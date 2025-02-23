@@ -4,7 +4,7 @@ import Navbar from "../navbar/navbar";
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between pt-5 px-[152px]">
+    <header className="flex items-center justify-between pt-5 px-[152px] border-b-2 border-[#1A191D] pb-[30px]">
       <Logo />
       <Navbar />
       <div className="flex items-center gap-3">

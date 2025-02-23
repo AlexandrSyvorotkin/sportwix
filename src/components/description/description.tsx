@@ -4,14 +4,22 @@ import img_bg from "../../assets/bg/ImgPrimary.png";
 
 const Description = () => {
   return (
-    <div className="mt-36 flex flex-col items-center">
-      <div className="fixed inset-0 -z-10">
-        <div className="w-full h-full grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] grid-rows-[repeat(auto-fill,minmax(100px,1fr))]">
-          {Array(200)
-            .fill(null)
-            .map((_, i) => (
-              <div key={i} className="border border-white/[0.03]"></div>
-            ))}
+    <div className="mt-36 flex flex-col items-center relative">
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        {/* Контейнер с градиентами по бокам */}
+        <div className="relative w-full h-full">
+          {/* Сама сетка */}
+          <div className="w-full h-full grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] grid-rows-[repeat(auto-fill,minmax(100px,1fr))]">
+            {Array(200)
+              .fill(null)
+              .map((_, i) => (
+                <div key={i} className="border border-white/[0.03]"></div>
+              ))}
+          </div>
+
+          {/* Градиенты по бокам */}
+          <div className="absolute inset-y-0 left-0 w-[1200px] bg-gradient-to-r from-[#0D0C0E] to-transparent"></div>
+          <div className="absolute inset-y-0 right-0 w-[1200px] bg-gradient-to-l from-[#0D0C0E] to-transparent"></div>
         </div>
       </div>
 
