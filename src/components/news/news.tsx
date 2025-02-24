@@ -2,8 +2,6 @@ import ArrowButton from "../../ui/arrow-button/arrow-button";
 import news_1 from "../../assets/news-bg/ImgNews1.png";
 import news_2 from "../../assets/news-bg/ImgNews2.png";
 import news_3 from "../../assets/news-bg/ImgNews3.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-
 const NEWS = [
   {
     id: 1,
