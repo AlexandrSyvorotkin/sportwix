@@ -39,7 +39,7 @@ interface ModalProps {
   className?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ modalType, title, isOpen, onClose, children, className}) => {
+const Modal: React.FC<ModalProps> = ({title, isOpen, onClose, children, className}) => {
   if (!isOpen) return null;
 
   return (

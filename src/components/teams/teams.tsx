@@ -1,12 +1,28 @@
 import { useState } from "react";
 
-import icon_league1 from "../../assets/team-championships/IconLeague1.png";
+// import icon_league1 from "../../assets/team-championships/IconLeague1.png";
 import icon_league2 from "../../assets/team-championships/IconLeague2.png";
 import icon_league3 from "../../assets/team-championships/IconLeague3.png";
 import icon_league4 from "../../assets/team-championships/IconLeague4.png";
 import icon_league5 from "../../assets/team-championships/IconLeague5.png";
 
-const TEAMS = {
+interface Team {
+  name: string;
+  image: string;
+}
+
+interface League {
+  name: string;
+  image: string;
+  teams: Team[];
+}
+
+interface Teams {
+  [key: string]: League;
+}
+
+
+const TEAMS:Teams = {
   // 'World cup': {
   //   'name': 'World Cup',
   //   'image': icon_league1,
