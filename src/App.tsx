@@ -1,5 +1,8 @@
 import './App.css'
+import Community from './components/community/community'
 import Description from './components/description/description'
+import FAQ from './components/faq/faq'
+import News from './components/news/news'
 import Suggest from './components/suggest/suggest'
 import Header from './layout/header/header'
 
@@ -11,7 +14,10 @@ function App() {
         <Header />
         <Description />
         <Suggest />
-    </div>
+        <News />
+        <Community />
+        <FAQ />
+    </div>  
   )
 }
 
