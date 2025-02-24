@@ -5,9 +5,10 @@ import ArrowButton from "../../ui/arrow-button/arrow-button";
 
 interface HeaderProps {
   tag?: React.ElementType;
+  openModal: () => void;
 }
 
-const RoutingElement = ({ tag }: HeaderProps) => {
+const RoutingElement = ({ tag, openModal }: HeaderProps) => {
 
   const Tag = tag || "div";
 
@@ -24,7 +25,7 @@ const RoutingElement = ({ tag }: HeaderProps) => {
             className="w-full h-full object-cover"
           />
         </div>
-        <ArrowButton text="Поиск команды" />
+        <ArrowButton text="Поиск команды" onClick={() => openModal()} />
       </div>
     </Tag>
   );
