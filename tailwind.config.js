@@ -69,6 +69,7 @@ export default {
         'bg-main': 'var(--bg-black-main)',
         'color-violet': 'var(--color-violet-main)',
         'violet-gradient': 'var(--violet-gradient)',
+        'grey-gradient': 'var(--grey-gradient)',
       },
       keyframes: {
         fadeIn: {
