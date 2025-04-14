@@ -1,0 +1,71 @@
+@import '../../../../styles/variables.scss';
+
+.news_team_selector {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: 14px;
+    .news_team_selector_header {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        cursor: pointer;
+    }
+    .available_teams {
+        position: absolute;
+        width: 340px;
+        top: 20px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 5px;
+        background: #181818;
+        box-shadow: 0px 2px 7px rgba(31, 31, 34, 0.25);
+        border-radius: 8px;
+        z-index: 10;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    .team_wrapper {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px;
+        &:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+    .team {
+        
+        gap: 5px;
+        white-space: nowrap;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+    .img_wrapper {
+        width: 30px;
+        height: 30px;
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .active_indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $active-el-color;
+    }
+}
+
+.available_teams::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+}

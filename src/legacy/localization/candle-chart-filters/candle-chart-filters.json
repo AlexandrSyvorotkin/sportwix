@@ -1,0 +1,62 @@
+{
+    "filter_by_season": {
+        "3_last_seasons": {
+            "ru": "3 последних сезона",
+            "eng": "3 last seasons"
+        },
+        "5_last_seasons": {
+            "ru": "5 последних сезонов",
+            "eng": "5 last seasons"
+        },
+        "all_seasons": {
+            "ru": "Все сезоны",
+            "eng": "All seasons"
+        }
+    },
+    "filter_by_games": {
+        "home_games": {
+            "ru": "Домашние игры",
+            "eng": "Home games"
+        },
+        "away_games": {
+            "ru": "Гостевые игры",
+            "eng": "Away games"
+        },
+        "all_games": {
+            "ru": "Все игры",
+            "eng": "All games"
+        }
+    },
+    "filter_by_times": {
+        "full_time": {
+            "ru": "Полный матч",
+            "eng": "FT"
+        },
+        "1t+2T": {
+            "ru": "1 тайм + 2 тайм",
+            "eng": "1T + 2T"
+        },
+        "1T": {
+            "ru": "1 тайм",
+            "eng": "1T"
+        },
+        "2T": {
+            "ru": "2 тайм",
+            "eng": "2T"
+        }
+    },
+    "filter_by_goals": {
+        "all_goals": {
+            "ru": "Все голы",
+            "eng": "All goals"
+        },
+        "total>2.5": {
+            "ru": "Тотал > 2.5",
+            "eng": "Total > 2.5"
+        },
+        "total<2.5": {
+            "ru": "Тотал < 2.5",
+            "eng": "Total < 2.5"
+        }
+    }
+}

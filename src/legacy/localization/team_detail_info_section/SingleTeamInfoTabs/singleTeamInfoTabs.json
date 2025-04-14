@@ -1,0 +1,26 @@
+{
+    "achievements": {
+        "ru": "Достижения",
+        "eng": "Achievements"
+    },
+    "kits": {
+        "ru": "Формы",
+        "eng": "Kits & Emblems"
+    },
+    "sponsors": {
+        "ru": "Спонсоры",
+        "eng": "Sponsors"
+    },
+    "club_records": {
+        "ru": "Рекорды клуба",
+        "eng": "Club records"
+    },
+    "player_records": {
+        "ru": "Рекорды игроков",
+        "eng": "Player records"
+    },
+    "facts": {
+        "ru": "Факты",
+        "eng": "Facts"
+    }
+}

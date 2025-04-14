@@ -1,0 +1,22 @@
+{
+    "epl": {
+        "ru": "Премьер Лига",
+        "eng": "Premier League"
+    },
+    "la_liga": {
+        "ru": "Ла-лига",
+        "eng": "La-liga"
+    },
+    "seriaA": {
+        "ru": "Серия А",
+        "eng": "Seria A"
+    },
+    "bundesliga": {
+        "ru": "Бундеслига",
+        "eng": "Bundesliga"
+    },
+    "league1": {
+        "ru": "Лига 1",
+        "eng": "League 1"
+    }
+}

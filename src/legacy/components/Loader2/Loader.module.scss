@@ -1,0 +1,67 @@
+.loader_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animateBg 10s linear infinite;
+    width: 100%;
+    height: 100%;
+    .loader {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        transform: rotate(35deg);
+        & > span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(calc(18deg * var(--i)));
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #A266F4;
+                // box-shadow: 0 0 5px #A266F4,
+                //             0 0 10px #A266F4,
+                //             0 0 15px #A266F4,
+                //             0 0 20px #A266F4,
+                //             0 0 25px #A266F4,
+                //             0 0 30px #A266F4;
+                animation: animate 2s linear infinite;
+                animation-delay: calc(0.1s * var(--i));
+                opacity: 0;
+                        
+            }
+        }
+    }
+}
+
+// @keyframes animateBg {
+//     0% 
+//     {
+//         filter: hue-rotate(0deg);
+//     }
+//     100% 
+//     {
+//         filter: hue-rotate(360deg)
+//     }
+// }
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+        opacity: 0; /* Начальная прозрачность */
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 1; /* Постепенно становится непрозрачным */
+    }
+}

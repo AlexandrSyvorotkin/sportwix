@@ -1,0 +1,73 @@
+@import '../../../styles/variables.scss';
+
+.line {
+    width: 2px;
+    background-color: black;
+}
+
+.line1_8to1_4 {
+    width: 2px;
+    height: 100px; /* Adjust as needed */
+    background-color: $bg-rectangle-color;
+    position: relative;
+}
+
+.line1_4to1_2 {
+    width: 2px;
+    height: 250px; /* Adjust as needed */
+    background-color: $bg-rectangle-color;
+    position: relative;
+}
+
+.line1_2toFinal {
+    width: 2px;
+    height: 40%; /* Adjust as needed */
+    background-color: $bg-rectangle-color;
+    position: relative;
+}
+
+.line1_2toFinal_hald_grid {
+    width: 25%;
+    height: 2px; /* Adjust as needed */
+    background-color: $bg-rectangle-color;
+    position: relative;
+}
+
+.top_left {
+    background-color: $bg-rectangle-color;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.bottom_left {
+    background-color: $bg-rectangle-color;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.left_bottom {
+    background-color: $bg-rectangle-color;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.right_top {
+    background-color: $bg-rectangle-color;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+

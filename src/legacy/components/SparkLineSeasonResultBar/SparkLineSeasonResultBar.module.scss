@@ -1,0 +1,28 @@
+.bar_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  .season_result_percentage {
+    // width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    cursor: pointer;
+    @media (max-width: 576px) {
+      width: 50px;
+    }
+  }
+  .metric_percentage {
+    height: 10px;
+    @media (max-width: 576px) {
+      height: 6px;
+    }
+  }
+  .sparkline_chart {
+    @media (max-width: 976px) {
+      display: none;
+    }
+  }
+}

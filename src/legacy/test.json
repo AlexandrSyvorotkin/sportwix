@@ -1,0 +1,205 @@
+{
+    "final": {
+      "match": {
+        "team1": {
+          "name": null,
+          "goals": null
+        },
+        "team2": {
+          "name": null,
+          "goals": null
+        }
+      },
+      "semifinals": [
+        {
+          "match": {
+            "team1": {
+              "name": null,
+              "goals": null
+            },
+            "team2": {
+              "name": null,
+              "goals": null
+            }
+          },
+          "quarterfinals": [
+            {
+              "match": {
+                "team1": {
+                  "name": "Team A",
+                  "goals": null
+                },
+                "team2": {
+                  "name": "Team B",
+                  "goals": null
+                }
+              },
+              "roundOf8": [
+                {
+                  "match": {
+                    "team1": {
+                      "name": "Team A1",
+                      "goals": null
+                    },
+                    "team2": {
+                      "name": "Team A2",
+                      "goals": null
+                    }
+                  },
+                  "roundOf16": null
+                },
+                {
+                  "match": {
+                    "team1": {
+                      "name": "Team B1",
+                      "goals": null
+                    },
+                    "team2": {
+                      "name": "Team B2",
+                      "goals": null
+                    }
+                  },
+                  "roundOf16": null
+                }
+              ]
+            },
+            {
+              "match": {
+                "team1": {
+                  "name": "Team C",
+                  "goals": null
+                },
+                "team2": {
+                  "name": "Team D",
+                  "goals": null
+                }
+              },
+              "roundOf8": [
+                {
+                  "match": {
+                    "team1": {
+                      "name": "Team C1",
+                      "goals": null
+                    },
+                    "team2": {
+                      "name": "Team C2",
+                      "goals": null
+                    }
+                  },
+                  "roundOf16": null
+                },
+                {
+                  "match": {
+                    "team1": {
+                      "name": "Team D1",
+                      "goals": null
+                    },
+                    "team2": {
+                      "name": "Team D2",
+                      "goals": null
+                    }
+                  },
+                  "roundOf16": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "match": {
+            "team1": {
+              "name": null,
+              "goals": null
+            },
+            "team2": {
+              "name": null,
+              "goals": null
+            }
+          },
+          "quarterfinals": [
+            {
+              "match": {
+                "team1": {
+                  "name": "Team E",
+                  "goals": null
+                },
+                "team2": {
+                  "name": "Team F",
+                  "goals": null
+                }
+              },
+              "roundOf8": [
+                {
+                  "match": {
+                    "team1": {
+                      "name": "Team E1",
+                      "goals": null
+                    },
+                    "team2": {
+                      "name": "Team E2",
+                      "goals": null
+                    }
+                  },
+                  "roundOf16": null
+                },
+                {
+                  "match": {
+                    "team1": {
+                      "name": "Team F1",
+                      "goals": null
+                    },
+                    "team2": {
+                      "name": "Team F2",
+                      "goals": null
+                    }
+                  },
+                  "roundOf16": null
+                }
+              ]
+            },
+            {
+              "match": {
+                "team1": {
+                  "name": "Team G",
+                  "goals": null
+                },
+                "team2": {
+                  "name": "Team H",
+                  "goals": null
+                }
+              },
+              "roundOf8": [
+                {
+                  "match": {
+                    "team1": {
+                      "name": "Team G1",
+                      "goals": null
+                    },
+                    "team2": {
+                      "name": "Team G2",
+                      "goals": null
+                    }
+                  },
+                  "roundOf16": null
+                },
+                {
+                  "match": {
+                    "team1": {
+                      "name": "Team H1",
+                      "goals": null
+                    },
+                    "team2": {
+                      "name": "Team H2",
+                      "goals": null
+                    }
+                  },
+                  "roundOf16": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+  

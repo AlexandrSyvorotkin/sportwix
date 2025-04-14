@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+
+.team_achievements {
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .team_achievements_header {
+    border-bottom: 1px solid $substrate-color;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 18px;
+    align-items: center;
+    opacity: 0.6;
+    padding-bottom: 16px;
+    @media (max-width: 756px) {
+      display: none;
+    }
+  }
+  .header_item {
+    width: 25%;
+    display: block;
+    text-align: center;
+  }
+}

@@ -1,0 +1,99 @@
+@import '../../styles/variables.scss';
+
+.attack_wrapper {
+    width: calc(100%/3);
+
+    .attack_header {
+        height: 20%;
+        font-size: 14px;
+        border-bottom: 1px solid $substrate-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .attack {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        flex-direction: row-reverse;
+        position: relative;
+    }
+
+    .active_filters {
+        position: absolute;
+        display: flex;
+        gap: 5px;
+        top: 15%;
+        left: 25%;
+    }
+    .attack_params {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px
+    }
+    .attack_field_elements {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 100%;
+    }
+
+    .corner_bottom_right {
+        width: 30px;
+        height: 30px;
+        border-top: 1px solid #5C5C5C;
+        border-left: 1px solid #5C5C5C;
+        border-radius: 100% 0 0 0;
+    }
+
+    .corner_top_right {
+        width: 30px;
+        height: 30px;
+        border-bottom: 1px solid #5C5C5C;
+        border-left: 1px solid #5C5C5C;
+        border-radius: 0 100% 0;
+    }
+
+
+
+    .goalkeeper_zone_alt {
+        width: 70px;
+        height: 50%;
+        border-left: 1px solid #5C5C5C;
+        border-top: 1px solid #5C5C5C;
+        border-bottom: 1px solid #5C5C5C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .circle {
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 6px solid #DC7700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .little_circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 6px solid #DC7700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

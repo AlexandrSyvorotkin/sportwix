@@ -1,0 +1,9 @@
+@import '../../styles//variables.scss';
+
+.resizable_border_dark {
+    border: 1px solid $resizable-border-dark;
+  }
+  
+  .resizable_border_light{
+    border: 1px solid $resizable-border-light;
+  }

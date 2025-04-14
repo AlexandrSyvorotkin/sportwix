@@ -1,0 +1,14 @@
+{
+    "first_time": {
+        "ru": "1 тайм",
+        "eng": "1 time"
+    },
+    "second_time": {
+        "ru": "2 тайм",
+        "eng": "2 time"
+    },
+    "full_time": {
+        "ru": "Полный матч",
+        "eng": "Full time"
+    }
+}

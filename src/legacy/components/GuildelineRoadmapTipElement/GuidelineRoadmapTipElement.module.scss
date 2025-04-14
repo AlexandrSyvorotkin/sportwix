@@ -1,0 +1,149 @@
+.text {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 350px;
+	height: auto;
+	text-align: start;
+	align-items: center;
+	z-index: 10200;
+	gap: 20px;
+	@media (max-width: 576px) {
+		width: 280px;
+	}
+}
+.text_content {
+	background-color: white;
+	padding: 16px;
+	border-radius: 12px;
+	position: relative;
+	@media (max-width: 576px) {
+		padding: 10px;
+		font-size: 14px;
+	}
+}
+
+.title {
+	font-size: 16px;
+	font-weight: bold;
+}
+.close {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	& > img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.text_content_header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	// white-space: nowrap;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	position: absolute;
+}
+
+.guide_element {
+	position: relative;
+	// border: 1px solid $hove-el-color;
+	border-radius: 5px;
+	
+	transition: opacity 0.2s ease 0s;
+}
+
+.test_transparent {
+	background-color: transparent;
+}
+
+.test_grey {
+	background-color: grey;
+}
+
+.text_items_normal {
+	flex-direction: column;
+}
+
+.text_items_reverse {
+	flex-direction: column-reverse;
+}
+
+
+.triangle_left {
+	left: -9px;
+	/* Смещение треугольника влево на ширину треугольника */
+	top: 15%;
+    border-right: 10px solid white;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+
+	@media (max-width: 576px) {
+		left: -8px;
+		top: 50%;
+		transform: translateY(-50%);
+		border-right: 10px solid white;
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+	}
+
+}
+
+.triangle_top {
+	border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid white;
+    top: -9px;
+    left: 15%;
+}
+
+.triangle_bottom_mobile_sparkline {
+	border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid white;
+    top: -9px;
+    left: 55%;
+}
+
+.triangle_bottom_mobile_team {
+	border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid white;
+    top: -9px;
+    left: 75%;
+}
+
+.triangle_bottom {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid white;
+    bottom: -9px;
+    left: 15%;
+}
+
+
+.triangle_right {
+	border-bottom: 6px solid transparent;
+    border-left: 10px solid white;
+    border-top: 6px solid transparent;
+    right: -9px;
+    top: 15%;
+}
+
+.current_text {
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.controllers {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}

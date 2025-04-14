@@ -1,0 +1,78 @@
+{
+    "expand": {
+        "ru": "Развернуть",
+        "eng": "Expand"
+    },
+    "inver_table": {
+        "ru": "Инвертировать таблицу",
+        "eng": "Invert table"
+    },
+    "diagonal_levels": {
+        "ru": "Уровень",
+        "eng": "Diagonal_levels"
+    },
+    "switch_sparkline": {
+        "ru": "Вернуться к спраклайну",
+        "eng": "Switch to sparkline"
+    },
+    "filter_by_seasons": {
+        "ru": "Фильтр по кол-ву сезонов",
+        "eng": "Filter by seasons"
+    },
+    "filter_by_games": {
+        "ru": "Фильтр по типу игры",
+        "eng": "Filter by games"
+    },
+    "filter_by_times": {
+        "ru": "Фильтр по таймам",
+        "eng": "Filter by times"
+    },
+    "filter_by_goals": {
+        "ru": "Фильтр по голам",
+        "eng": "Filter by goals"
+    },
+    "news": {
+        "ru": "Новости",
+        "eng": "News"
+    },
+    "about_team": {
+        "ru": "О команде",
+        "eng": "About team"
+    },
+    "performance": {
+        "ru": "Выступление",
+        "eng": "Performance"
+    },
+    "team_stats": {
+        "ru": "Статистика команды",
+        "eng": "Team stats"
+    },
+    "football_field": {
+        "ru": "Футбольное поле",
+        "eng": "Football field"
+    },
+    "calendar": {
+        "ru": "Календарь",
+        "eng": "Calendar"
+    },
+    "information_table": {
+        "ru": "Информационная доска",
+        "eng": "Information table"
+    },
+    "support": {
+        "ru": "Помощь",
+        "eng": "Support"
+    },
+    "email": {
+        "ru": "Почта",
+        "eng": "Email"
+    },
+    "tips": {
+        "ru": "База знаний",
+        "eng": "Tips"
+    },
+    "user_guide": {
+        "ru": "Обучение",
+        "eng": "User guide"
+    }
+}

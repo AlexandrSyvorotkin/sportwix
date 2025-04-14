@@ -1,0 +1,408 @@
+{
+    "1/16": [
+        {
+            "team1": {
+                "name": "A1",
+                "img": "burnley",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "shefield",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "wolverhamptom",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "chelsea",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "luton",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "brandford",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "mu",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "nottingham",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "newcastle",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "westham",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "tottenham",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "mc",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "brighton",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "boormut",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "fulham",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "brighton",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "burnley",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "shefield",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "burnley",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "shefield",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "burnley",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "shefield",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "burnley",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "shefield",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "burnley",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "shefield",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "burnley",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "shefield",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "burnley",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "shefield",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "burnley",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "shefield",
+                "score": ""
+            }
+        }
+    ],
+    "1/8": [
+        {
+            "team1": {
+                "name": "A1",
+                "img": "burnley",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "shefield",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "wolverhamptom",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "chelsea",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "luton",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "brandford",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "mu",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "nottingham",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "newcastle",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "westham",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "tottenham",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "mc",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "brighton",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "boormut",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "fulham",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "brighton",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "burnley",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "shefield",
+                "score": ""
+            }
+        }
+    ],
+    "1/4": [
+        {
+            "team1": {
+                "name": "A1",
+                "img": "burnley",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "shefield",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "wolverhamptom",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "chelsea",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "luton",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "brandford",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "mu",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "nottingham",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "newcastle",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "westham",
+                "score": ""
+            }
+        }
+    ],
+    "1/2": [
+        {
+            "team1": {
+                "name": "A1",
+                "img": "burnley",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "shefield",
+                "score": ""
+            }
+        },
+        {
+            "team1": {
+                "name": "A1",
+                "img": "wolverhamptom",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "chelsea",
+                "score": ""
+            }
+        }
+    ],
+    "final": [
+        {
+            "team1": {
+                "name": "A1",
+                "img": "burnley",
+                "score": ""
+            },
+            "team2": {
+                "name": "B2",
+                "img": "shefield",
+                "score": ""
+            }
+        }
+    ]
+}

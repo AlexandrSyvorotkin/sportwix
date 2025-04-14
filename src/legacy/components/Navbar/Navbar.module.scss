@@ -1,0 +1,61 @@
+@import '../../styles//variables.scss';
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+ 
+  @media (max-width: 1200px) {
+    gap: 20px;
+  }
+  @media (max-width: 976px) {
+    font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+  .border { /* толщина и цвет линии */
+    height: 34px; /* высота линии - здесь 100% от высоты родительского элемента */
+    margin-left: 20px; /* отступ слева от родительского элемента */
+    box-sizing: border-box;
+  }
+  &_list {
+    display: flex;
+    gap: 40px;
+    @media (max-width: 1200px) {
+      gap: 20px;
+    }
+    @media (max-width: 1100px) {
+      display: none;
+    }
+    & > a {
+      cursor: pointer;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      text-decoration: none;
+      &:hover {
+        color: #B279FF;
+      }
+    }
+  }
+  
+}
+
+.active {
+  color: #A266F4!important;
+}
+
+.dark {
+  color: $main-color;
+  &:hover {
+    color: #B279FF;
+  }
+}
+
+.light {
+  color: $text-color-light;
+  &:hover {
+    color: #B279FF;
+  }
+}

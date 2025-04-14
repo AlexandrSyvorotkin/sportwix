@@ -1,0 +1,69 @@
+.news_modal_background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.74);
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    .modal_content {
+        width: 40%;
+        background-color: rgb(24, 24, 24);
+        position: relative;
+        @media (max-width: 576px) {
+            width: 100%;
+            max-height: 600px;
+        }
+    }
+    .btns_header {
+        display: flex;
+        gap: 15px;
+    }
+    .modal_header {
+        padding: 0 20px;
+        position: sticky; /* Закрепляем шапку */
+        top: 0; /* Отступ от верха контейнера */
+        border-bottom:  1px solid white; /* Цвет фона шапки */
+        z-index: 6; /* Чтобы шапка была выше контента при прокрутке */
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        color: white;
+        align-items: center;
+    }
+    .header_text {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: black;
+    }
+    .news_info {
+        display: flex;
+        gap: 10px;
+    }
+    .close_btn {
+        cursor: pointer;
+    }
+    .img_wrapper {
+        margin-top: 30px;
+        width: 100%;
+        height: 100%;
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .text {
+        color: black;
+        margin-top: 30px;
+        overflow-y: auto;
+        white-space: pre-line;
+        overflow-y: auto;
+    }
+}

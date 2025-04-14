@@ -7,11 +7,11 @@ const links = [
     },
     {
         name: "Новости",
-        href: "/about"
+        href: "/news"
     },
     {
         name: "Комньюнити",
-        href: "/contact"
+        href: "/community"
     },
     {
         name: "FAQ",

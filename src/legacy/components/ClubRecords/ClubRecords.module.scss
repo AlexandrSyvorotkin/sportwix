@@ -1,0 +1,91 @@
+@import "../../styles/variables";
+
+.club_records {
+	display: flex;
+	flex-direction: column;
+	@media (max-width: 576px) {
+		gap: 15px;
+		padding: 10px;
+	}
+	.header_records {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding: 10px;
+		border-bottom: 1px solid $substrate-color;
+		@media (max-width: 576px) {
+			border-bottom: none;
+			justify-content: flex-start;
+			border-bottom: none;
+		}
+	}
+	.club_record_item {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid $substrate-color;
+		@media (max-width: 576px) {
+    		background: #181818;
+			border-radius: 10px;
+			border-bottom: none;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	.record_items {
+		width: 66%;
+		display: flex;
+		@media (max-width: 576px) {
+			width: 100%;
+		}
+	}
+	.record_item_detail_info_value {
+		padding: 10px;
+		height: 50px;
+		width: calc(100%/3);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:not(:last-child) {
+			border-right: 1px solid $substrate-color;
+			@media (max-width: 576px) {
+				border-right: none;
+				width: 50%;
+				justify-content: flex-start;
+			}
+		}
+	}
+	.record_item_detail_info {
+		padding: 10px;
+		width: 50%;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:not(:last-child) {
+			border-right: 1px solid $substrate-color;
+			@media (max-width: 576px) {
+				border-right: none;
+				justify-content: flex-start;
+			}
+		}
+	}
+	.record_treble {
+		padding: 10px;
+		display: flex;
+		height: 50px;
+		justify-content: center;
+		align-items: center;
+		width: calc(100%/3);
+		text-align: center;
+		&:not(:last-child) {
+			border-right: 1px solid $substrate-color;
+			@media (max-width: 576px) {
+				border-right: none;
+				width: 100%;
+				justify-content: flex-start;
+			}
+		}
+	}
+}

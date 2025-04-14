@@ -1,0 +1,60 @@
+.histogram_wrapper {
+  width: 100%;
+  overflow-x: auto;
+  .histogram_header {
+    margin-top: 16px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+  .scores {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+    color: #FFFFFF;
+  }
+  .tabs {
+    margin-top: 24px;
+    width: 100%;
+    border-top: 1px solid #5C5C5C;
+    border-bottom: 1px solid #5C5C5C;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+    color: #FFFFFF;
+  }
+  .statistical_indicators {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .statistical_indicators_inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    white-space: normal;
+  }
+  .indicator {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+    color: #FFFFFF;
+  }
+}

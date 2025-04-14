@@ -1,0 +1,68 @@
+[
+    {
+        "position": "goalkeeper",
+        "short_position": "GL",
+        "player_name": "Thibaut Courtois",
+        "number": 1
+    },
+    {
+        "position": "left_back",
+        "short_position": "LB",
+        "player_name": "Ferland Mendy",
+        "number": 23
+    },
+    {
+        "position": "centre_back",
+        "short_position": "LCB",
+        "player_name": "Antonio Rüdiger",
+        "number": 22
+    },
+    {
+        "position": "centre_back",
+        "short_position": "RCB",
+        "player_name": "Éder Militão",
+        "number": 3
+    },
+    {
+        "position": "right_back",
+        "short_position": "RB",
+        "player_name": "Daniel Carvajal",
+        "number": 2
+    },
+    {
+        "position": "defensve_midfield",
+        "short_position": "DM",
+        "player_name": "Aurélien Tchouaméni",
+        "number": 14
+    },
+    {
+        "position": "central_midfield",
+        "short_position": "RCM",
+        "player_name": "Federico Valverde",
+        "number": 8
+    },
+    {
+        "position": "central_midfield",
+        "short_position": "LCM",
+        "player_name": "Jude Bellingham",
+        "number": 5
+    },
+    {
+        "position": "left_winger",
+        "short_position": "LW",
+        "player_name": "Vinicius Junior",
+        "number": 7
+    },
+    {
+        "position": "right_winger",
+        "short_position": "RW",
+        "player_name": "Rodrygo",
+        "number": 11
+    },
+    {
+        "position": "centre_forward",
+        "short_position": "CF",
+        "player_name": "Kylian Mbappé",
+        "number": 9
+    }
+]
