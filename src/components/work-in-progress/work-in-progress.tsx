@@ -1,12 +1,8 @@
-import React, { FC, useContext } from 'react'
+import { FC } from 'react'
 import styles from './WorkInProgress.module.scss'
 import imgWork from '../../assets/workInProgress.svg'
-import SubscribeBtn from '../../ui/Buttons/SubscribeBtn/SubsribeBtn'
-import { LanguageContext } from '../../context/LanguageContext/LanguageContext'
 
 const WorkInProgress:FC = () => {
-
-    const {language} = useContext(LanguageContext)
 
     return (
         <div className={styles.work_in_progress_wrapper}>
@@ -16,8 +12,10 @@ const WorkInProgress:FC = () => {
                     <img src={imgWork} alt="" />
                 </div>
             </div>
-            <span>{language === 'Eng' ? 'Work in progress' : 'Раздел в разработке'}</span>
-            <span>{language === 'Eng' ? "We'll be back soon with updates" : "Мы скоро вернемся с обновлениями"}</span>
+            {/* <span>{language === 'Eng' ? 'Work in progress' : 'Раздел в разработке'}</span>
+            <span>{language === 'Eng' ? "We'll be back soon with updates" : "Мы скоро вернемся с обновлениями"}</span> */}
+
+            <span>Раздел в разработке</span>
             
         </div>
         {/* <SubscribeBtn>Subscribe our updates</SubscribeBtn> */}
