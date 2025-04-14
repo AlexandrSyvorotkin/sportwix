@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import styles from './WorkInProgress.module.scss'
-import imgWork from '../../assets/workInProgress.svg'
+import styles from './work-in-progress.module.scss'
+import imgWork from '../../assets/work-in-progress.svg'
 
 const WorkInProgress:FC = () => {
 
