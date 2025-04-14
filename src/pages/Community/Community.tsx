@@ -1,4 +1,5 @@
-import WorkInProgress from '../../legacy/components/WorkInProgress/WorkInProgress';
+
+import WorkInProgress from '../../components/work-in-progress/work-in-progress';
 import styles from './Community.module.scss'
 
 const Community = () => {

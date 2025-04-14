@@ -11,7 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
-/legacy
+/legacy/
+/src/legacy/
 
 # Editor directories and files
 .vscode/*

@@ -1,5 +1,5 @@
+import WorkInProgress from '../../components/work-in-progress/work-in-progress';
 import styles from './News.module.scss'
-import WorkInProgress from '../../legacy/components/WorkInProgress/WorkInProgress';
 
 
 const News = () => {
