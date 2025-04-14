@@ -10,7 +10,7 @@ import PolicyPage from './pages/policy-page'
 import Best from './pages/Best/Best'
 import Community from './pages/Community/Community'
 import News from './pages/News/news'
-import background from './assets/background.png'
+import background from './assets/bg/background.png'
 function App() {
 
   const [isOpen, setIsOpen] = useState(false);
