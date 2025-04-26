@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+// @import '../../styles/variables.scss';
 
 .work_in_progress_wrapper {
     display: flex;
@@ -12,11 +12,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: $main-color;
+        // color: $main-color;
         flex-direction: column;
         gap: 10px;
         .img_background {
-            background-color: $main-color;
+            // background-color: $main-color;
             border-radius: 50%;
             width: 100px;
             height: 100px;

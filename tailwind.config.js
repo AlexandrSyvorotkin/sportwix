@@ -70,6 +70,43 @@ export default {
         'color-violet': 'var(--color-violet-main)',
         'violet-gradient': 'var(--violet-gradient)',
         'grey-gradient': 'var(--grey-gradient)',
+        
+        // Добавленные цвета из legacy
+        'bg-color': 'var(--bg-color)',
+        'active-el': 'var(--active-el-color)',
+        'hover-el': 'var(--hove-el-color)',
+        'main': 'var(--main-color)',
+        'bg-rectangle': 'var(--bg-rectangle-color)',
+        
+        // Цвета для чемпионата
+        'champions-league': 'var(--championship-champions-league-place-color)',
+        'europa-league': 'var(--championship-europa-league-place-color)',
+        'conference-league': 'var(--championship-conference-league-place-color)',
+        'bottom-place': 'var(--championship-bottom-place)',
+        
+        // Цвета для результатов
+        'first-place': 'var(--results-first-place)',
+        'second-place': 'var(--results-second-place)',
+        'third-place': 'var(--results-third-place)',
+        
+        // Цвета для прогресс-бара
+        'progress-bar-dark': 'var(--championship-table-team-progress-bar-dark)',
+        'progress-bar-light': 'var(--championship-table-team-progress-bar-light)',
+        
+        // Цвета подложки
+        'substrate': 'var(--substrate-color)',
+        'substrate-light': 'var(--substrate-color-light)',
+        
+        // Цвет текста
+        'text-light': 'var(--text-color-light)',
+        
+        // Цвета баннера
+        'banner-dark': 'var(--banner-color-dark)',
+        'banner-light': 'var(--banner-color-light)',
+        
+        // Цвета границы
+        'border-dark': 'var(--resizable-border-dark)',
+        'border-light': 'var(--resizable-border-light)',
       },
       keyframes: {
         fadeIn: {

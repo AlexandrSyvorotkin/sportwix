@@ -5,14 +5,50 @@
   /* outline: 2px solid red !important; */
 }
 
-
-
-:root  {
+:root {
+  /* Основные цвета */
   --bg-black-main: #0D0C0E;
   --text-white-main: #EDF1EE;
   --color-violet-main: #5724FF;
   --violet-gradient: #6A2DBF;
-  --grey-gradient: #D5D6E9B2
+  --grey-gradient: #D5D6E9B2;
+  
+  /* Цвета из legacy */
+  --bg-color: #1F1F1F;
+  --active-el-color: #A266F4;
+  --hove-el-color: #B279FF;
+  --main-color: #FFFFFF;
+  --bg-rectangle-color: #333333;
+  
+  /* Цвета для чемпионата */
+  --championship-champions-league-place-color: #4E4EFD;
+  --championship-europa-league-place-color: #B7A503;
+  --championship-conference-league-place-color: #51B136;
+  --championship-bottom-place: #C00000;
+  
+  /* Цвета для результатов */
+  --results-first-place: #B3891F;
+  --results-second-place: #867D7D;
+  --results-third-place: #5C3E1F;
+  
+  /* Цвета для прогресс-бара */
+  --championship-table-team-progress-bar-dark: #181818;
+  --championship-table-team-progress-bar-light: #E6D4FF;
+  
+  /* Цвета подложки */
+  --substrate-color: #5C5C5C;
+  --substrate-color-light: #E1E3EA;
+  
+  /* Цвет текста */
+  --text-color-light: #333333;
+  
+  /* Цвета баннера */
+  --banner-color-dark: #181818;
+  --banner-color-light: #F3F4F7;
+  
+  /* Цвета границы */
+  --resizable-border-dark: #5C5C5C;
+  --resizable-border-light: #E1E3EA;
 }
 
 body {

@@ -11,6 +11,7 @@ import Best from './pages/Best/Best'
 import Community from './pages/Community/Community'
 import News from './pages/News/news'
 import background from './assets/bg/background.png'
+import Chart from './legacy/pages/Chart/Chart'
 function App() {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -37,6 +38,7 @@ function App() {
         <Route path="/" element={<Main isOpen={isOpen} setIsOpen={setIsOpen} />} />
         <Route path="/policy" element={<PolicyPage />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/chart" element={<Chart />} />
 
 
         {/* legacy routes */}
