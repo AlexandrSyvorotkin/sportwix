@@ -19,9 +19,11 @@ dist-ssr
 .DS_Store
 *.suo
 *.ntvs*
-*.njsproj
+*.njsprojw
 *.sln
 *.sw?
 
 # Legacy folder
 src/legacy/
+
+
