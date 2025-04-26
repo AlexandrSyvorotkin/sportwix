@@ -1,0 +1,37 @@
+.checkbox_param {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.checkbox {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff; /* Цвет фона при выключенном состоянии */
+    border: 2px solid #ccc; /* Цвет границы */
+    border-radius: 50%; /* Задаем скругление для создания круглой формы */
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    appearance: none; /* Убираем стандартный стиль */
+    -webkit-appearance: none; /* Для поддержки вебкит-браузеров */
+    -moz-appearance: none; /* Для поддержки Firefox */
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    border: 2px solid #8a2be2; /* Цвет границы чекбокса */
+    border-radius: 50%; /* Делаем чекбокс круглым */
+    outline: none; /* Убираем фокусировку при клике */
+    cursor: pointer; /* Делаем указатель при наведении */
+}
+
+/* Стиль для фонового цвета при выборе (чекд) */
+input[type="checkbox"]:checked {
+    background-color: #8a2be2; /* Фиолетовый цвет при выборе */
+    border: 2px solid #8a2be2; /* Можно оставить такой же цвет границы, чтобы он не менялся */
+}

@@ -1,0 +1,45 @@
+// @import '../../styles/variables.scss';
+
+.option {
+    position: absolute;
+    // border: 1px solid $hove-el-color;
+    border-radius: 5px;
+    background-color: grey;
+    transition: opacity 0.2s ease 0s;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.03);
+        transition: 0.3s;
+    }
+    .option_number {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 80px;
+        // color: $hove-el-color;
+        z-index: 1000;
+    }
+    .title {
+        position: absolute;
+        width: 30%;
+        top: 50%;
+        left: 50%;
+        color: white;
+        height: 60px;
+        // background-color: $banner-color-dark;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-50%);
+        z-index: 10000;
+    }
+}
+
+.option_text {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    color: white;
+    font-size: 30px;
+}

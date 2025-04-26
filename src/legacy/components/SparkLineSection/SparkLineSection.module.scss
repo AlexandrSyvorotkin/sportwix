@@ -1,0 +1,113 @@
+// @import '../../styles/variables.scss';
+
+.sparkline_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: auto;
+    .header {
+        width: 100%;
+        // border-bottom: 1px solid $substrate-color;
+        // background-color: #1F1F1F;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        
+    }
+    .header_items {
+        display: flex;
+        align-items: center;
+        // gap: 30px;
+        justify-content: space-between
+    }
+    .team_pos {
+        padding: 10px;
+        width: 30px;
+        text-align: center;
+    }
+    .team_img {
+        width: 90px;
+        padding: 10px;
+        text-align: center;
+    }
+    .team_coach {
+        width: 90px;
+        padding: 10px;
+        text-align: center;
+    }
+    .team_name {
+        width: 130px;
+        padding: 10px;
+        text-align: center;
+    }
+    .season_bar {
+        width: 120px;
+        padding: 10px;
+        text-align: center;
+    }
+    .line_chart {
+        width: 250px;
+        padding: 10px;
+        text-align: center;
+    }
+    .medals {
+        width: 130px;
+    }
+    .last_games {
+        width: 340px;
+        padding: 10px;
+        text-align: center;
+    }
+    .next_game {
+        padding: 10;
+        width: 135px;
+        text-align: center;
+    }
+    
+}
+
+.bkg_light {
+    // background-color: white;
+}
+
+.bkg_dark {
+    // background-color: #1F1F1F;
+}
+
+.sparkline_section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: auto;
+    @media (max-width: 768px) {
+        display: none;
+        padding: 10px;
+        gap: 5px;
+    }
+    
+}
+
+
+
+//MOBILE TEST
+
+.sparkline_section_mobile {
+    display: none;
+    // @media (min-width: 576px) and (orientation: landscape) {
+    //     // height: 100% !important;
+    // }
+    @media (max-width: 768px) {
+        display: flex;
+        overflow-y: auto;
+        width: 100%;
+        // gap: 5px;
+        height: 100%;
+        position: relative;
+    }
+
+}
+
+.sparkline_section_mobile::-webkit-scrollbar {
+    display: none;
+}
+

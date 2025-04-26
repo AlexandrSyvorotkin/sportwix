@@ -1,0 +1,21 @@
+.select_wrapper {
+  .select_bar {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #FFFFFF;
+    -webkit-appearance: none;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    background-image: url("../../assets/select-arrows/open-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 15px;
+    appearance: none;
+    -moz-appearance: none;
+    & > option {
+      background-color: red;
+    }
+  }
+}

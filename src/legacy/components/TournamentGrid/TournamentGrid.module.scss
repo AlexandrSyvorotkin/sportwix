@@ -1,0 +1,25 @@
+// @import '../../styles/variables.scss';
+
+.grid_wrapper {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 70px);
+
+    .grid_header {
+        width:  100%;
+        // border-bottom: 1px solid $substrate-color;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 10px;
+        & > div {
+            padding: 10px;
+            border-radius: 10px;
+            &:hover {
+                // background-color: $hove-el-color;
+                
+            }
+        }
+    }
+    
+}

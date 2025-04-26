@@ -1,0 +1,55 @@
+.game_tooltip {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.left {
+    bottom: 0;
+    left: 80px;
+}
+
+.right {
+    bottom: 0;
+    left: -250px;
+}
+
+.final {
+    left: 0;
+    top: 50px;
+}
+
+/* Анимация появления элемента */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Видимое состояние элемента с применением анимации */
+.game_tooltip_visible {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in;
+    background-color: rebeccapurple;
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px;
+    z-index: 1000;
+    .tooltip_description {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .team_game_info {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+

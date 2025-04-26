@@ -1,0 +1,96 @@
+// @import '../../styles/variables.scss';
+
+.group_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    // background: #f9f9f9; // Фон для группы
+    border-radius: 8px; // Скругленные углы
+    box-shadow: 0 4px 8px rgba(0, 0, 0.5, 0.5); // Легкая тень
+    padding: 20px; // Внутренний отступ
+
+    .group_name {
+        font-size: 1.5em; // Увеличенный шрифт
+        font-weight: bold; // Жирный текст
+        color: #f9f9f9; // Основной цвет из переменных
+        margin-bottom: 10px; // Отступ снизу
+        text-align: center; // Центровка текста
+    }
+
+    .list_teams {
+        border-top: 2px solid $substrate-color; // Верхняя граница
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px; // Внутренний отступ сверху
+        gap: 15px;
+    }
+
+    .place {
+        border-radius: 4px;
+        padding: 4px 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 45px;
+        height: 100%;
+        color: #fff; // Цвет текста для лучшего контраста
+        transition: background 0.3s ease; // Плавный переход цвета фона
+    }
+
+    .place_default {
+        background: #333333;
+    }
+
+    .place_win {
+        background: #51B136;
+    }
+
+    .place_europa {
+        background: #B7A503;
+    }
+
+    .team_description_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        transition: background 0.3s ease; // Плавный переход фона при наведении
+        &:hover {
+            background: rgba(0, 0, 0, 0.05); // Лёгкое затемнение при наведении
+        }
+    }
+
+    .team_description_wrapper_winner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .team_description {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .team_details {
+        display: flex;
+        gap: 20px;
+        color: #666; // Цвет текста для лучшей читабельности
+    }
+
+    .img_wrapper {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Лёгкая тень
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

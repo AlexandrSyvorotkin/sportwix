@@ -1,0 +1,53 @@
+.facts {
+	padding: 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+
+	.fact {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 12px;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 18px;
+		color: #FFFFFF;
+		white-space: break-spaces;
+		width: 100%;
+		flex-direction: row;
+	}
+	.fact_reverse {
+		flex-direction: row-reverse;
+	}
+
+	.title {
+		font-size: 18px;
+	}
+	.img_container {
+		min-width: 20%;
+		max-width: 30%;
+	}
+
+	.img_wrapper {
+		width: 100%;
+		height: 130px;
+		&>img {
+			width: 100%;
+			height: 100%;
+			border-radius: 8px;
+			object-fit: cover;
+		}
+	}
+	.description {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		min-width: 70%;
+		max-width: 100%;
+	}
+	.description_title {
+		font-weight: bold;
+		font-size: 16px;
+	}
+}

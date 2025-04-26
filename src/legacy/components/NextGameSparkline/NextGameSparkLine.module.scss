@@ -1,0 +1,48 @@
+.next_game_sparkline {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+	min-width: 90px;
+
+	.game_info {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		align-items: center;
+		color: white;
+		justify-content: center;
+		padding: 5px;
+		border-radius: 12px;
+		& > span {
+			opacity: 0.5;
+			@media (max-width: 576px) {
+				font-size: 12px;
+			}
+		}
+	}
+
+	.img_wrapper {
+		opacity: 0.5;
+		width: 40px;
+		height: 40px;
+		@media (max-width: 576px) {
+			width: 30px;
+			height: 30px;
+		}
+
+		&>img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.possible_winning_percentage {
+		display: flex;
+		justify-content: center;
+		// width: 50px;
+		font-size: 14px;
+		@media (max-width: 576px) {
+			font-size: 12px;
+		}
+	}
+}

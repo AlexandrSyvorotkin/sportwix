@@ -1,0 +1,170 @@
+{
+    "defense_options": {
+        "defense": {
+            "title": {
+                "ru": "Защита",
+                "eng": "Defense"
+            },
+            "opponent_xG": {
+                "ru": "xG соперника",
+                "eng": "Opponent xG",
+                "ru_short": "xG соп.",
+                "eng_short": "Op xG",
+                "ru_tip": "xG (от английского «expected goals» другое название наиболее вероятный счёт) — сумма вероятностей результативности голевых моментов — математическая величина, рассчитываемая с учетом параметров потенциально голевых моментов, к которым относятся удары по воротам и опасные моменты без завершающих ударов.",
+                "eng_tip": "Expected goals (xG) is the new revolutionary football metric, which allows you to evaluate team and player performance."
+            },
+            "opponent_corners": {
+                "ru": "Угловые от соперника",
+                "eng": "Opponent corners",
+                "ru_short": "Угл. от сопр.",
+                "eng_short": "Op Corners",
+                "ru_tip": "",
+                "eng_tip": ""
+            },
+            "opponent_offsides": {
+                "ru": "Оффсайды от соперника",
+                "eng": "Opponent offsides",
+                "ru_short": "Оффсайды от сопр.",
+                "eng_short": "Op offsides",
+                "ru_tip": "",
+                "eng_tip": ""
+            },
+            "lose_coefficient": {
+                "ru": "Коэффициент на поражение",
+                "eng": "Lose coefficient",
+                "ru_short": "Коэф. на поражение",
+                "eng_short": "Lose coeff",
+                "ru_tip": "",
+                "eng_tip": ""
+            }
+        },
+        "defense_goal": {
+            "title": {
+                "ru": "Защита ворот",
+                "eng": "Defense goal"
+            },
+            "opponent_shots_on_target": {
+                "ru": "Общее кол-во ударов(нанесенные соперником)",
+                "eng": "Opponent shots on target",
+                "ru_short": "Удары соп.",
+                "eng_short": "Op shots",
+                "ru_tip": "",
+                "eng_tip": ""
+            },
+            "opponent_bch": {
+                "ru": "BCH у соперника",
+                "eng": "Opponent BCH",
+                "ru_short": "Bch соп.",
+                "eng_short": "Op Bch",
+                "ru_tip": "Лучшие шансы у соперника",
+                "eng_tip": "Best opponent chances"
+            },
+            "opponent_bchm": {
+                "ru": "BCHM у соперника",
+                "eng": "Opponent BCHM",
+                "ru_short": "Bchm соп.",
+                "eng_short": "Op Bchm",
+                "ru_tip": "Лучшие упущенные шансы",
+                "eng_tip": "Best missed chances"
+            }
+        }
+    },
+    "midfied_options": {
+        "title": {
+            "ru": "Полузащита (общее)",
+            "eng": "Midfield (common)"
+        },
+        "ball_possession": {
+            "ru": "Владение мячом",
+            "eng": "Ball possession",
+            "ru_tip": "",
+            "eng_tip": ""
+        },
+        "accurate_passes": {
+            "ru": "Точные пасы",
+            "eng": "Accurate passes",
+            "ru_tip": "",
+            "eng_tip": ""
+        },
+        "innacurate_passes": {
+            "ru": "Неточные пасы",
+            "eng": "Innaccurate passes",
+            "ru_tip": "",
+            "eng_tip": ""
+        }
+    },
+    "attack_options": {
+        "attack": {
+            "title": {
+                "ru": "Атака",
+                "eng": "Attack"
+            },
+            "xG": {
+                "ru": "xG",
+                "eng": "xG",
+                "ru_short": "xG",
+                "eng_short": "xG",
+                "ru_tip": "xG — сумма вероятностей результативности голевых моментов — математическая величина, рассчитываемая с учетом параметров потенциально голевых моментов, к которым относятся удары по воротам и опасные моменты без завершающих ударов.",
+                "eng_tip": "Expected goals (xG) is the new revolutionary football metric, which allows you to evaluate team and player performance."
+            },
+            "corners": {
+                "ru": "Угловые",
+                "eng": "Corners",
+                "ru_short": "Угловые",
+                "eng_short": "Corners",
+                "ru_tip": "",
+                "eng_tip": ""
+            },
+            "offsides": {
+                "ru": "Оффсайды",
+                "eng": "Offsides",
+                "ru_short": "Оффсайды",
+                "eng_short": "Offsides",
+                "ru_tip": "",
+                "eng_tip": ""
+            },
+            "win_coefficient": {
+                "ru": "Коэффициент на победу",
+                "eng": "Win coefficient",
+                "ru_short": "Коэф. на победу",
+                "eng_short": "Win. coeff",
+                "ru_tip": "",
+                "eng_tip": ""
+            }
+        },
+        "goal_attack": {
+            "title": {
+                "ru": "Атака ворот",
+                "eng": "Goal Attack",
+                "ru_short": "Атака ворот",
+                "eng_short": "Goal Attack",
+                "ru_tip": "",
+                "eng_tip": ""
+            },
+            "total_shots": {
+                "ru": "Общее кол-во ударов",
+                "eng": "Total shots",
+                "ru_short": "Общ. кол-во ударов",
+                "eng_short": "Total shots",
+                "ru_tip": "",
+                "eng_tip": ""
+            },
+            "bch": {
+                "ru": "BCH",
+                "eng": "BCH",
+                "ru_short": "BCH",
+                "eng_short": "BCH",
+                "ru_tip": "Лучшие шансы",
+                "eng_tip": "Best chances"
+            },
+            "bchm": {
+                "ru": "BCHM",
+                "eng": "BCHM",
+                "ru_short": "BCHM",
+                "eng_short": "BCHM",
+                "ru_tip": "Лучшие упущенные шансы",
+                "eng_tip": "Best chances missed"
+            }
+        }
+    }
+}

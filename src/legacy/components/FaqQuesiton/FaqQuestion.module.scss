@@ -1,0 +1,85 @@
+// @import '../../styles/variables.scss';
+
+.container {
+    width: 100%;
+    color: $main-color;
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    user-select: none;
+    border-bottom: 1px solid#5C5C5C;
+    padding: 20px;
+    @media (max-width: 576px) {
+      
+    }
+  }
+  
+  .title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    user-select: none;
+    color: $main-color;
+    cursor: pointer;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    @media (max-width: 576px) {
+      font-size: 16px;
+    }
+    
+  }
+  
+  .plus {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background: #F3F5F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 600px) {
+      flex-shrink: 0;
+    }
+    
+    .minus {
+      width: 12px;
+      height: 3px;
+      background-color: #7bbf2d;
+      border-radius: 5px;
+    }
+  }
+  
+  .collapsible {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    color: #282D3C;
+  }
+
+ 
+  
+  .collapsible p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #636363;
+    max-width: 80%;
+    line-height: 24px;
+    letter-spacing: -.01em;
+    @media (max-width: 600px) {
+      font-size: 14px;
+    }
+  }
+  
+  .blockradius {
+    border-radius: 24px;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+  }
+  

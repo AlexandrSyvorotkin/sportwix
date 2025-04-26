@@ -1,0 +1,86 @@
+// @import '../../../styles/variables.scss';
+
+.selected_params {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+}
+
+.football_field_selection {
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    background-color: #111;
+    // border-radius: 8px;
+    box-shadow: 0px 2px 7px 0px rgba(31, 31, 34, 0.25);
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    // color: $main-color;
+    z-index: 5;
+    padding: 15px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .params_lists {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .list_items {
+        // margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-left: 20px;
+        padding-top: 5px;
+    }
+    .checkbox_param {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+    }
+    .checkbox {
+        position: relative;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-color: #fff; /* Цвет фона при выключенном состоянии */
+        border: 2px solid #ccc; /* Цвет границы */
+        border-radius: 50%; /* Задаем скругление для создания круглой формы */
+        cursor: pointer;
+    }
+}
+
+input[type="checkbox"] {
+    appearance: none; /* Убираем стандартный стиль */
+    -webkit-appearance: none; /* Для поддержки вебкит-браузеров */
+    -moz-appearance: none; /* Для поддержки Firefox */
+    width: 20px; /* Желаемая ширина кастомного чекбокса */
+    height: 20px; /* Желаемая высота кастомного чекбокса */
+    border: 2px solid #8a2be2; /* Цвет границы чекбокса */
+    border-radius: 50%; /* Делаем чекбокс круглым */
+    outline: none; /* Убираем фокусировку при клике */
+    cursor: pointer; /* Делаем указатель при наведении */
+}
+
+/* Стиль для фонового цвета при выборе (чекд) */
+input[type="checkbox"]:checked {
+    background-color: #8a2be2; /* Фиолетовый цвет при выборе */
+    border: 2px solid #8a2be2; /* Можно оставить такой же цвет границы, чтобы он не менялся */
+}
+
+

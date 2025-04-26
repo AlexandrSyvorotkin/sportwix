@@ -1,0 +1,15 @@
+.checkbox_param {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.checkbox {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff; /* Цвет фона при выключенном состоянии */
+    border: 2px solid #ccc; /* Цвет границы */
+    border-radius: 50%; /* Задаем скругление для создания круглой формы */
+    cursor: pointer;
+}
