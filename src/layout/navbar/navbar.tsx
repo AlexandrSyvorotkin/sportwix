@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 
 const links = [
     {
+        name: "Chart",
+        href: "/chart"
+    },
+    {
         name: "Компания",
         href: "/"
     },

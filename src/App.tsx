@@ -12,6 +12,7 @@ import Community from './pages/Community/Community'
 import News from './pages/News/news'
 import background from './assets/bg/background.png'
 import Chart from './legacy/pages/Chart/Chart'
+import Header from './legacy/layout/Header/Header'
 function App() {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -31,9 +32,11 @@ function App() {
 
   const is404Page = location.pathname !== '/' && location.pathname !== '/policy';
 
+  const isStartPage = location.pathname === '/';
+
   return (
     <div className=" w-full h-screen">
-      <RoutingElement tag="header" openModal={() => setIsOpen(true)} />
+      {isStartPage ? <RoutingElement tag="header" openModal={() => setIsOpen(true)} />  : <Header />}
       <Routes>
         <Route path="/" element={<Main isOpen={isOpen} setIsOpen={setIsOpen} />} />
         <Route path="/policy" element={<PolicyPage />} />
