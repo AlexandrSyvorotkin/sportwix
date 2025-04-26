@@ -1,0 +1,80 @@
+{
+    "goals_scored": {
+        "ru": "Забитые голы",
+        "eng": "Goals Scored",
+        "ru_tip": "",
+        "eng_tip": ""
+    },
+    "goals_conceded": {
+        "ru": "Пропущенные голы",
+        "eng": "Goals Conceded",
+        "ru_tip": "",
+        "eng_tip": ""
+    },
+    "delta_goals": {
+        "ru": "Дельта голов",
+        "eng": "Delta Goals",
+        "ru_tip": "Сумма забитых голов / сумма пропущенных голов",
+        "eng_tip": ""
+    },
+    "xgSum": {
+        "ru": "Сумма xG",
+        "eng": "xG Sum",
+        "ru_tip": "xG (от английского «expected goals» другое название наиболее вероятный счёт) — сумма вероятностей результативности голевых моментов — математическая величина, рассчитываемая с учетом параметров потенциально голевых моментов, к которым относятся удары по воротам и опасные моменты без завершающих ударов.",
+        "eng_tip": "Expected goals (xG) is the new revolutionary football metric, which allows you to evaluate team and player performance."
+    },
+    "ball_possession": {
+        "ru": "Владение мячом",
+        "eng": "Ball Possession",
+        "ru_tip": "",
+        "eng_tip": ""
+    },
+    "total_shots": {
+        "ru": "Общее количество ударов",
+        "eng": "Total Shots",
+        "ru_tip": "",
+        "eng_tip": ""
+    },
+    "innaccurate_passes": {
+        "ru": "Неточные пасы",
+        "eng": "Innaccurate Passes",
+        "ru_tip": "",
+        "eng_tip": ""
+    },
+    "accurate_passes": {
+        "ru": "Точные пасы",
+        "eng": "Accurate Passes",
+        "ru_tip": "",
+        "eng_tip": ""
+    },
+    "bch": {
+        "ru": "BCH",
+        "eng": "BCH",
+        "ru_tip": "Лучшие шансы",
+        "eng_tip": "Best Chances"
+    },
+    "bchm": {
+        "ru": "BCHM",
+        "eng": "BCHM",
+        "ru_tip": "Лучшие упущенные шансы",
+        "eng_tip": "Best Chances missed"
+    },
+    "avg_coeff": {
+        "ru": "Средний коэффициент на победу",
+        "eng": "Avg Coeff",
+        "ru_tip": "сумма коэффициентов / кол-во матчей за выбранный период",
+        "eng_tip": "sum of odds / number of matches for the selected period"
+    },
+    "offsides": {
+        "ru": "Оффсайды",
+        "eng": "Offsides",
+        "ru_tip": "",
+        "eng_tip": ""
+    },
+    "corners": {
+        "ru": "Угловые",
+        "eng": "Corners",
+        "ru_tip": "",
+        "eng_tip": ""
+    }
+}

@@ -12,12 +12,12 @@ import Community from './pages/community/Community'
 import News from './pages/news/news'
 import background from './assets/bg/background.png'
 import Chart from './pages/chart/chart'
-import Header from './legacy/layout/Header/Header'
+import Header from './layout/header-legacy/legacy-header'
+
 function App() {
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);  
   
-
   const [backgroundVisible, setBackgroundVisible] = useState(false);
   const location = useLocation()
   useEffect(() => {

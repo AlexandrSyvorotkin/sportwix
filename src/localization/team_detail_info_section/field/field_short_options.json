@@ -1,0 +1,18 @@
+{
+    "defense": {
+        "defense": {
+            
+        },
+        "goal_defense": {
+
+        }
+    },
+    "midfied": {
+        "ru": "Параметры полузащиты",
+        "eng": "Midfield options"
+    },
+    "attack": {
+        "ru": "Параметры атаки",
+        "eng": "Attack options"
+    }
+}

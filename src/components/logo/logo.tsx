@@ -1,16 +1,23 @@
-import logo from "../../assets/logo.svg"
-import { useNavigate } from "react-router-dom";
+import styles from './Logo.module.scss'
+import logo from '../../assets/logo.svg'
+import {useAppDispatch} from "../../hooks/hooks";
+import { switchPageToStartPostition } from '../../store/tournament-slice/tournament-slice';
 
 const Logo = () => {
-    const navigate = useNavigate();
-    return (
-        <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
-            <div className="">
-                <img src={logo} alt="" className="w-full h-full object-cover"/>
-            </div>
-            <span>SportWix</span>
-        </div>
-    )
-}
+
+	const dispatch = useAppDispatch()
+
+
+	return (
+		<div className={styles.logo} onClick={() => dispatch(switchPageToStartPostition())} style={{cursor: 'pointer'}}>
+			<div className={styles.logo_img}  >
+				<img src={logo} alt=""/>
+			</div>
+			<div className={`${styles.logo_name}`}>
+				Sport Wix
+			</div>
+		</div>
+	);
+};
 
 export default Logo;

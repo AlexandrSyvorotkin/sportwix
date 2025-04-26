@@ -1,33 +1,18 @@
+import { RootState } from "@reduxjs/toolkit/query";
 import { FC, useState, useContext, useEffect } from "react";
-import Banner from "../../legacy/components/Banner/Banner";
-import CandleChart from "../../legacy/components/CandleChart/CandleChart";
-import ChampionshipTable from "../../legacy/components/ChampionshipTable/ChampionshipTable";
-import GuidleRoadmap from "../../legacy/components/GuidelineRoadmap/GuidelineRoadmap";
-import NewsShort from "../../legacy/components/NewsShort/NewsShort";
-import PlayoffGridSVG from "../../legacy/components/Playoffs/PlayoffGrid";
-import RecentGamesSection from "../../legacy/components/RecentGamesSection/RecentGamesSection";
-import RecentResults from "../../legacy/components/RecentResults/RecentResults";
-import { ResizableBorder } from "../../legacy/components/ResizableBorder/ResizableBorder";
-import SparkLineSection from "../../legacy/components/SparkLineSection/SparkLineSection";
-import TeamDetailInfoSection from "../../legacy/components/TeamDetailInfoSection/TeamDetailInfoSection";
-import TwoCandlesWrapper from "../../legacy/components/TwoCandlesChartsWrapper/TwoCandlesWrapper";
+
 import { ThemeContext } from "../../legacy/context/ThemeContext/ThemeContext";
-import { useXSMAX, useSMMIN } from "../../legacy/media-queries";
-import { filterChartBySeasons, filterChartByHomeOrAwayGames, filterChartByAmountOfGoals, filterChartByTypeOfTime } from "../../legacy/redux/candle-slice/candle-slice";
-import { activateGuidelineMode, disableEducationOffer } from "../../legacy/redux/GuidelineRoadmapSlice/GuidelineRoadmapSlice";
-import { switchVersion, switchMobileOrientation, expandTypes, expandSection } from "../../legacy/redux/InterfaceSlice/InterfaceSlice";
-import TeamStatsControls from "../../legacy/redux/TeamStatsControls/TeamStatsControls";
-import { switchActiveTeamDetailInfoTabMobile } from "../../legacy/redux/TeamTabsSlice/TeamTabsSlice";
-import { chooseSecondTeam, switchPageToStartPostition, setFirstSelectedTeamUuid, setCurrentSeasonsAmount, setSpliteType } from "../../legacy/redux/tournament-slice/tournament-slice";
+// import { useXSMAX, useSMMIN } from "../../legacy/media-queries";
 import { useFetchChampionshipInfoQuery } from "../../legacy/services/championships-api/championship-api";
 import { filterByHomeAwayGamesVariants, filterByAmountOfGoalsVarians, filterByTypeOfTimeVariants } from "../../legacy/types/candleChartFilterTypes";
-import { useAppDispatch, useAppSelector } from "../../legacy/types/hooks";
-import ControlPanelBtn from "../../legacy/ui/Buttons/ControlPanelBtn/ControlPanelBtn";
-import TipsModal from "../../legacy/ui/modals/TipsModal/TipsModal";
-import styles from './Chart.module.scss'
-import { RootState } from "../../legacy/redux/store";
-import { interfaceState } from "../../legacy/types/types";
 
+import { filterChartBySeasons, filterChartByHomeOrAwayGames, filterChartByAmountOfGoals, filterChartByTypeOfTime } from "../../store/candle-slice/candle-slice";
+import { activateGuidelineMode, disableEducationOffer } from "../../store/GuidelineRoadmapSlice/GuidelineRoadmapSlice";
+import { switchVersion, switchMobileOrientation, expandTypes, expandSection } from "../../store/InterfaceSlice/InterfaceSlice";
+import TeamStatsControls from "../../store/TeamStatsControls/TeamStatsControls";
+import { chooseSecondTeam, switchPageToStartPostition, setFirstSelectedTeamUuid, setCurrentSeasonsAmount, setSpliteType } from "../../store/tournament-slice/tournament-slice";
+import styles from './chart.module.scss'
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 
 
 const Chart: FC = () => {
@@ -35,11 +20,11 @@ const Chart: FC = () => {
     const dispatch = useAppDispatch()
 
 
-    const { season, championshipId } = useAppSelector(state => state.tournamentSlice)
+    const { season , championshipId } = useAppSelector(state => state.tournamentSlice)
     const { data, isLoading, error } = useFetchChampionshipInfoQuery({ championshipId, season })
 
-    const xsMax = useXSMAX()
-    const smMin = useSMMIN()
+    // const xsMax = useXSMAX()
+    // const smMin = useSMMIN()
 
     // const { BASE_PATH, API, V1, EVENT, TEAM } = API_VARIABLES
     const [leftPaneWidthPercentage, setLeftPaneWidthPercentage] = useState(65);
@@ -534,8 +519,10 @@ const Chart: FC = () => {
 
 
     const bottomMobileComponents = [
-        { id: 1, component: <NewsShort /> },
-        { id: 2, component: <RecentResults /> },
+        // { id: 1, component: <NewsShort /> },
+        // { id: 2, component: <RecentResults /> },
+        { id: 1, component: <div>Новости</div> },
+        { id: 2, component: <div>Результаты</div> },
 
     ]
 
@@ -639,13 +626,13 @@ const Chart: FC = () => {
                                 )} */}
                             </div>
                         </div>
-                        <ResizableBorder
+                        {/* <ResizableBorder
                             display={sectionDisplay}
                             cursor='row-resize'
                             resize={() => null}
-                        />
+                        /> */}
                         <div className={styles.news_section} style={{ display: expandSections ? 'none' : 'flex' }}>
-                            <Banner />
+                            {/* <Banner /> */}
                             <div className={styles.news_section_inner}>
                                 {/* <TeamDetailInfoSection /> */}
                             </div>
@@ -653,22 +640,22 @@ const Chart: FC = () => {
                     </div>
                 }
             </div>
-            <ResizableBorder
+            {/* <ResizableBorder
                 display={sectionDisplay}
                 cursor='col-resize'
                 resize={() => null}
-            />
+            /> */}
             <div className={styles.championship_table_section} style={{ display: expandSections ? 'none' : 'flex' }}>
                 <div style={{ height: `${championshipTableHeightPercentage}%` }}>
-                    <ChampionshipTable />
+                    {/* <ChampionshipTable /> */}
                 </div>
-                <ResizableBorder
+                {/* <ResizableBorder
                     display={sectionDisplay}
                     cursor='row-resize'
                     resize={(e) => null}
-                />
+                /> */}
                 <div className={styles.recent_games_section} >
-                    <RecentGamesSection leftPaneWidthPercentage={leftPaneWidthPercentage} setIsTipsModal={setIsTipsModal} setShowGuideline={setIsShowGuideline} />
+                    {/* <RecentGamesSection leftPaneWidthPercentage={leftPaneWidthPercentage} setIsTipsModal={setIsTipsModal} setShowGuideline={setIsShowGuideline} /> */}
                 </div>
             </div>
         </div>

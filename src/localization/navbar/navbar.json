@@ -1,0 +1,22 @@
+{
+    "chart": {
+        "ru": "Графики",
+        "eng": "Chart"
+    },
+    "news": {
+        "ru": "Новости",
+        "eng": "News"
+    },
+    "community": {
+        "ru": "Сообщество",
+        "eng": "Community"
+    },
+    "best": {
+        "ru": "Лучшее",
+        "eng": "Best"
+    },
+    "live": {
+        "ru": "Live",
+        "eng": "Live"
+    }
+}
