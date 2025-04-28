@@ -1,7 +1,6 @@
 
-import { FC, useState, useContext, useEffect, useMemo } from "react";
+import { FC, useState, useEffect, useMemo } from "react";
 
-import { ThemeContext } from "../../legacy/context/ThemeContext/ThemeContext";
 // import { useXSMAX, useSMMIN } from "../../legacy/media-queries";
 import { switchVersion, switchMobileOrientation } from "../../store/InterfaceSlice/InterfaceSlice";
 import styles from './chart.module.scss'
@@ -25,7 +24,7 @@ import FilterByHomeAwayGames from '../../assets/icons/filter-by-home-away-games.
 
 
 import PanelBtn from "../../ui/panel-btn/panel-btn";
-import Banner from "../../legacy/components/Banner/Banner";
+import Banner from "../../components/banner/banner";
 import SparkLineSection from "../../components/SparklineTable/SparklineTable";
 // import ChampionshipTable from "../../legacy/components/ChampionshipTable/ChampionshipTable";
 
@@ -54,7 +53,6 @@ const Chart: FC = () => {
     // const [disableControlPanelItem, setDisableControlPanelItem] = useState<boolean>(true)
     // const [chartSelect, setChartSelect] = useState<boolean>(false)
     // const [isSparklineForMobile, setIsSparklineForMobile] = useState<boolean>(false)
-    const { theme } = useContext(ThemeContext)
     // const isSingleTeamView = useAppSelector(state => state.tournamentSlice.isSingleTeamView)
     // const [drawRulerActive, setDrawRulerActive] = useState<boolean>(false)
 
@@ -500,7 +498,7 @@ const Chart: FC = () => {
 
     // }
 
-
+    const theme = 'dark'
     const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
 
     // const tournamentType = useAppSelector((state => state.tournamentSlice.isNationalTournament))
