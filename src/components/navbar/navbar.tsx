@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import styles from './Navbar.module.scss'
 import { NavLink, useLocation } from "react-router-dom";
 import classNames from 'classnames';
-import sportVariants from '../../localization/navbar/sportVariants.json'
+// import sportVariants from '../../localization/navbar/sportVariants.json'
 
 
 interface Route {
@@ -18,18 +18,18 @@ interface Routes {
     routes: Route[]
 }
 
-interface Option {
-    to: string;
-    label: string;
-}
+// interface Option {
+//     to: string;
+//     label: string;
+// }
 
 
 
-const sportOptions = [
-    { ruTitle: sportVariants.football.ru, engTitle: sportVariants.football.eng, path: '#' },
-    { ruTitle: sportVariants.hockey.ru, engTitle: sportVariants.hockey.eng, path: '#' },
-    { ruTitle: sportVariants.basketball.ru, engTitle: sportVariants.basketball.eng, path: '#' },
-]
+// const sportOptions = [
+//     { ruTitle: sportVariants.football.ru, engTitle: sportVariants.football.eng, path: '#' },
+//     { ruTitle: sportVariants.hockey.ru, engTitle: sportVariants.hockey.eng, path: '#' },
+//     { ruTitle: sportVariants.basketball.ru, engTitle: sportVariants.basketball.eng, path: '#' },
+// ]
 
 const Navbar:FC<Routes> = ({ routes }) => {
 
@@ -125,7 +125,7 @@ const Navbar:FC<Routes> = ({ routes }) => {
                                 className={navLinkStyles}
                                 onClick={() => setActiveLink(route.id)}
                             >
-                                {language === 'Eng' ? route.titleEng : route.titleRu}
+                                {language === 'Ru' ? route.titleRu : route.titleRu}
                                 <img src={activeLink === 5 ? route.img_active : route.img} alt="" />
                             </NavLink>
                         )

@@ -33,7 +33,7 @@ import FilterByHomeAwayGames from '../../assets/icons/filter-by-home-away-games.
 import PanelBtn from "../../ui/panel-btn/panel-btn";
 import Banner from "../../legacy/components/Banner/Banner";
 import SparkLineSection from "../../components/SparklineTable/SparklineTable";
-import ChampionshipTable from "../../legacy/components/ChampionshipTable/ChampionshipTable";
+// import ChampionshipTable from "../../legacy/components/ChampionshipTable/ChampionshipTable";
 
 
 const Chart: FC = () => {
@@ -41,53 +41,52 @@ const Chart: FC = () => {
     const dispatch = useAppDispatch()
 
 
-    const { season , championshipId } = useAppSelector(state => state.tournamentSlice)
-    const { data, isLoading, error } = useFetchChampionshipInfoQuery({ championshipId, season })
+    // const { season , championshipId } = useAppSelector(state => state.tournamentSlice)
+    // const { data, isLoading, error } = useFetchChampionshipInfoQuery({ championshipId, season })
 
     // const xsMax = useXSMAX()
     // const smMin = useSMMIN()
 
     // const { BASE_PATH, API, V1, EVENT, TEAM } = API_VARIABLES
     const [leftPaneWidthPercentage, setLeftPaneWidthPercentage] = useState(65);
-    const [championshipTableHeightPercentage, setChampionshipTableHeightPercentage] = useState(50);
+    // const [championshipTableHeightPercentage, setChampionshipTableHeightPercentage] = useState(50);
     const [chartPanelHeightPercentage, setChartPanelHeightPercentage] = useState(50)
-    const [publishPost, setPublishPost] = useState<boolean>(false)
     const [sparkLineActive, setSparklineActive] = useState<boolean>(true)
     const [expandSections, setExpandSections] = useState<boolean>(false)
     const [bordersResizableActive, setBorderResizableActive] = useState<boolean>(true)
-    const [sectionDisplay, setSectionDisplay] = useState<string>('flex')
-    const borderResizableStatus = bordersResizableActive
-    const expandSectionsStatus = expandSections
+    // const [sectionDisplay, setSectionDisplay] = useState<string>('flex')
+    // const borderResizableStatus = bordersResizableActive
+    // const expandSectionsStatus = expandSections
     const [disableControlPanelItem, setDisableControlPanelItem] = useState<boolean>(true)
-    const [chartSelect, setChartSelect] = useState<boolean>(false)
-    const [isSparklineForMobile, setIsSparklineForMobile] = useState<boolean>(false)
-    const { theme, setTheme } = useContext(ThemeContext)
-    const isSingleTeamView = useAppSelector(state => state.tournamentSlice.isSingleTeamView)
-    const [drawRulerActive, setDrawRulerActive] = useState<boolean>(false)
+    // const [chartSelect, setChartSelect] = useState<boolean>(false)
+    // const [isSparklineForMobile, setIsSparklineForMobile] = useState<boolean>(false)
+    const { theme } = useContext(ThemeContext)
+    // const isSingleTeamView = useAppSelector(state => state.tournamentSlice.isSingleTeamView)
+    // const [drawRulerActive, setDrawRulerActive] = useState<boolean>(false)
 
-    const firstSelectedTeam = useAppSelector((state: RootState) => state.tournamentSlice.firstSelectedTeam)
+    // const firstSelectedTeam = useAppSelector((state: RootState) => state.tournamentSlice.firstSelectedTeam)
 
-    const [filterBySeasons, setFilterBySeasons] = useState<boolean>(false)
-    const [filterByGoals, setFilterByGoals] = useState<boolean>(false)
-    const [filterByTimes, setFilterByTimes] = useState<boolean>(false)
-    const [filterByHomeAwayGames, setFilterByHomeAwayGames] = useState<boolean>(false)
-    const activeTeamDetailInfoTabMobile = useAppSelector((state: RootState) => state.teamTabs.activeMobileTabs.activeTeamDetailInfoTab)
-    const tabActive = (id: number) => id === activeTeamDetailInfoTabMobile ? 'block' : 'none'
-    const firstSelectedTeamCandles = useAppSelector((state: RootState) => state.candleSliceNew.firstSelectedTeam.candles)
-    const firstSelectedTeamSeasons = useAppSelector((state: RootState) => state.candleSliceNew.firstSelectedTeam.seasons)
-    const loading = useAppSelector(state => state.candleSliceNew.loading)
-    const isTeamStatsControlsVisible = useAppSelector(state => state.TeamStatsControls.isVisible)
+    // const [filterBySeasons, setFilterBySeasons] = useState<boolean>(false)
+    // const [filterByGoals, setFilterByGoals] = useState<boolean>(false)
+    // const [filterByTimes, setFilterByTimes] = useState<boolean>(false)
+    // const [filterByHomeAwayGames, setFilterByHomeAwayGames] = useState<boolean>(false)
+    // const activeTeamDetailInfoTabMobile = useAppSelector((state: RootState) => state.teamTabs.activeMobileTabs.activeTeamDetailInfoTab)
+    // const tabActive = (id: number) => id === activeTeamDetailInfoTabMobile ? 'block' : 'none'
+    // const firstSelectedTeamCandles = useAppSelector((state: RootState) => state.candleSliceNew.firstSelectedTeam.candles)
+    // const firstSelectedTeamSeasons = useAppSelector((state: RootState) => state.candleSliceNew.firstSelectedTeam.seasons)
+    // const loading = useAppSelector(state => state.candleSliceNew.loading)
+    // const isTeamStatsControlsVisible = useAppSelector(state => state.TeamStatsControls.isVisible)
     const windowWidth = window.innerWidth
-    const isDoubleTeamView = useAppSelector(state => state.tournamentSlice.isDoubleTeamView)
-    const [isTeamSectionMobileExpanded, setIsTeamSectionMobileExpanded] = useState<boolean>(false)
+    // const isDoubleTeamView = useAppSelector(state => state.tournamentSlice.isDoubleTeamView)
+    // const [isTeamSectionMobileExpanded, setIsTeamSectionMobileExpanded] = useState<boolean>(false)
     const interfaceState = useAppSelector(state => state.interfaceState)
-    const [chartMobileWidth, setChartMobileWidth] = useState(100)
-    const expandMobileType = isSingleTeamView ? 'candleChart' : 'sparkline'
-    const filterCandleChartByTypeOfGames = useAppSelector((state: RootState) => state.candleSliceNew.filters.byHomeAwayGames)
-    const filterCandleChartByAmoutOfGoals = (useAppSelector((state: RootState) => state.candleSliceNew.filters.byAmountOfGoals))
-    const filterCandleChartByTypeOfTime = useAppSelector((state: RootState) => state.candleSliceNew.filters.byTypeOfTime)
-    const [isTipsModal, setIsTipsModal] = useState<boolean>(false)
-    const [isShowGuideline, setIsShowGuideline] = useState(false);
+    // const [chartMobileWidth, setChartMobileWidth] = useState(100)
+    // const expandMobileType = isSingleTeamView ? 'candleChart' : 'sparkline'
+    // const filterCandleChartByTypeOfGames = useAppSelector((state: RootState) => state.candleSliceNew.filters.byHomeAwayGames)
+    // const filterCandleChartByAmoutOfGoals = (useAppSelector((state: RootState) => state.candleSliceNew.filters.byAmountOfGoals))
+    // const filterCandleChartByTypeOfTime = useAppSelector((state: RootState) => state.candleSliceNew.filters.byTypeOfTime)
+    // const [isTipsModal, setIsTipsModal] = useState<boolean>(false)
+    // const [isShowGuideline, setIsShowGuideline] = useState(false);
 
     useEffect(() => {
         if (windowWidth < 758) {
@@ -108,63 +107,63 @@ const Chart: FC = () => {
         }
     }, [expandSections])
 
-    const heightSection = interfaceState.mobile.orientation.landscape ? 93 : 100
+    // const heightSection = interfaceState.mobile.orientation.landscape ? 93 : 100
 
-    const [sparklineMobileHeight, setSparklineMobile] = useState<number>(50)
-    const [newsAndLastGamesHeight, setNewsAndLastGamesHeight] = useState<number>(50)
-    const [chartMobileHeight, setChartMobileHeight] = useState<number>(50)
-    const [tabsMobileHeight, setTabsMobileHeight] = useState<number>(50)
+    // const [sparklineMobileHeight, setSparklineMobile] = useState<number>(50)
+    // const [newsAndLastGamesHeight, setNewsAndLastGamesHeight] = useState<number>(50)
+    // const [chartMobileHeight, setChartMobileHeight] = useState<number>(50)
+    // const [tabsMobileHeight, setTabsMobileHeight] = useState<number>(50)
 
-    useEffect(() => {
-        // 1 экран
-        // если открыт спакрлайн
-        if (interfaceState.mobile.expandSections.sparklineSection || interfaceState.mobile.expandSections.chartSection) {
-            setChartMobileHeight(93)
-            setNewsAndLastGamesHeight(0)
-            // если открыты новости
-        } if (interfaceState.mobile.expandSections.newsAndLastGamesSection && !interfaceState.mobile.expandSections.sparklineSection) {
-            setChartMobileHeight(0)
-            setNewsAndLastGamesHeight(93)
-            // если ничего не открыто
-        } if (!interfaceState.mobile.expandSections.sparklineSection && !interfaceState.mobile.expandSections.newsAndLastGamesSection) {
-            setSparklineMobile(50)
-            setNewsAndLastGamesHeight(50)
-        }
-        // если ничего не открыто и мобилка перевернута
-        if (!interfaceState.mobile.expandSections.sparklineSection && !interfaceState.mobile.expandSections.newsAndLastGamesSection && interfaceState.mobile.orientation.landscape) {
-            setSparklineMobile(100)
-            setNewsAndLastGamesHeight(0)
-        }
-        // 1 экран
+    // useEffect(() => {
+    //     // 1 экран
+    //     // если открыт спакрлайн
+    //     if (interfaceState.mobile.expandSections.sparklineSection || interfaceState.mobile.expandSections.chartSection) {
+    //         setChartMobileHeight(93)
+    //         setNewsAndLastGamesHeight(0)
+    //         // если открыты новости
+    //     } if (interfaceState.mobile.expandSections.newsAndLastGamesSection && !interfaceState.mobile.expandSections.sparklineSection) {
+    //         setChartMobileHeight(0)
+    //         setNewsAndLastGamesHeight(93)
+    //         // если ничего не открыто
+    //     } if (!interfaceState.mobile.expandSections.sparklineSection && !interfaceState.mobile.expandSections.newsAndLastGamesSection) {
+    //         setSparklineMobile(50)
+    //         setNewsAndLastGamesHeight(50)
+    //     }
+    //     // если ничего не открыто и мобилка перевернута
+    //     if (!interfaceState.mobile.expandSections.sparklineSection && !interfaceState.mobile.expandSections.newsAndLastGamesSection && interfaceState.mobile.orientation.landscape) {
+    //         setSparklineMobile(100)
+    //         setNewsAndLastGamesHeight(0)
+    //     }
+    //     // 1 экран
 
-        // 2 экран
-        // если открыты табы
-        if (interfaceState.mobile.expandSections.tabsInfoSection) {
-            setChartMobileHeight(0)
-            setNewsAndLastGamesHeight(100)
-        }
-        // // если открыт чарт
-        if (interfaceState.mobile.expandSections.chartSection) {
-            setChartMobileHeight(93)
-            setTabsMobileHeight(0)
-        }
-        // // если ничего не открыто
-        if (!interfaceState.mobile.expandSections.sparklineSection && !interfaceState.mobile.expandSections.newsAndLastGamesSection && !interfaceState.mobile.expandSections.tabsInfoSection && !interfaceState.mobile.expandSections.chartSection) {
-            setChartMobileHeight(50)
-            setNewsAndLastGamesHeight(50)
-        }
-        // // если ничего не открыто и мобилка перевернута на спраклайне
-        if (!interfaceState.mobile.expandSections.chartSection && !interfaceState.mobile.expandSections.tabsInfoSection && !interfaceState.mobile.expandSections.newsAndLastGamesSection && interfaceState.mobile.orientation.landscape) {
-            setChartMobileHeight(100)
-            //++
-        }
-        // если ничего не открыто и мобилка перевернута на грачике
-        if (!interfaceState.mobile.expandSections.chartSection && !interfaceState.mobile.expandSections.tabsInfoSection && !interfaceState.mobile.expandSections.newsAndLastGamesSection && interfaceState.mobile.orientation.landscape) {
-            setChartMobileHeight(93)
-            setNewsAndLastGamesHeight(0)
-            //++
-        }
-    }, [interfaceState])
+    //     // 2 экран
+    //     // если открыты табы
+    //     if (interfaceState.mobile.expandSections.tabsInfoSection) {
+    //         setChartMobileHeight(0)
+    //         setNewsAndLastGamesHeight(100)
+    //     }
+    //     // // если открыт чарт
+    //     if (interfaceState.mobile.expandSections.chartSection) {
+    //         setChartMobileHeight(93)
+    //         setTabsMobileHeight(0)
+    //     }
+    //     // // если ничего не открыто
+    //     if (!interfaceState.mobile.expandSections.sparklineSection && !interfaceState.mobile.expandSections.newsAndLastGamesSection && !interfaceState.mobile.expandSections.tabsInfoSection && !interfaceState.mobile.expandSections.chartSection) {
+    //         setChartMobileHeight(50)
+    //         setNewsAndLastGamesHeight(50)
+    //     }
+    //     // // если ничего не открыто и мобилка перевернута на спраклайне
+    //     if (!interfaceState.mobile.expandSections.chartSection && !interfaceState.mobile.expandSections.tabsInfoSection && !interfaceState.mobile.expandSections.newsAndLastGamesSection && interfaceState.mobile.orientation.landscape) {
+    //         setChartMobileHeight(100)
+    //         //++
+    //     }
+    //     // если ничего не открыто и мобилка перевернута на грачике
+    //     if (!interfaceState.mobile.expandSections.chartSection && !interfaceState.mobile.expandSections.tabsInfoSection && !interfaceState.mobile.expandSections.newsAndLastGamesSection && interfaceState.mobile.orientation.landscape) {
+    //         setChartMobileHeight(93)
+    //         setNewsAndLastGamesHeight(0)
+    //         //++
+    //     }
+    // }, [interfaceState])
 
     useEffect(() => {
         const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -190,44 +189,44 @@ const Chart: FC = () => {
     }, []);
 
     
-    useEffect(() => {
-        if (data) {
-            dispatch(chooseSecondTeam(data?.teams[0]))
-        }
-    },[data])
+    // useEffect(() => {
+    //     if (data) {
+    //         dispatch(chooseSecondTeam(data?.teams[0]))
+    //     }
+    // },[data])
 
 
-    function expandChartSectionHandler(type: expandTypes) {
-        dispatch(expandSection(type))
-        setExpandSections(!expandSections)
-        setBorderResizableActive(!bordersResizableActive)
-    }
+    // function expandChartSectionHandler(type: expandTypes) {
+    //     dispatch(expandSection(type))
+    //     setExpandSections(!expandSections)
+    //     setBorderResizableActive(!bordersResizableActive)
+    // }
 
-    function expandTeamSectionMobile(type: expandTypes) {
-        dispatch(expandSection(type))
-        // setIsTeamSectionMobileExpanded(!isTeamSectionMobileExpanded)
-    }
+    // function expandTeamSectionMobile(type: expandTypes) {
+    //     dispatch(expandSection(type))
+    //     // setIsTeamSectionMobileExpanded(!isTeamSectionMobileExpanded)
+    // }
 
-    function changeSparklineToChart(type: string) {
-        if (type === "switchToSparkline") {
-            setExpandSections(!expandSections)
-            setSparklineActive(!sparkLineActive)
-            setDisableControlPanelItem(!disableControlPanelItem)
-            dispatch(switchPageToStartPostition())
-        } else {
-            setSparklineActive(true)
-            dispatch(switchPageToStartPostition())
-            dispatch(setFirstSelectedTeamUuid(''))
-            // dispatch(switchToSingleCandleChart())
-        }
-    }
+    // function changeSparklineToChart(type: string) {
+    //     if (type === "switchToSparkline") {
+    //         setExpandSections(!expandSections)
+    //         setSparklineActive(!sparkLineActive)
+    //         setDisableControlPanelItem(!disableControlPanelItem)
+    //         dispatch(switchPageToStartPostition())
+    //     } else {
+    //         setSparklineActive(true)
+    //         dispatch(switchPageToStartPostition())
+    //         dispatch(setFirstSelectedTeamUuid(''))
+    //         // dispatch(switchToSingleCandleChart())
+    //     }
+    // }
 
-    const candleFilters = useAppSelector(state => state.candleSliceNew.filters)
+    // const candleFilters = useAppSelector(state => state.candleSliceNew.filters)
 
-    const filterBySeasonsHandler = (seasonsAmout: number, currentSeasonType: any) => {
-        dispatch(setCurrentSeasonsAmount(seasonsAmout))
-        dispatch(filterChartBySeasons(currentSeasonType))
-    }
+    // const filterBySeasonsHandler = (seasonsAmout: number, currentSeasonType: any) => {
+    //     dispatch(setCurrentSeasonsAmount(seasonsAmout))
+    //     dispatch(filterChartBySeasons(currentSeasonType))
+    // }
 
     // console.log(interfaceState.mobile.expandSections)
     // const metricsByGames = [
@@ -406,11 +405,11 @@ const Chart: FC = () => {
     //     },
     // ]
 
-    const guidelineRoadmapActivate = () => {
-        setIsShowGuideline(true)
-        dispatch(activateGuidelineMode())
-        dispatch(disableEducationOffer())
-    }
+    // const guidelineRoadmapActivate = () => {
+    //     setIsShowGuideline(true)
+    //     dispatch(activateGuidelineMode())
+    //     dispatch(disableEducationOffer())
+    // }
 
 
     // const mobile_controls = [
@@ -472,46 +471,46 @@ const Chart: FC = () => {
     // ]
 
 
-    const bottomMobileComponents = [
-        // { id: 1, component: <NewsShort /> },
-        // { id: 2, component: <RecentResults /> },
-        { id: 1, component: <div>Новости</div> },
-        { id: 2, component: <div>Результаты</div> },
+    // const bottomMobileComponents = [
+    //     // { id: 1, component: <NewsShort /> },
+    //     // { id: 2, component: <RecentResults /> },
+    //     { id: 1, component: <div>Новости</div> },
+    //     { id: 2, component: <div>Результаты</div> },
 
-    ]
+    // ]
 
-    const filterByHomeAwayGamesHandler = (type: filterByHomeAwayGamesVariants, id: number) => {
-        setFilterByHomeAwayGames(false)
-        dispatch(filterChartByHomeOrAwayGames(type))
-    }
+    // const filterByHomeAwayGamesHandler = (type: filterByHomeAwayGamesVariants, id: number) => {
+    //     setFilterByHomeAwayGames(false)
+    //     dispatch(filterChartByHomeOrAwayGames(type))
+    // }
 
-    const filterByGoalsHandler = (type: filterByAmountOfGoalsVarians, id: number) => {
-        setFilterByGoals(false)
-        dispatch(filterChartByAmountOfGoals(type))
-    }
+    // const filterByGoalsHandler = (type: filterByAmountOfGoalsVarians, id: number) => {
+    //     setFilterByGoals(false)
+    //     dispatch(filterChartByAmountOfGoals(type))
+    // }
 
 
-    async function newFilterByTimeHandler(type: filterByTypeOfTimeVariants, id: number) {
+    // async function newFilterByTimeHandler(type: filterByTypeOfTimeVariants, id: number) {
 
-        const apiConfig = {
-            'FT': { offset: 3, splited: false },
-            '1T + 2T': { offset: 3, splited: true },
-            '1T': { offset: 3, splited: true },
-            '2T': { offset: 3, splited: true }
-        };
+    //     const apiConfig = {
+    //         'FT': { offset: 3, splited: false },
+    //         '1T + 2T': { offset: 3, splited: true },
+    //         '1T': { offset: 3, splited: true },
+    //         '2T': { offset: 3, splited: true }
+    //     };
 
-        const { offset, splited } = apiConfig[type];
+    //     const { offset, splited } = apiConfig[type];
 
-        dispatch(setCurrentSeasonsAmount(offset))
-        dispatch(setSpliteType(splited))
-        dispatch(filterChartByTypeOfTime(type));
+    //     dispatch(setCurrentSeasonsAmount(offset))
+    //     dispatch(setSpliteType(splited))
+    //     dispatch(filterChartByTypeOfTime(type));
 
-    }
+    // }
 
 
     const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
 
-    const tournamentType = useAppSelector((state => state.tournamentSlice.isNationalTournament))
+    // const tournamentType = useAppSelector((state => state.tournamentSlice.isNationalTournament))
 
     const leftChartBtns = useMemo(() => [
         {
@@ -637,9 +636,9 @@ const Chart: FC = () => {
                     </div>
             </div>
             <div className={styles.championship_table_section} style={{ display: expandSections ? 'none' : 'flex' }}>
-                <div style={{ height: `${championshipTableHeightPercentage}%` }}>
+                {/* <div style={{ height: `${championshipTableHeightPercentage}%` }}> */}
                     {/* <ChampionshipTable /> */}
-                </div>
+                {/* </div> */}
                 <div className={styles.recent_games_section} >
                     {/* <RecentGamesSection leftPaneWidthPercentage={leftPaneWidthPercentage} setIsTipsModal={setIsTipsModal} setShowGuideline={setIsShowGuideline} /> */}
                 </div>

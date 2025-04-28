@@ -8,7 +8,7 @@ import { useAppSelector } from '../../legacy/types/hooks';
 import { RootState } from '../../store/store';
 import classNames from 'classnames';
 import { useFetchChampionshipInfoQuery } from '../../services/championships-api/championship-api';
-import TeamSparkLine from '../../legacy/components/TeamSparkLine/TeamSparkLine';
+// import TeamSparkLine from '../../legacy/components/TeamSparkLine/TeamSparkLine';
 
 interface SparkLineSectionProps {
     sectionWidth: number,
@@ -20,13 +20,12 @@ const SparkLineSection: FC<SparkLineSectionProps> = ({ sectionWidth }) => {
     const { theme } = useContext(ThemeContext)
     const interfaceState = useAppSelector((state: RootState) => state.interfaceState)
 
-    const {championshipId, season} = useAppSelector(state => state.tournamentSlice)
-    const { data, isLoading, error, isFetching } = useFetchChampionshipInfoQuery({ championshipId, season })
+    // const {championshipId, season} = useAppSelector(state => state.tournamentSlice)
+    // const { data, isLoading, error, isFetching } = useFetchChampionshipInfoQuery({ championshipId, season })
 
 
-    const teams = data?.teams?.filter((team: ITeam) => !team.is_event)
+    // const teams = data?.teams?.filter((team: ITeam) => !team.is_event)
 
-   
 
     const sparklineHeaderColors = classNames({
         [styles.header]: true,
@@ -35,9 +34,9 @@ const SparkLineSection: FC<SparkLineSectionProps> = ({ sectionWidth }) => {
     })
 
     const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
-    const [isFutureGame, setIsFutureGame] = useState(true)
+    // const [isFutureGame, setIsFutureGame] = useState(true)
 
-    const championshipTeams = useAppSelector(state => state.tournamentSlice.tournament?.teams.filter(((team:ITeam) => !team.is_event)))
+    // const championshipTeams = useAppSelector(state => state.tournamentSlice.tournament?.teams.filter(((team:ITeam) => !team.is_event)))
 
     return (
             <div className={styles.sparkline_wrapper} id='sparkline'>

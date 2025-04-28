@@ -1,10 +1,8 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import styles from './legacy-header.module.scss'
 import Navbar from '../../components/navbar/navbar';
 import Logo from "../../components/logo/logo";
-import {useNavigate} from 'react-router-dom';
-import { useAppSelector } from '../../hooks/hooks';
-import { RootState } from '../../store/store';
+// import {useNavigate} from 'react-router-dom';
 import navbar from '../../localization/navbar/navbar.json';
 
 
@@ -18,30 +16,27 @@ const routes = [
 
 
 
-const languages = [
-	{language: 'Eng'},
-	{language: 'Ru'},
-]
+// const languages = [
+// 	{language: 'Eng'},
+// 	{language: 'Ru'},
+// ]
 
 
 const Header = () => {
 
-	const navigate = useNavigate()
+	// const navigate = useNavigate()
 
-	const redirectToLogin = () => {
-		navigate('/login')
-	}
+	// const redirectToLogin = () => {
+	// 	navigate('/login')
+	// }
 
-	const redicerToCabinet = () => {
-		navigate('/personal-accaunt')
-	}
+	// const redicerToCabinet = () => {
+	// 	navigate('/personal-accaunt')
+	// }
 
 	const theme = 'dark'
 	
-
-	const [isMobileMenuActive, setIsMobileMenuActive] = useState(false)
-
-	
+	// const [isMobileMenuActive, setIsMobileMenuActive] = useState(false)
 
 	const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
 
