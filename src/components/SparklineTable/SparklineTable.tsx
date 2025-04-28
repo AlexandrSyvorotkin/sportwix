@@ -1,20 +1,20 @@
-import { FC, useState, useContext } from 'react';
+import { FC, useContext } from 'react';
 import styles from './SparklineTable.module.scss'
-import { ITeam } from "../../legacy/models/ITeam";
+// import { ITeam } from "../../legacy/models/ITeam";
 import sparklineCap from '../../legacy/localization/sparkline/sparkline-cap.json'
 import { LanguageContext } from '../../legacy/context/LanguageContext/LanguageContext';
 import { ThemeContext } from '../../legacy/context/ThemeContext/ThemeContext';
 import { useAppSelector } from '../../legacy/types/hooks';
 import { RootState } from '../../store/store';
 import classNames from 'classnames';
-import { useFetchChampionshipInfoQuery } from '../../services/championships-api/championship-api';
+// import { useFetchChampionshipInfoQuery } from '../../services/championships-api/championship-api';
 // import TeamSparkLine from '../../legacy/components/TeamSparkLine/TeamSparkLine';
 
 interface SparkLineSectionProps {
     sectionWidth: number,
 }
 
-const SparkLineSection: FC<SparkLineSectionProps> = ({ sectionWidth }) => {
+const SparkLineSection: FC<SparkLineSectionProps> = ({  }) => {
 
     const { language } = useContext(LanguageContext)
     const { theme } = useContext(ThemeContext)
