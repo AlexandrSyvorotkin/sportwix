@@ -7,7 +7,7 @@ export const newsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://dev.sportwix.susi-susi.site/api/v1/news/' }),
   endpoints: (builder) => ({
     fetchNews: builder.query<News, {selectedTeam: string | undefined, championshipUuid: string, tags: string[] | undefined}>({
-      query: ({selectedTeam, championshipUuid, tags}) => `?team=${selectedTeam}&event=${championshipUuid}`,
+      query: ({selectedTeam, championshipUuid}) => `?team=${selectedTeam}&event=${championshipUuid}`,
     }),
   }),
 })

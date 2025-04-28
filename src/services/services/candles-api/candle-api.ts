@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { ICandle } from '../../models/ICandle'
+import { ICandle } from '../../../models/ICandle'
 
 export const candleApi = createApi({
   reducerPath: 'candles',

@@ -34,7 +34,7 @@ const interfaceSlice = createSlice({
             state.mobile.orientation.portrait = !isLandscape;
             state.mobile.orientation.landscape = isLandscape;
         },
-        expandDesktopSection (state, action) {
+        expandDesktopSection (state) {
                 state.desktop.expandSections.sparkline = !state.desktop.expandSections
         },
         expandSection(state, action: PayloadAction<expandTypes>) {
