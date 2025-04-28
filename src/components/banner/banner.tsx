@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import styles from './Banner.module.scss'
+import styles from './banner.module.scss'
 import bannerLogo from '../../assets/logo and favicon/Favicon.svg'
 
 interface BannerProps {
