@@ -7,9 +7,9 @@ import { Routes } from 'react-router-dom'
 import NotFound from './pages/404'
 import Main from './pages/main'
 import PolicyPage from './pages/policy-page'
-import Best from './pages/best/best'
-import Community from './pages/community/community'
-import News from './pages/news/news'
+import Best from './pages/best/best.tsx'
+import Community from './pages/community/community.tsx'
+import News from './pages/news/news.tsx'
 import background from './assets/bg/background.png'
 import Chart from './pages/chart/chart'
 import Header from './layout/header-legacy/legacy-header'
@@ -44,7 +44,6 @@ function App() {
         <Route path="/chart" element={<Chart />} />
 
 
-        {/* legacy routes */}
         <Route path="/best" element={<Best />} />
         <Route path="/community" element={<Community />} />
         <Route path="/news" element={< News/>} />
