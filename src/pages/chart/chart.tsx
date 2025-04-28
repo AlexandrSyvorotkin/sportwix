@@ -1,5 +1,5 @@
-import { RootState } from "@reduxjs/toolkit/query";
-import { FC, useState, useContext, useEffect } from "react";
+import { RootState } from "../../store/store";
+import { FC, useState, useContext, useEffect, useMemo } from "react";
 
 import { ThemeContext } from "../../legacy/context/ThemeContext/ThemeContext";
 // import { useXSMAX, useSMMIN } from "../../legacy/media-queries";
@@ -9,10 +9,31 @@ import { filterByHomeAwayGamesVariants, filterByAmountOfGoalsVarians, filterByTy
 import { filterChartBySeasons, filterChartByHomeOrAwayGames, filterChartByAmountOfGoals, filterChartByTypeOfTime } from "../../store/candle-slice/candle-slice";
 import { activateGuidelineMode, disableEducationOffer } from "../../store/GuidelineRoadmapSlice/GuidelineRoadmapSlice";
 import { switchVersion, switchMobileOrientation, expandTypes, expandSection } from "../../store/InterfaceSlice/InterfaceSlice";
-import TeamStatsControls from "../../store/TeamStatsControls/TeamStatsControls";
 import { chooseSecondTeam, switchPageToStartPostition, setFirstSelectedTeamUuid, setCurrentSeasonsAmount, setSpliteType } from "../../store/tournament-slice/tournament-slice";
 import styles from './chart.module.scss'
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+
+//left btns
+import DiagonalLevels from '../../assets/icons/diagonal-levels.svg?react'
+import PublishPost from '../../assets/icons/publish-post.svg?react'
+import LabelSelection from '../../assets/icons/label-selection.svg?react'
+import Nuler from '../../assets/icons/nuler.svg?react'
+import PutYourLables from '../../assets/icons/put-your-labels.svg?react'
+
+//right btns
+import Expand from '../../assets/icons/expand.svg?react'
+import FilterByCups from '../../assets/icons/filter-by-cups.svg?react'
+import ChartSettings from '../../assets/icons/chart-settings.svg?react'
+import FilterByTimes from '../../assets/icons/filter-by-times.svg?react'
+import FilterByGoals from '../../assets/icons/filter-by-goals.svg?react'
+import FilterBySeasons from '../../assets/icons/filter-by-seasons.svg?react'
+import FilterByHomeAwayGames from '../../assets/icons/filter-by-home-away-games.svg?react'
+
+
+import PanelBtn from "../../ui/panel-btn/panel-btn";
+import Banner from "../../legacy/components/Banner/Banner";
+import SparkLineSection from "../../components/SparklineTable/SparklineTable";
+import ChampionshipTable from "../../legacy/components/ChampionshipTable/ChampionshipTable";
 
 
 const Chart: FC = () => {
@@ -59,7 +80,7 @@ const Chart: FC = () => {
     const windowWidth = window.innerWidth
     const isDoubleTeamView = useAppSelector(state => state.tournamentSlice.isDoubleTeamView)
     const [isTeamSectionMobileExpanded, setIsTeamSectionMobileExpanded] = useState<boolean>(false)
-    const interfaceState = useAppSelector<interfaceState>(state => state.interfaceState)
+    const interfaceState = useAppSelector(state => state.interfaceState)
     const [chartMobileWidth, setChartMobileWidth] = useState(100)
     const expandMobileType = isSingleTeamView ? 'candleChart' : 'sparkline'
     const filterCandleChartByTypeOfGames = useAppSelector((state: RootState) => state.candleSliceNew.filters.byHomeAwayGames)
@@ -231,74 +252,7 @@ const Chart: FC = () => {
     //     { id: 3, param: candle_chart_select_variants.filter_by_goals["total<2.5"], filterFunc: () => filterByGoalsHandler('Total < 2.5', 3) },
     // ]
 
-    // const chartCandleFunctions = [
-    //     // publish post
-    //     {
-    //         id: 1,
-    //         onClick: () => null,
-    //         img: publish_post,
-    //         imgActive: publish_post_active,
-    //         active: null,
-    //         disabled: true,
-    //         visible: true,
-    //         imgLight: publish_post_light,
-    //         imgDisabled: publish_post_disabled,
-    //         position: 'right',
-    //         tooltipDescription: control_btns_tooltips.diagonal_levels
-    //     },
-    //     // label selection
-    //     {
-    //         id: 2,
-    //         onClick: () => null,
-    //         img: label_selection,
-    //         imgActive: label_selection_active,
-    //         active: null,
-    //         visible: isSingleTeamView,
-    //         imgLight: label_selection_light,
-    //         position: 'right',
-    //         disabled: true,
-    //         imgDisabled: label_selection_disabled
-    //     },
-    //     // nuler
-    //     {
-    //         id: 3,
-    //         onClick: () => null,
-    //         img: Nuler,
-    //         imgActive: Nuler_active,
-    //         active: null,
-    //         visible: isSingleTeamView,
-    //         imgLight: NulerLight,
-    //         disabled: true,
-    //         imgDisabled: nuler_disabled,
-    //         position: 'right',
-    //         tooltipDescription: control_btns_tooltips.diagonal_levels
-    //     },
-    //     // diagonal levels
-    //     {
-    //         id: 4,
-    //         onClick: () => setDrawRulerActive(!drawRulerActive),
-    //         img: diagonal_levels,
-    //         imgActive: diagonal_levels_active,
-    //         active: drawRulerActive,
-    //         visible: isSingleTeamView,
-    //         imgLight: diagonal_levels_light,
-    //         position: 'right',
-    //         tooltipDescription: control_btns_tooltips.diagonal_levels
-    //     },
-    //     // put your labels
-    //     {
-    //         id: 5, onClick: () => null,
-    //         img: put_your_labels,
-    //         imgActive: put_your_labels_active,
-    //         active: '',
-    //         visible: isSingleTeamView,
-    //         imgLight: put_your_labels_light,
-    //         disabled: true,
-    //         imgDisabled: put_your_labels_disabled,
-    //         position: 'right',
-    //         tooltipDescription: control_btns_tooltips.diagonal_levels
-    //     },
-    // ]
+
 
     // const chartControls = [
     //     //expand
@@ -559,30 +513,95 @@ const Chart: FC = () => {
 
     const tournamentType = useAppSelector((state => state.tournamentSlice.isNationalTournament))
 
+    const leftChartBtns = useMemo(() => [
+        {
+            id: 1,
+            icon: <PublishPost/>,
+            onClick: () => null,
+            disabled: true
+        },
+        {
+            id: 2,
+            icon: <DiagonalLevels/>,
+            onClick: () => null,
+            disabled: true
+        },
+        {
+            id: 3,
+            icon: <LabelSelection />,
+            onClick: () => null,
+            disabled: true
+        },
+        {
+            id: 4,
+            icon: <Nuler/>,
+            onClick: () => null,
+            disabled: true
+        },
+        {
+            id: 5,
+            icon: <PutYourLables/>,
+            onClick: () => null,
+            disabled: true
+        }
+    ], [])
+
+    const rightChartBtns = useMemo(() => [
+        {
+            id: 1,
+            icon: <Expand/>,
+            onClick: () => null,
+            disabled: false
+        },
+        {
+            id: 2,
+            icon: <FilterBySeasons/>,
+            onClick: () => null,
+            disabled: false
+        },
+        {
+            id: 3,
+            icon: <ChartSettings/>,
+            onClick: () => null,
+            disabled: false
+        },
+        {
+            id: 4,
+            icon: <FilterByCups/>,
+            onClick: () => null,
+            disabled: false
+        },
+        {
+            id: 5,
+            icon: <FilterByHomeAwayGames/>,
+            onClick: () => null,
+            disabled: false
+        },
+        {
+            id: 6,
+            icon: <FilterByTimes/>,
+            onClick: () => null,
+            disabled: false
+        },
+        {
+            id: 7,
+            icon: <FilterByGoals/>,
+            onClick: () => null,
+            disabled: false
+        },
+    ], [])
 
     const desktop = (
         <div className={`${styles.panels} ${styles[theme]}`}>
             <div className={styles.work_panel_left} style={{ position: 'relative', borderRight: border }}>
-                {/* {chartCandleFunctions.map(btn =>
-                    <ControlPanelBtn
-                        key={btn.id}
-                        imgLight={btn.imgLight}
-                        img={btn.img}
-                        onClick={btn.onClick}
-                        active={btn.active}
-                        imgActive={btn.imgActive}
-                        disabled={btn.disabled}
-                        visible={btn.visible}
-                        imgDisabled={btn.imgDisabled}
-                        position={btn.position}
-                        tooltipDescription={btn.tooltipDescription}
-                    />
-                )} */}
-                {isTeamStatsControlsVisible ? <TeamStatsControls/> : null}
+                <div className="flex flex-col gap-2">
+                    {leftChartBtns.map(({ id, ...btnProps }) => (
+                        <PanelBtn key={id} {...btnProps} />
+                    ))}
+                </div>
             </div>
             <div style={{ width: `${leftPaneWidthPercentage}%` }} className={styles.left_section}>
-                {tournamentType ? <PlayoffGridSVG /> :
-                    <div className={styles.right_section_chart}>
+            <div className={styles.right_section_chart}>
                         <div style={{ height: `${chartPanelHeightPercentage}%` }} className={styles.chart} id='candle-chart'>
                         {/* {isSingleTeamView ?
                                             <CandleChart
@@ -598,62 +617,29 @@ const Chart: FC = () => {
                                                 chartId="single_chart"
                                                 width={leftPaneWidthPercentage}
                                                 height={championshipTableHeightPercentage}
-                                            />
-
-                                            :
-                                            <SparkLineSection sectionWidth={leftPaneWidthPercentage} />
+                                            />                                            
                                         } */}
-
+                            <SparkLineSection sectionWidth={leftPaneWidthPercentage} />
                             <div className={styles.panel_section} id='candle-chart-panel-section' style={{ borderLeft: border }}>
-                                {/* {chartControls.map(btn =>
-                                    <ControlPanelBtn
-                                        key={btn.id}
-                                        imgLight={btn.imgLight}
-                                        img={btn.img}
-                                        onClick={btn.onClick}
-                                        active={btn.active}
-                                        imgActive={btn.imgActive}
-                                        visible={btn.visible}
-                                        disabled={btn.disabled}
-                                        imgDisabled={btn.imgDisabled}
-                                        tooltipDescription={btn.tooltipDescription}
-                                        position={btn.position}
-                                        btnId={btn.btnId}
-                                        hasSelection={btn.hasSelection}
-                                        selectItems={btn.selectItems}
-                                        currentFilter={btn.currentFilter}
-                                    />
-                                )} */}
+                            <div className="flex flex-col gap-2">
+                                {rightChartBtns.map(({ id, ...btnProps }) => (
+                                    <PanelBtn key={id} {...btnProps} />
+                                ))}
+                            </div>
                             </div>
                         </div>
-                        {/* <ResizableBorder
-                            display={sectionDisplay}
-                            cursor='row-resize'
-                            resize={() => null}
-                        /> */}
                         <div className={styles.news_section} style={{ display: expandSections ? 'none' : 'flex' }}>
-                            {/* <Banner /> */}
+                            <Banner />
                             <div className={styles.news_section_inner}>
                                 {/* <TeamDetailInfoSection /> */}
                             </div>
                         </div>
                     </div>
-                }
             </div>
-            {/* <ResizableBorder
-                display={sectionDisplay}
-                cursor='col-resize'
-                resize={() => null}
-            /> */}
             <div className={styles.championship_table_section} style={{ display: expandSections ? 'none' : 'flex' }}>
                 <div style={{ height: `${championshipTableHeightPercentage}%` }}>
                     {/* <ChampionshipTable /> */}
                 </div>
-                {/* <ResizableBorder
-                    display={sectionDisplay}
-                    cursor='row-resize'
-                    resize={(e) => null}
-                /> */}
                 <div className={styles.recent_games_section} >
                     {/* <RecentGamesSection leftPaneWidthPercentage={leftPaneWidthPercentage} setIsTipsModal={setIsTipsModal} setShowGuideline={setIsShowGuideline} /> */}
                 </div>

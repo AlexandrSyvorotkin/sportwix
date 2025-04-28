@@ -12,6 +12,9 @@
   --color-violet-main: #5724FF;
   --violet-gradient: #6A2DBF;
   --grey-gradient: #D5D6E9B2;
+
+  --active-panel-btn: #A266F4;
+  --btn-hover: #181818;
   
   /* Цвета из legacy */
   --bg-color: #1F1F1F;

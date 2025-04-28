@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-/** @type {import('tailwindcss').Config} */
 
 // text-xs - размер шрифта 0.75rem (12px)
 // text-sm - размер шрифта 0.875rem (14px)
@@ -70,6 +69,7 @@ export default {
         'color-violet': 'var(--color-violet-main)',
         'violet-gradient': 'var(--violet-gradient)',
         'grey-gradient': 'var(--grey-gradient)',
+        'btn-hover': 'var(--btn-hover)',
         
         // Добавленные цвета из legacy
         'bg-color': 'var(--bg-color)',
@@ -134,9 +134,5 @@ export default {
   },
   corePlugins: {
     // ... other core plugins
-  },
-  // Add this to your base styles
-  variants: {
-    extend: {},
   },
 }
