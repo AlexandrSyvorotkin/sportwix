@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import styles from './Navbar.module.scss'
+import styles from './navbar.module.scss'
 import { NavLink, useLocation } from "react-router-dom";
 import classNames from 'classnames';
 // import sportVariants from '../../localization/navbar/sportVariants.json'
