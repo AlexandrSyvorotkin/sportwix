@@ -7,9 +7,6 @@ import { Routes } from 'react-router-dom'
 import NotFound from './pages/404'
 import Main from './pages/main'
 import PolicyPage from './pages/policy-page'
-import Best from './pages/best/best.tsx'
-import Community from './pages/community/community.tsx'
-import News from './pages/news/news.tsx'
 import background from './assets/bg/background.png'
 import Chart from './pages/chart/chart'
 import Header from './layout/header-legacy/legacy-header'
@@ -35,7 +32,7 @@ function App() {
   const isStartPage = location.pathname === '/';
 
   return (
-    <div className=" w-full h-screen">
+    <div className="w-full h-screen">
       {isStartPage ? <RoutingElement tag="header" openModal={() => setIsOpen(true)} />  : <Header />}
       <Routes>
         <Route path="/" element={<Main isOpen={isOpen} setIsOpen={setIsOpen} />} />
@@ -44,9 +41,9 @@ function App() {
         <Route path="/chart" element={<Chart />} />
 
 
-        <Route path="/best" element={<Best />} />
-        <Route path="/community" element={<Community />} />
-        <Route path="/news" element={< News/>} />
+        <Route path="/best" element={<div>Best</div>} />
+        <Route path="/community" element={<div>Community</div>} />
+        <Route path="/news" element={<div>News</div>} />
       </Routes>
       {!is404Page && (
         <>
