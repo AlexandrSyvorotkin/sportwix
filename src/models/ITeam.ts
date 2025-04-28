@@ -1,4 +1,4 @@
-import { Coach, TimeFrameMetrics } from "../types/types"
+
 import { ILastMatch } from "./ILastMatch"
 import { Candle } from "../types/types"
 import { FootballMetricTimeFrame } from "../types/FootballField/FootballMetricTimeFrame/FootbalMetricTimeFrame"
@@ -10,6 +10,8 @@ import { PlayerRecords } from "../types/InformationTabs/SingleTeamInfo/Records/P
 import { Achievement } from "../types/InformationTabs/Achievement/Achievement"
 import { Stadion } from "../types/InformationTabs/Stadium/Stadion"
 import { Sponsor } from "../types/InformationTabs/SingleTeamInfo/Sponsor"
+import { TimeFrameMetrics } from "../types/types"
+import { Coach } from "../types/types"
 
 export interface ITeam {
     category_name?: string, 
