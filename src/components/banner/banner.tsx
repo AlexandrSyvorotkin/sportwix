@@ -1,15 +1,13 @@
-import { FC, useContext } from 'react'
+import { FC } from 'react'
 import styles from './Banner.module.scss'
 import bannerLogo from '../../assets/logo and favicon/Favicon.svg'
-import { ThemeContext } from '../../context/ThemeContext/ThemeContext'
 
 interface BannerProps {
 }
  
 const Banner: FC<BannerProps> = ({}) => {
 
-
-    const {theme} = useContext(ThemeContext)
+    const theme = 'dark'
     
     const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
 
