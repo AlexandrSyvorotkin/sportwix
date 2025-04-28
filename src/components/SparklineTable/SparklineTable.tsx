@@ -2,7 +2,6 @@ import { FC } from 'react';
 import styles from './SparklineTable.module.scss'
 // import { ITeam } from "../../legacy/models/ITeam";
 import sparklineCap from '../../localization/sparkline/sparkline-cap.json'
-import { RootState } from '../../store/store';
 import classNames from 'classnames';
 // import { useFetchChampionshipInfoQuery } from '../../services/championships-api/championship-api';
 // import TeamSparkLine from '../../legacy/components/TeamSparkLine/TeamSparkLine';

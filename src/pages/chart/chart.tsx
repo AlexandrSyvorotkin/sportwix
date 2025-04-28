@@ -1,17 +1,11 @@
-import { RootState } from "../../store/store";
+
 import { FC, useState, useContext, useEffect, useMemo } from "react";
 
 import { ThemeContext } from "../../legacy/context/ThemeContext/ThemeContext";
 // import { useXSMAX, useSMMIN } from "../../legacy/media-queries";
-import { useFetchChampionshipInfoQuery } from "../../legacy/services/championships-api/championship-api";
-import { filterByHomeAwayGamesVariants, filterByAmountOfGoalsVarians, filterByTypeOfTimeVariants } from "../../legacy/types/candleChartFilterTypes";
-
-import { filterChartBySeasons, filterChartByHomeOrAwayGames, filterChartByAmountOfGoals, filterChartByTypeOfTime } from "../../store/candle-slice/candle-slice";
-import { activateGuidelineMode, disableEducationOffer } from "../../store/GuidelineRoadmapSlice/GuidelineRoadmapSlice";
-import { switchVersion, switchMobileOrientation, expandTypes, expandSection } from "../../store/InterfaceSlice/InterfaceSlice";
-import { chooseSecondTeam, switchPageToStartPostition, setFirstSelectedTeamUuid, setCurrentSeasonsAmount, setSpliteType } from "../../store/tournament-slice/tournament-slice";
+import { switchVersion, switchMobileOrientation } from "../../store/InterfaceSlice/InterfaceSlice";
 import styles from './chart.module.scss'
-import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { useAppDispatch } from "../../hooks/hooks";
 
 //left btns
 import DiagonalLevels from '../../assets/icons/diagonal-levels.svg?react'
@@ -51,13 +45,13 @@ const Chart: FC = () => {
     const [leftPaneWidthPercentage, setLeftPaneWidthPercentage] = useState(65);
     // const [championshipTableHeightPercentage, setChampionshipTableHeightPercentage] = useState(50);
     const [chartPanelHeightPercentage, setChartPanelHeightPercentage] = useState(50)
-    const [sparkLineActive, setSparklineActive] = useState<boolean>(true)
-    const [expandSections, setExpandSections] = useState<boolean>(false)
-    const [bordersResizableActive, setBorderResizableActive] = useState<boolean>(true)
+    // const [sparkLineActive, setSparklineActive] = useState<boolean>(true)
+    const [expandSections] = useState<boolean>(false)
+    // const [bordersResizableActive, setBorderResizableActive] = useState<boolean>(true)
     // const [sectionDisplay, setSectionDisplay] = useState<string>('flex')
     // const borderResizableStatus = bordersResizableActive
     // const expandSectionsStatus = expandSections
-    const [disableControlPanelItem, setDisableControlPanelItem] = useState<boolean>(true)
+    // const [disableControlPanelItem, setDisableControlPanelItem] = useState<boolean>(true)
     // const [chartSelect, setChartSelect] = useState<boolean>(false)
     // const [isSparklineForMobile, setIsSparklineForMobile] = useState<boolean>(false)
     const { theme } = useContext(ThemeContext)
@@ -79,7 +73,6 @@ const Chart: FC = () => {
     const windowWidth = window.innerWidth
     // const isDoubleTeamView = useAppSelector(state => state.tournamentSlice.isDoubleTeamView)
     // const [isTeamSectionMobileExpanded, setIsTeamSectionMobileExpanded] = useState<boolean>(false)
-    const interfaceState = useAppSelector(state => state.interfaceState)
     // const [chartMobileWidth, setChartMobileWidth] = useState(100)
     // const expandMobileType = isSingleTeamView ? 'candleChart' : 'sparkline'
     // const filterCandleChartByTypeOfGames = useAppSelector((state: RootState) => state.candleSliceNew.filters.byHomeAwayGames)
