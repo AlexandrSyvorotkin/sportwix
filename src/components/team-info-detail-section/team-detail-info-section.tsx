@@ -113,7 +113,7 @@ const TeamDetailInfoSection = ({ }) => {
 
     // const ref = useRef<HTMLDivElement>(null)
 
-    const theme = 'dark'
+    // const theme = 'dark'
 
 
     // const tabActive = (id: number) => id === activeTeamTab ? 'block' : 'none'

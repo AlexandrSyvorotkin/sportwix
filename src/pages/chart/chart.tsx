@@ -29,6 +29,7 @@ import SparkLineSection from "../../components/sparkline-table/sparkline-table";
 import ChampionshipTable from "../../components/championship-table/championship-table";
 
 import { TeamDetailInfoSection } from "@components/team-info-detail-section";
+import { CommonInfoSection } from "@components/common-info-section";
 
 const Chart: FC = () => {
 
@@ -43,7 +44,7 @@ const Chart: FC = () => {
 
     // const { BASE_PATH, API, V1, EVENT, TEAM } = API_VARIABLES
     const [leftPaneWidthPercentage, setLeftPaneWidthPercentage] = useState(65);
-    // const [championshipTableHeightPercentage, setChampionshipTableHeightPercentage] = useState(50);
+    const [championshipTableHeightPercentage] = useState(50);
     const [chartPanelHeightPercentage, setChartPanelHeightPercentage] = useState(50)
     // const [sparkLineActive, setSparklineActive] = useState<boolean>(true)
     const [expandSections] = useState<boolean>(false)
@@ -628,11 +629,11 @@ const Chart: FC = () => {
                     </div>
             </div>
             <div className={styles.championship_table_section} style={{ display: expandSections ? 'none' : 'flex' }}>
-                {/* <div style={{ height: `${championshipTableHeightPercentage}%` }}> */}
+                <div style={{ height: `${championshipTableHeightPercentage}%` }}>
                     <ChampionshipTable />
-                {/* </div> */}
+                </div>
                 <div className={styles.recent_games_section} >
-                    {/* <RecentGamesSection leftPaneWidthPercentage={leftPaneWidthPercentage} setIsTipsModal={setIsTipsModal} setShowGuideline={setIsShowGuideline} /> */}
+                    <CommonInfoSection />
                 </div>
             </div>
         </div>
