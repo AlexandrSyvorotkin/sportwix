@@ -1,7 +1,7 @@
 import styles from './news-tab.module.scss';
 import { NewsTabItem } from '../news-tab-item';
-import { singleNews } from '../../legacy/types/types';
-import TabBtn from '../../legacy/ui/Buttons/TabBtn/TabBtn';
+// import { singleNews } from '../../legacy/types/types';
+// import TabBtn from '../../legacy/ui/Buttons/TabBtn/TabBtn';
 import classNames from 'classnames';
 import newsMock from '../../mocks/news-mock.json';
 
@@ -182,7 +182,7 @@ const NewsTab = () => {
         <div className={styles.news_wrapper}>
             <div className={styles.news_header_tags} id='news-tags' style={{ borderBottom: border }}>
                 <div className={tabListStyles}>
-                    <TabBtn onClick={() => null} activeTab={false}>Reset tags</TabBtn>
+                    {/* <TabBtn onClick={() => null} activeTab={false}>Reset tags</TabBtn> */}
                     {/* <TabBtn onClick={allTagsHandles} activeTab={false}>All tags</TabBtn> */}
                     {/* {newsTags?.results.slice(0, 3).map((tag: any, id: number) =>
                         <TabBtn key={id} activeTab={activeFilterTags.includes(tag)} onClick={() => addDeleteTagToActivaTagsPool(tag)}>{tag}</TabBtn>
@@ -201,7 +201,7 @@ const NewsTab = () => {
                 <div className={styles.news}>
                     {data?.results.length === 0 ? <div className={styles.nonews}>{"Нет новостей по вашим выбранным параметрам"}</div> :
                         <>
-                            {data?.results.map((news: singleNews, id: number) => (
+                            {data?.results.map((news: any, id: number) => (
                                 <NewsTabItem
                                     key={id}
                                     img={news.header_img}

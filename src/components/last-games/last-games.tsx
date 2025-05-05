@@ -2,7 +2,6 @@
 import { LastGameItem } from '@components/last-game-item/last-game-item';
 import styles from './last-games.module.scss'
 import { useState } from 'react'
-import { ILastMatch } from 'src/models/ILastMatch';
 import lastGames from '../../mocks/last-games.json'
 // import RecentResultItem from "../../legacy/components/RecentResultItem/RecentResultItem";
 
@@ -27,7 +26,7 @@ const LastResultsSection = ({}) => {
     // const {championshipId, season} = useAppSelector(state => state.tournamentSlice)
     // const { data, isLoading, error, isFetching } = useFetchChampionshipInfoQuery({ championshipId, season })
 
-    const [recentGames, setRecentGames] = useState({
+    const [recentGames] = useState({
         finished: lastGames.filter((game: any) => game.status === 'finished'),
         notstarted: lastGames.filter((game: any) => game.status === 'notstarted'),
         inprogress: lastGames.filter((game: any) => game.status === 'inprogress')
