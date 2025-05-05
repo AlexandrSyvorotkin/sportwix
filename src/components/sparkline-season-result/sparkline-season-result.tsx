@@ -11,7 +11,7 @@ interface SparkLineSeasonResultBarProps {
     isDopInfo: boolean
 }
 
-const SparkLineSeasonResultBar:FC<SparkLineSeasonResultBarProps> = ({wins, draws, losses, setIsAlternativeResultsVisible, height, width, isDopInfo}) => {
+const SparkLineSeasonResultBar:FC<SparkLineSeasonResultBarProps> = ({wins, draws, losses, height, width, isDopInfo}) => {
 
     const totalGames = wins + draws + losses
     const winsPercentage = Math.round((wins / totalGames) * 100)

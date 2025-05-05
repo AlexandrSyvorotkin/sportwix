@@ -27,33 +27,6 @@ const LineChart:FC<LineChartProps> = ({candles}) => {
             {/* <CandlesMini candles={candles}/> */}
         </div>
     )
-
-    function showCandlesMini(candles:any) {
-
-        const rect = candleCanvasRef.current?.getBoundingClientRect()
-
-        if (rect) {
-            const { top, left, width: offset } = rect;
-        
-            const e = new CustomEvent('show-candles-mini', {
-                detail: {
-                    candles,
-                    msg: "show",
-                    top,
-                    left,
-                    offset
-                }
-            });
-            document.dispatchEvent(e);
-        }
-    }
-    
-    function hideCandlesMini() {
-        const e = new CustomEvent('hide-candles-mini', { detail: {
-            msg: "hide"
-        }});
-        document.dispatchEvent(e);
-    }
 };
 
 

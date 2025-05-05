@@ -1,6 +1,6 @@
 import {FC} from 'react'
 import styles from './line-chart-last-candle.module.scss'
-import SparklineArrowPoints from '../../legacy/components/SparklineArrowPoints/SparklineArrowPoints'
+// import SparklineArrowPoints from '../../legacy/components/SparklineArrowPoints/SparklineArrowPoints'
 
 type LittleCandle = {
     open: number,
@@ -20,7 +20,7 @@ const LineChartLastCandlePos:FC<LineChartLastCandlePosProps> = ({lastCandles}) =
 
     const lastCloseDifference = lastCandles[1].close - lastCandles[0].close
 
-    let pointsDifference
+    // let pointsDifference
     let pointsDifferenceColor
 
     if (lastCloseDifference > 0) {
@@ -36,7 +36,7 @@ const LineChartLastCandlePos:FC<LineChartLastCandlePosProps> = ({lastCandles}) =
             <div>{lastCandles[1].close} ({language === 'Eng' ? 'Gls' : 'Гз'})</div>
             <div className={styles.last_candles_diff}>
                 <div style={{color: pointsDifferenceColor}}>{lastCloseDifference}</div>
-                {lastCloseDifference >= 0 ? <SparklineArrowPoints isPositive={true}/> : <SparklineArrowPoints isPositive={false}/>}
+                {/* {lastCloseDifference >= 0 ? <SparklineArrowPoints isPositive={true}/> : <SparklineArrowPoints isPositive={false}/>} */}
             </div>
         </div>
     )

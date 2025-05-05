@@ -9,7 +9,7 @@ interface PreviousSparkLineGameTsProps {
     match_result?: string
 }
 
-const SparklineLastGame = ({rival_team_goals, game_type, rival_team_logo, team_goals, match_result}: PreviousSparkLineGameTsProps) => {
+const SparklineLastGame = ({rival_team_goals, game_type, rival_team_logo, team_goals}: PreviousSparkLineGameTsProps) => {
 
 
     const final_score = classNames({

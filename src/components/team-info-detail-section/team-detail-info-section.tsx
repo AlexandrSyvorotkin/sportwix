@@ -9,14 +9,13 @@ import TeamStatsIcon from '@assets/icons/team-stats.svg?react'
 import PlayerStatIcon from '@assets/icons/player-stat.svg?react'
 import FootballFieldIcon from '@assets/icons/football-field.svg?react'
 import CalendarIcon from '@assets/icons/calendar.svg?react'
-import RecentResults from 'src/legacy/components/RecentResults/RecentResults';
 
 type Tab = 'news' | 'about-team' | 'championships-performance' | 'team-stats' | 'player-stat' | 'football-field' | 'calendar'
 
-interface TeamDetailInfoSectionProps {
-    expandTeamSectionMobile?: any
-    isTeamSectionMobileExpanded?: boolean
-}
+// interface TeamDetailInfoSectionProps {
+//     expandTeamSectionMobile?: any
+//     isTeamSectionMobileExpanded?: boolean
+// }
 
 const TeamDetailInfoSection = ({ }) => {
 
