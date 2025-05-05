@@ -25,7 +25,7 @@ import FilterByHomeAwayGames from '../../assets/icons/filter-by-home-away-games.
 
 import PanelBtn from "../../ui/panel-btn/panel-btn";
 import Banner from "../../components/banner/banner";
-import SparkLineSection from "../../components/SparklineTable/SparklineTable";
+import SparkLineSection from "../../components/sparkline-table/sparkline-table";
 import ChampionshipTable from "../../components/championship-table/championship-table";
 
 const Chart: FC = () => {

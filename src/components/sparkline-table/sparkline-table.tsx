@@ -1,10 +1,12 @@
 import { FC } from 'react';
-import styles from './SparklineTable.module.scss'
+import styles from './sparkline-table.module.scss'
 // import { ITeam } from "../../legacy/models/ITeam";
 import sparklineCap from '../../localization/sparkline/sparkline-cap.json'
 import classNames from 'classnames';
 // import { useFetchChampionshipInfoQuery } from '../../services/championships-api/championship-api';
 // import TeamSparkLine from '../../legacy/components/TeamSparkLine/TeamSparkLine';
+import teamsMock from '../../mocks/teams-mock.json'
+import TeamSparkLine from '../sparkline-team/sparkline-team'
 
 interface SparkLineSectionProps {
     sectionWidth: number,
@@ -19,7 +21,6 @@ const SparkLineSection: FC<SparkLineSectionProps> = ({ }) => {
 
 
     // const teams = data?.teams?.filter((team: ITeam) => !team.is_event)
-
 
     const sparklineHeaderColors = classNames({
         [styles.header]: true,
@@ -53,13 +54,9 @@ const SparkLineSection: FC<SparkLineSectionProps> = ({ }) => {
                         <div className={styles.next_game}>{sparklineCap[8].ru}</div>
                     </div>
                 </div>
-                {/* {isFetching ? <span>Loading...</span> :    
-                    <div>
-                    {teams?.map((team: ITeam, id: number) =>
-                        <TeamSparkLine section_width={sectionWidth} team={team} id={id} uuid={team.team_uuid} key={id} setIsFutureGame={setIsFutureGame}/>
-                    )}
-                </div>
-                } */}
+                {teamsMock?.map(team =>
+                    <TeamSparkLine team={team}/>
+                )}
             </div>
     );
 };
