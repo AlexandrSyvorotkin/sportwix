@@ -17,7 +17,7 @@ interface ChampionShipTableTeamProps {
 
 const ChampionShipTableTeam = ({maxPts, team, place}: ChampionShipTableTeamProps) => {
 
-    const dispatch = useAppDispatch()
+    // const dispatch = useAppDispatch()
 
 
     // const {BASE_PATH, API, V1, EVENT, TEAM} = API_VARIABLES
@@ -59,7 +59,7 @@ const ChampionShipTableTeam = ({maxPts, team, place}: ChampionShipTableTeamProps
         // [styles.progress_bar_light]: theme === 'light'
     })
 
-    const [progressBarDisplay, setProgressBarDisplay] = useState<string>('block')
+    const [progressBarDisplay] = useState<string>('block')
 
 
 

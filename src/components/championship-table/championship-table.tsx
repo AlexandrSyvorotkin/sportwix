@@ -46,7 +46,7 @@ const ChampionShipTable = ({}: ChampionshipTableProps) => {
 
     // const { theme } = useContext(ThemeContext)
 
-    const theme = 'dark'
+    // const theme = 'dark'
     const language = 'Eng'
 
     // const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
