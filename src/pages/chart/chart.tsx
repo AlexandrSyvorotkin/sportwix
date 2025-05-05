@@ -28,6 +28,8 @@ import Banner from "../../components/banner/banner";
 import SparkLineSection from "../../components/sparkline-table/sparkline-table";
 import ChampionshipTable from "../../components/championship-table/championship-table";
 
+import { TeamDetailInfoSection } from "@components/team-info-detail-section";
+
 const Chart: FC = () => {
 
     const dispatch = useAppDispatch()
@@ -620,7 +622,7 @@ const Chart: FC = () => {
                         <div className={styles.news_section} style={{ display: expandSections ? 'none' : 'flex' }}>
                             <Banner />
                             <div className={styles.news_section_inner}>
-                                {/* <TeamDetailInfoSection /> */}
+                                <TeamDetailInfoSection />
                             </div>
                         </div>
                     </div>

@@ -9,6 +9,8 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@charts/*": ["src/charts/*"],
+      "@ui/*": ["src/ui/*"],
+      "@assets/*": ["src/assets/*"],
       // "@utils/*": ["src/utils/*"]
     }
   }

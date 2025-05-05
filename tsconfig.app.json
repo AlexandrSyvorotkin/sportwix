@@ -10,7 +10,8 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@charts/*": ["src/charts/*"],
-      // "@assets/*": ["src/assets/*"],
+      "@ui/*": ["src/ui/*"],
+      "@assets/*": ["src/assets/*"],
       // "@styles/*": ["src/styles/*"],
       // "@utils/*": ["src/utils/*"],
       // "@hooks/*": ["src/hooks/*"],

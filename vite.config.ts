@@ -16,6 +16,8 @@ export default defineConfig({
     alias: {
       '@components': path.resolve(__dirname, './src/components'),
       '@charts': path.resolve(__dirname, './src/charts'),
+      '@ui': path.resolve(__dirname, './src/ui'),
+      '@assets': path.resolve(__dirname, './src/assets'),
       // '@legacy': path.resolve(__dirname, './src/legacy'),
     },
   },
