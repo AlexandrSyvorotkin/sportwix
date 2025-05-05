@@ -10,7 +10,7 @@ interface SparkLineSectionProps {
     sectionWidth: number,
 }
 
-const SparkLineSection: FC<SparkLineSectionProps> = ({  }) => {
+const SparkLineSection: FC<SparkLineSectionProps> = ({ }) => {
 
     // const interfaceState = useAppSelector((state: RootState) => state.interfaceState)
 

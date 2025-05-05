@@ -26,8 +26,7 @@ import FilterByHomeAwayGames from '../../assets/icons/filter-by-home-away-games.
 import PanelBtn from "../../ui/panel-btn/panel-btn";
 import Banner from "../../components/banner/banner";
 import SparkLineSection from "../../components/SparklineTable/SparklineTable";
-// import ChampionshipTable from "../../legacy/components/ChampionshipTable/ChampionshipTable";
-
+import ChampionshipTable from "../../components/championship-table/championship-table";
 
 const Chart: FC = () => {
 
@@ -628,7 +627,7 @@ const Chart: FC = () => {
             </div>
             <div className={styles.championship_table_section} style={{ display: expandSections ? 'none' : 'flex' }}>
                 {/* <div style={{ height: `${championshipTableHeightPercentage}%` }}> */}
-                    {/* <ChampionshipTable /> */}
+                    <ChampionshipTable />
                 {/* </div> */}
                 <div className={styles.recent_games_section} >
                     {/* <RecentGamesSection leftPaneWidthPercentage={leftPaneWidthPercentage} setIsTipsModal={setIsTipsModal} setShowGuideline={setIsShowGuideline} /> */}
