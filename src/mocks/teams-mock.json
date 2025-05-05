@@ -1,9 +1,202 @@
 [
-    {   
+    {
         "id": 0,
         "category_name": "Premier League",
         "is_event": false,
-        "candles": [],
+        "candles": [
+            {
+                "home_team": "Ливерпуль",
+                "away_team": "Ипсвич Таун",
+                "home_team_img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                "away_team_img": "",
+                "home_team_uuid": "",
+                "away_team_uuid": "",
+                "event": "Премьер-Лига",
+                "event_uuid": "",
+                "tour": "Тур -3",
+                "date": "2025-01-25",
+                "high": 4,
+                "low": 1,
+                "open": 0,
+                "close": 3
+            },
+            {
+                "home_team": "Борнмут",
+                "away_team": "Ливерпуль",
+                "home_team_img": "",
+                "away_team_img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                "home_team_uuid": "",
+                "away_team_uuid": "",
+                "event": "Премьер-Лига",
+                "event_uuid": "",
+                "tour": "Тур -2",
+                "date": "2025-02-01",
+                "high": 2,
+                "low": 0,
+                "open": 3,
+                "close": 2
+            },
+            {
+                "home_team": "Эвертон",
+                "away_team": "Ливерпуль",
+                "home_team_img": "",
+                "away_team_img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                "home_team_uuid": "",
+                "away_team_uuid": "",
+                "event": "Премьер-Лига",
+                "event_uuid": "",
+                "tour": "Тур -1",
+                "date": "2025-02-12",
+                "high": 2,
+                "low": 2,
+                "open": 2,
+                "close": 0
+            },
+            {
+                "home_team": "Ливерпуль",
+                "away_team": "Вулверхэмптон",
+                "home_team_img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                "away_team_img": "",
+                "home_team_uuid": "",
+                "away_team_uuid": "",
+                "event": "Премьер-Лига",
+                "event_uuid": "",
+                "tour": "Тур 0",
+                "date": "2025-02-16",
+                "high": 2,
+                "low": 1,
+                "open": 0,
+                "close": 1
+            },
+            {
+                "home_team": "Астон Вилла",
+                "away_team": "Ливерпуль",
+                "home_team_img": "",
+                "away_team_img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                "home_team_uuid": "",
+                "away_team_uuid": "",
+                "event": "Премьер-Лига",
+                "event_uuid": "",
+                "tour": "Тур 1",
+                "date": "2025-02-19",
+                "high": 2,
+                "low": 2,
+                "open": 1,
+                "close": 0
+            },
+            {
+                "home_team": "Манчестер Сити",
+                "away_team": "Ливерпуль",
+                "home_team_img": "",
+                "away_team_img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                "home_team_uuid": "",
+                "away_team_uuid": "",
+                "event": "Премьер-Лига",
+                "event_uuid": "",
+                "tour": "Тур 2",
+                "date": "2025-02-23",
+                "high": 2,
+                "low": 0,
+                "open": 0,
+                "close": 2
+            },
+            {
+                "home_team": "Ливерпуль",
+                "away_team": "Ньюкасл Юнайтед",
+                "home_team_img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                "away_team_img": "",
+                "home_team_uuid": "",
+                "away_team_uuid": "",
+                "event": "Премьер-Лига",
+                "event_uuid": "",
+                "tour": "Тур 3",
+                "date": "2025-02-26",
+                "high": 2,
+                "low": 0,
+                "open": 2,
+                "close": 2
+            },
+            {
+                "home_team": "Ливерпуль",
+                "away_team": "Саутгемптон",
+                "home_team_img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                "away_team_img": "",
+                "home_team_uuid": "",
+                "away_team_uuid": "",
+                "event": "Премьер-Лига",
+                "event_uuid": "",
+                "tour": "Тур 4",
+                "date": "2025-03-08",
+                "high": 3,
+                "low": 1,
+                "open": 2,
+                "close": 2
+            },
+            {
+                "home_team": "Ливерпуль",
+                "away_team": "Ньюкасл Юнайтед",
+                "home_team_img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                "away_team_img": "",
+                "home_team_uuid": "",
+                "away_team_uuid": "",
+                "event": "Кубок английской лиги",
+                "event_uuid": "",
+                "tour": "Тур 5",
+                "date": "2025-03-16",
+                "high": 1,
+                "low": 2,
+                "open": 2,
+                "close": -1
+            },
+            {
+                "home_team": "Ливерпуль",
+                "away_team": "Эвертон",
+                "home_team_img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                "away_team_img": "",
+                "home_team_uuid": "",
+                "away_team_uuid": "",
+                "event": "Премьер-Лига",
+                "event_uuid": "",
+                "tour": "Тур 6",
+                "date": "2025-04-02",
+                "high": 1,
+                "low": 0,
+                "open": -1,
+                "close": 1
+            },
+            {
+                "home_team": "Фулхэм",
+                "away_team": "Ливерпуль",
+                "home_team_img": "",
+                "away_team_img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                "home_team_uuid": "",
+                "away_team_uuid": "",
+                "event": "Премьер-Лига",
+                "event_uuid": "",
+                "tour": "Тур 7",
+                "date": "2025-04-06",
+                "high": 3,
+                "low": 2,
+                "open": 1,
+                "close": -1
+            },
+            {
+                "home_team": "Ливерпуль",
+                "away_team": "Вест Хэм",
+                "home_team_img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                "away_team_img": "",
+                "home_team_uuid": "",
+                "away_team_uuid": "",
+                "event": "Премьер-Лига",
+                "event_uuid": "",
+                "tour": "Тур 8",
+                "date": "2025-04-13",
+                "high": 2,
+                "low": 1,
+                "open": -1,
+                "close": 1
+            }
+        ],
         "draws": 4,
         "games": 35,
         "losses": 5,
@@ -26,9 +219,391 @@
         "team_short_name_ru": "ЛИВ",
         "wins": 26,
         "xG": 0,
-        "team_svg_img": ""
+        "team_svg_img": "",
+        "last_matches": [
+            {
+                "date": "2025-01-25",
+                "status": "finished",
+                "score": {
+                    "short_score": {
+                        "full_time": [
+                            4,
+                            1
+                        ]
+                    },
+                    "goals_home": [],
+                    "goals_away": []
+                },
+                "is_home": true,
+                "home_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                    "name": "Liverpool",
+                    "uuid": "liverpool",
+                    "name_ru": "Ливерпуль",
+                    "short_name_ru": "ЛИВ"
+                },
+                "away_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/9902.png",
+                    "name": "Ipswich Town",
+                    "uuid": "ipswich-town",
+                    "name_ru": "Ипсвич Таун",
+                    "short_name_ru": "ИПС"
+                }
+            },
+            {
+                "date": "2025-02-01",
+                "status": "finished",
+                "score": {
+                    "short_score": {
+                        "full_time": [
+                            0,
+                            2
+                        ]
+                    },
+                    "goals_home": [],
+                    "goals_away": []
+                },
+                "is_home": false,
+                "home_team": {
+                    "img": "bournemouth.png",
+                    "name": "Bournemouth",
+                    "uuid": "bournemouth",
+                    "name_ru": "Борнмут",
+                    "short_name_ru": "БОР"
+                },
+                "away_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                    "name": "Liverpool",
+                    "uuid": "liverpool",
+                    "name_ru": "Ливерпуль",
+                    "short_name_ru": "ЛИВ"
+                }
+            },
+            {
+                "date": "2025-02-12",
+                "status": "finished",
+                "score": {
+                    "short_score": {
+                        "full_time": [
+                            2,
+                            2
+                        ]
+                    },
+                    "goals_home": [],
+                    "goals_away": []
+                },
+                "is_home": false,
+                "home_team": {
+                    "img": "everton.png",
+                    "name": "Everton",
+                    "uuid": "everton",
+                    "name_ru": "Эвертон",
+                    "short_name_ru": "ЭВЕ"
+                },
+                "away_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                    "name": "Liverpool",
+                    "uuid": "liverpool",
+                    "name_ru": "Ливерпуль",
+                    "short_name_ru": "ЛИВ"
+                }
+            },
+            {
+                "date": "2025-02-16",
+                "status": "finished",
+                "score": {
+                    "short_score": {
+                        "full_time": [
+                            2,
+                            1
+                        ]
+                    },
+                    "goals_home": [],
+                    "goals_away": []
+                },
+                "is_home": true,
+                "home_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                    "name": "Liverpool",
+                    "uuid": "liverpool",
+                    "name_ru": "Ливерпуль",
+                    "short_name_ru": "ЛИВ"
+                },
+                "away_team": {
+                    "img": "wolves.png",
+                    "name": "Wolverhampton",
+                    "uuid": "wolves",
+                    "name_ru": "Вулверхэмптон",
+                    "short_name_ru": "ВУЛ"
+                }
+            },
+            {
+                "date": "2025-02-19",
+                "status": "finished",
+                "score": {
+                    "short_score": {
+                        "full_time": [
+                            2,
+                            2
+                        ]
+                    },
+                    "goals_home": [],
+                    "goals_away": []
+                },
+                "is_home": false,
+                "home_team": {
+                    "img": "astonvilla.png",
+                    "name": "Aston Villa",
+                    "uuid": "aston-villa",
+                    "name_ru": "Астон Вилла",
+                    "short_name_ru": "АВ"
+                },
+                "away_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                    "name": "Liverpool",
+                    "uuid": "liverpool",
+                    "name_ru": "Ливерпуль",
+                    "short_name_ru": "ЛИВ"
+                }
+            },
+            {
+                "date": "2025-02-23",
+                "status": "finished",
+                "score": {
+                    "short_score": {
+                        "full_time": [
+                            0,
+                            2
+                        ]
+                    },
+                    "goals_home": [],
+                    "goals_away": []
+                },
+                "is_home": false,
+                "home_team": {
+                    "img": "mancity.png",
+                    "name": "Manchester City",
+                    "uuid": "man-city",
+                    "name_ru": "Манчестер Сити",
+                    "short_name_ru": "МС"
+                },
+                "away_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                    "name": "Liverpool",
+                    "uuid": "liverpool",
+                    "name_ru": "Ливерпуль",
+                    "short_name_ru": "ЛИВ"
+                }
+            },
+            {
+                "date": "2025-02-26",
+                "status": "finished",
+                "score": {
+                    "short_score": {
+                        "full_time": [
+                            2,
+                            0
+                        ]
+                    },
+                    "goals_home": [],
+                    "goals_away": []
+                },
+                "is_home": true,
+                "home_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                    "name": "Liverpool",
+                    "uuid": "liverpool",
+                    "name_ru": "Ливерпуль",
+                    "short_name_ru": "ЛИВ"
+                },
+                "away_team": {
+                    "img": "newcastle.png",
+                    "name": "Newcastle United",
+                    "uuid": "newcastle",
+                    "name_ru": "Ньюкасл",
+                    "short_name_ru": "НЬЮ"
+                }
+            },
+            {
+                "date": "2025-03-08",
+                "status": "finished",
+                "score": {
+                    "short_score": {
+                        "full_time": [
+                            3,
+                            1
+                        ]
+                    },
+                    "goals_home": [],
+                    "goals_away": []
+                },
+                "is_home": true,
+                "home_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                    "name": "Liverpool",
+                    "uuid": "liverpool",
+                    "name_ru": "Ливерпуль",
+                    "short_name_ru": "ЛИВ"
+                },
+                "away_team": {
+                    "img": "southampton.png",
+                    "name": "Southampton",
+                    "uuid": "southampton",
+                    "name_ru": "Саутгемптон",
+                    "short_name_ru": "САУ"
+                }
+            },
+            {
+                "date": "2025-03-16",
+                "status": "finished",
+                "score": {
+                    "short_score": {
+                        "full_time": [
+                            1,
+                            2
+                        ]
+                    },
+                    "goals_home": [],
+                    "goals_away": []
+                },
+                "is_home": true,
+                "home_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                    "name": "Liverpool",
+                    "uuid": "liverpool",
+                    "name_ru": "Ливерпуль",
+                    "short_name_ru": "ЛИВ"
+                },
+                "away_team": {
+                    "img": "newcastle.png",
+                    "name": "Newcastle United",
+                    "uuid": "newcastle",
+                    "name_ru": "Ньюкасл",
+                    "short_name_ru": "НЬЮ"
+                }
+            },
+            {
+                "date": "2025-04-02",
+                "status": "finished",
+                "score": {
+                    "short_score": {
+                        "full_time": [
+                            1,
+                            0
+                        ]
+                    },
+                    "goals_home": [],
+                    "goals_away": []
+                },
+                "is_home": true,
+                "home_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                    "name": "Liverpool",
+                    "uuid": "liverpool",
+                    "name_ru": "Ливерпуль",
+                    "short_name_ru": "ЛИВ"
+                },
+                "away_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8668.png",
+                    "name": "Everton",
+                    "uuid": "everton",
+                    "name_ru": "Эвертон",
+                    "short_name_ru": "ЭВЕ"
+                }
+            },
+            {
+                "date": "2025-04-06",
+                "status": "finished",
+                "score": {
+                    "short_score": {
+                        "full_time": [
+                            3,
+                            2
+                        ]
+                    },
+                    "goals_home": [],
+                    "goals_away": []
+                },
+                "is_home": false,
+                "home_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/9879.png",
+                    "name": "Fulham",
+                    "uuid": "fulham",
+                    "name_ru": "Фулхэм",
+                    "short_name_ru": "ФУЛ"
+                },
+                "away_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                    "name": "Liverpool",
+                    "uuid": "liverpool",
+                    "name_ru": "Ливерпуль",
+                    "short_name_ru": "ЛИВ"
+                }
+            },
+            {
+                "date": "2025-04-13",
+                "status": "finished",
+                "score": {
+                    "short_score": {
+                        "full_time": [
+                            2,
+                            1
+                        ]
+                    },
+                    "goals_home": [],
+                    "goals_away": []
+                },
+                "is_home": true,
+                "home_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                    "name": "Liverpool",
+                    "uuid": "liverpool",
+                    "name_ru": "Ливерпуль",
+                    "short_name_ru": "ЛИВ"
+                },
+                "away_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8654.png",
+                    "name": "West Ham",
+                    "uuid": "west-ham",
+                    "name_ru": "Вест Хэм",
+                    "short_name_ru": "ВХ"
+                }
+            },
+            {
+                "date": "2025-04-13",
+                "status": "notstarted",
+                "score": {
+                    "short_score": {
+                        "full_time": [
+                            2,
+                            1
+                        ]
+                    },
+                    "goals_home": [],
+                    "goals_away": []
+                },
+                "is_home": true,
+                "home_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+                    "name": "Liverpool",
+                    "uuid": "liverpool",
+                    "name_ru": "Ливерпуль",
+                    "short_name_ru": "ЛИВ"
+                },
+                "away_team": {
+                    "img": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+                    "name": "Arsenal",
+                    "uuid": "team-arsenal",
+                    "name_ru": "Арсенал",
+                    "short_name_ru": "АРС"
+                },
+                "odds": {
+                    "team_target_odds_procents": 50
+                }
+            }
+        ]
     },
-    {   
+    {
         "id": 1,
         "category_name": "Premier League",
         "is_event": false,
@@ -214,7 +789,7 @@
         "odd_score_procent": 0,
         "score": 53,
         "spread": 13,
-         "team_coach": {
+        "team_coach": {
             "age": 17,
             "country": "Spain",
             "first_name": "Andoni",
@@ -243,7 +818,7 @@
         "odd_score_procent": 0,
         "score": 59,
         "spread": 9,
-         "team_coach": {
+        "team_coach": {
             "age": 17,
             "country": "Spain",
             "first_name": "Thomas",
@@ -272,7 +847,7 @@
         "odd_score_procent": 0,
         "score": 52,
         "spread": 1,
-         "team_coach": {
+        "team_coach": {
             "age": 17,
             "country": "Spain",
             "first_name": "Fabian",
@@ -301,7 +876,7 @@
         "odd_score_procent": 0,
         "score": 51,
         "spread": 3,
-         "team_coach": {
+        "team_coach": {
             "age": 17,
             "country": "Spain",
             "first_name": "Roy",
@@ -330,7 +905,7 @@
         "odd_score_procent": 0,
         "score": 46,
         "spread": -4,
-         "team_coach": {
+        "team_coach": {
             "age": 17,
             "country": "Spain",
             "first_name": "Vitor",
@@ -359,7 +934,7 @@
         "odd_score_procent": 0,
         "score": 45,
         "spread": -11,
-         "team_coach": {
+        "team_coach": {
             "age": 17,
             "country": "Spain",
             "first_name": "Unai",
@@ -388,7 +963,7 @@
         "odd_score_procent": 0,
         "score": 39,
         "spread": -7,
-         "team_coach": {
+        "team_coach": {
             "age": 17,
             "country": "Spain",
             "first_name": "David",
@@ -417,7 +992,7 @@
         "odd_score_procent": 0,
         "score": 39,
         "spread": -9,
-         "team_coach": {
+        "team_coach": {
             "age": 17,
             "country": "Spain",
             "first_name": "Ruben",
@@ -446,7 +1021,7 @@
         "odd_score_procent": 0,
         "score": 38,
         "spread": 4,
-         "team_coach": {
+        "team_coach": {
             "age": 17,
             "country": "Spain",
             "first_name": "Ange",
@@ -475,7 +1050,7 @@
         "odd_score_procent": 0,
         "score": 37,
         "spread": -9,
-         "team_coach": {
+        "team_coach": {
             "age": 17,
             "country": "Spain",
             "first_name": "Graham",
@@ -504,7 +1079,7 @@
         "odd_score_procent": 0,
         "score": 22,
         "spread": -21,
-         "team_coach": {
+        "team_coach": {
             "age": 17,
             "country": "Spain",
             "first_name": "Steve",
@@ -533,7 +1108,7 @@
         "odd_score_procent": 0,
         "score": 21,
         "spread": -27,
-         "team_coach": {
+        "team_coach": {
             "age": 17,
             "country": "Spain",
             "first_name": "Ruud",
@@ -562,7 +1137,7 @@
         "odd_score_procent": 0,
         "score": 11,
         "spread": -57,
-         "team_coach": {
+        "team_coach": {
             "age": 17,
             "country": "Spain",
             "first_name": "Simon",

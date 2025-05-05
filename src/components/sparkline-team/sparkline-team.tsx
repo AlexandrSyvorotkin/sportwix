@@ -1,6 +1,10 @@
 import styles from './sparkline-team.module.scss'
-// import SparklineArrowPoints from '../../legacy/components/SparklineArrowPoints/SparklineArrowPoints';
-
+import { SparkLineSeasonResultBar } from '@components/sparkline-season-result'
+import { LineChart } from '@components/line-chart'
+import { LineChartLastCandlePos } from '@components/line-chart-last-candle'
+import { SparklineLastGame } from '@components/sparkline-last-game'
+import { ILastMatch } from 'src/models/ILastMatch'
+import { NextGameSparkLine } from '@components/sparkline-next-game'
 
 interface TeamSparkLineProps {
     team: any
@@ -8,9 +12,12 @@ interface TeamSparkLineProps {
 
 const TeamSparkLine = ({ team }: TeamSparkLineProps) => {
 
-    // const finishedLastGames = team.last_matches?.filter(game => game.status === 'finished').slice(-3)
+    const finishedLastGames = team.last_matches?.filter((game: ILastMatch) => game.status === 'finished').slice(-3)
+
+
     // const lastGame = team.last_matches?.filter(game => game.status === 'finished').slice(-1)
-    // const futureGame = team.last_matches?.filter(game => game.status === 'notstarted').slice(0, 1)
+    const futureGame = team.last_matches?.filter((game: ILastMatch) => game.status === 'notstarted').slice(0, 1)
+
     // const { BASE_PATH, API, V1, EVENT, TEAM } = API_VARIABLES
 
     // console.log(lastGame)
@@ -145,6 +152,8 @@ const TeamSparkLine = ({ team }: TeamSparkLineProps) => {
     //         break;
     // }
 
+
+
     const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
     return (
         <div className={styles.team_sparkline_container} id='container' >
@@ -167,24 +176,24 @@ const TeamSparkLine = ({ team }: TeamSparkLineProps) => {
                 <div className={styles.team_info} id='team-sparkline-name'>
                     <div className={`${styles?.team_name} ${styles[theme]}`}>{language === 'Eng' ? team?.team_short_name : team?.team_short_name_ru}</div>
                     <div className={styles.team_info_dop}>
-                        <div className={`${styles.points} ${styles[theme]}`}>{team.score}(P)</div>
+                        <div className={`${styles.points}`}>{team.score}(P)</div>
                         {/* {lastGame[0].match_result === 'win' || lastGame[0].match_result === 'draw' ? <SparklineArrowPoints isPositive={true}/> : <SparklineArrowPoints isPositive={false}/>} */}
                         <div style={{color: pointsDifferenceColor}}>{pointsDifference}</div>
                     </div>
                 </div>
-                {/* <SparkLineSeasonResultBar
+                <SparkLineSeasonResultBar
                     wins={team.wins}
                     losses={team.losses}
                     draws={team.draws}
-                    setIsAlternativeResultsVisible={setIsResultsVisible}
+                    setIsAlternativeResultsVisible={() => null}
                     width={100}
                     isDopInfo={true}
-                /> */}
-                {/* <div id='line-chart' className={styles.line_chart_wrapper}>
-                    <LineChart candles={team.candles} candleCanvasRef={candleCanvasRef} />
-                    <LineChartLastCandlePos lastCandles={team.candles.slice(-2)}/>
+                />
+                <div id='line-chart' className={styles.line_chart_wrapper}>
+                    <LineChart candles={team.candles} />
+                    {team.candles.length > 1 && <LineChartLastCandlePos lastCandles={team.candles.slice(-2)}/>}
                 </div>
-                {section_width === 100
+                {/* {section_width === 100
                     ?
                     <div className={styles.cups_list}>
                         <SparkLineSingleCup borderColor='#B3891F' backgroudColor='#EBBB41'>{eplHistory[0]?.gold_of_league === 0 ? null : eplHistory[0]?.gold_of_league}</SparkLineSingleCup>
@@ -195,9 +204,9 @@ const TeamSparkLine = ({ team }: TeamSparkLineProps) => {
                     null} */}
                 <div className={styles.last_games} id='last-games'>
                 <div className={styles.border} style={{height: '40px', border: border}}/>
-                    {/* {finishedLastGames.map(game =>
+                    {team.last_matches && finishedLastGames.map((game: ILastMatch) =>
                         !game?.is_home ?
-                            <PreviousSparkLineGame
+                            <SparklineLastGame
                                 key={game.uuid}
                                 rival_team_logo={game.home_team.img}
                                 game_type={game.is_home}
@@ -206,7 +215,7 @@ const TeamSparkLine = ({ team }: TeamSparkLineProps) => {
                                 match_result={game.match_result}
                             />
                             :
-                            <PreviousSparkLineGame
+                            <SparklineLastGame
                                 key={game.uuid}
                                 rival_team_logo={game.away_team.img}
                                 game_type={game.is_home}
@@ -214,27 +223,18 @@ const TeamSparkLine = ({ team }: TeamSparkLineProps) => {
                                 rival_team_goals={game.is_home ? game.score.short_score.full_time[1] : game.score.short_score.full_time[0]}
                                 match_result={game.match_result}
                             />
-                    )} */}
+                    )}
                 <div className={styles.border} style={{height: '40px', border: border}}/>
                 </div>
-                {/* {futureGame.length === 0 ?
-                null 
-                :
-                <div className={styles.next_game} id='next-game'>
-                    <NextGameSparkLine
-                        team_logo={futureGame[0]?.is_home ? futureGame[0]?.away_team.img : futureGame[0]?.home_team.img}
-                        match_type={futureGame[0]?.is_home}
-                        possible_winning_percentage={futureGame[0]?.odds.team_target_odds_procents}
-                    />
-                </div>
-                } */}
-                {/* <div className={styles.next_game} id='next-game'>
-                    <NextGameSparkLine
-                        team_logo={futureGame[0]?.is_home ? futureGame[0]?.away_team.img : futureGame[0]?.home_team.img}
-                        match_type={futureGame[0]?.is_home}
-                        possible_winning_percentage={futureGame[0]?.odds.team_target_odds_procents}
-                    />
-                </div> */}
+                {Array.isArray(futureGame) && futureGame.length > 0 && (
+                    <div className={styles.next_game} id='next-game'>
+                        <NextGameSparkLine
+                            team_logo={futureGame[0]?.is_home ? futureGame[0]?.away_team.img : futureGame[0]?.home_team.img}
+                            match_type={futureGame[0]?.is_home}
+                            possible_winning_percentage={futureGame[0]?.odds?.team_target_odds_procents}
+                        />
+                    </div>
+                )}
             </div>
         </div>
     );

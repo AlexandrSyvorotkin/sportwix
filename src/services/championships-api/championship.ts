@@ -5,3 +5,4 @@ export type Championship = {
     last_matches: ILastMatch[],
     teams: ITeam[]
 }
+
