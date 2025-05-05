@@ -142,7 +142,7 @@ const CommonInfoSection = ({}) => {
     // const roadmap = document.getElementById('user-guide')?.getBoundingClientRect()
 
     // const {theme} = useContext(ThemeContext)
-    const theme = 'dark'
+    // const theme = 'dark'
 
     // const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
 
@@ -181,7 +181,7 @@ const CommonInfoSection = ({}) => {
 
     return (
         <>  
-            <div style={{width: '100%', overflowY: 'auto'}} id='recent-games' className='border-t-[1px] border-[#5C5C5C]'>
+            <div style={{width: '100%', overflowY: 'auto'}} id='recent-games' className='border-t border-[#5C5C5C]'>
                 <LastResultsSection />
             </div>
             <div className="max-w-[55px] border-l border-[#5C5C5C] p-[7px] flex flex-col items-center gap-[3px] relative">
