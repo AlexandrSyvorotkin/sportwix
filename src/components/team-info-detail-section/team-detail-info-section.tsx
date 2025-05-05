@@ -9,6 +9,7 @@ import TeamStatsIcon from '@assets/icons/team-stats.svg?react'
 import PlayerStatIcon from '@assets/icons/player-stat.svg?react'
 import FootballFieldIcon from '@assets/icons/football-field.svg?react'
 import CalendarIcon from '@assets/icons/calendar.svg?react'
+import { NewsTab } from '@components/news-tab';
 
 type Tab = 'news' | 'about-team' | 'championships-performance' | 'team-stats' | 'player-stat' | 'football-field' | 'calendar'
 
@@ -51,13 +52,13 @@ const TeamDetailInfoSection = ({ }) => {
     // ]
 
     const detailInfoAboutTeamTabs =[
-        { id: 'news', component: <div className='w-full'>Новости</div> },
-        { id: 'about-team', component: <div className='w-full'>Последние результаты</div>},
-        { id: 'championships-performance', component: <div className='w-full'>Информация о команде</div> },
-        { id: 'team-stats', component: <div className='w-full'>Результаты команды</div> },
-        { id: 'player-stat', component: <div className='w-full'>Статистика команды</div> },
-        { id: 'football-field', component: <div className='w-full'>Игроки команды</div> },
-        { id: 'calendar', component: <div className='w-full'>Футбольное поле</div> },
+        { id: 'news', component: <NewsTab /> },
+        { id: 'about-team', component: <div >Последние результаты</div>},
+        { id: 'championships-performance', component: <div >Информация о команде</div> },
+        { id: 'team-stats', component: <div >Результаты команды</div> },
+        { id: 'player-stat', component: <div >Статистика команды</div> },
+        { id: 'football-field', component: <div >Игроки команды</div> },
+        { id: 'calendar', component: <div >Футбольное поле</div> },
     ]
 
     const [tabs, setTabs] = useState<Tab>('news')
@@ -122,7 +123,9 @@ const TeamDetailInfoSection = ({ }) => {
 
     return (
         <div className={styles.team_defail_info_section} id='full-tabs'>
-            {detailInfoAboutTeamTabs.find(tab => tab.id === tabs)?.component}
+            <div className='w-full border-r border-[#5C5C5C]'>
+                {detailInfoAboutTeamTabs.find(tab => tab.id === tabs)?.component}
+            </div>
             <div className={styles.panel_section}>
                 {rigthTabBtns.map(({ id, ...btnProps }) => (
                     <PanelBtn key={id} {...btnProps} />

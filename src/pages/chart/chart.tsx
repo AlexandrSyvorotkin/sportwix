@@ -592,7 +592,7 @@ const Chart: FC = () => {
                     ))}
                 </div>
             </div>
-            <div style={{ width: `${leftPaneWidthPercentage}%` }} className={styles.left_section}>
+            <div style={{ width: `${leftPaneWidthPercentage}%` }} className='border-r border-[#5C5C5C]'>
             <div className={styles.right_section_chart}>
                         <div style={{ height: `${chartPanelHeightPercentage}%` }} className={styles.chart} id='candle-chart'>
                         {/* {isSingleTeamView ?
@@ -632,7 +632,7 @@ const Chart: FC = () => {
                 <div style={{ height: `${championshipTableHeightPercentage}%` }}>
                     <ChampionshipTable />
                 </div>
-                <div className={styles.recent_games_section} >
+                <div className={styles.recent_games_section}>
                     <CommonInfoSection />
                 </div>
             </div>
