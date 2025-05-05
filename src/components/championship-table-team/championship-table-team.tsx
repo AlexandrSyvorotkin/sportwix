@@ -1,6 +1,6 @@
 
 import classNames from "classnames";
-import {useAppDispatch, useAppSelector} from "../../types/hooks";
+import {useAppSelector} from "../../types/hooks";
 import styles from './championship-table-team.module.scss'
 import { useState } from "react";
 
