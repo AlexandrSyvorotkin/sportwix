@@ -1,3 +1,4 @@
+import { expandTypes, teamTabsTypes } from "src/store/InterfaceSlice/InterfaceSlice";
 import { candleSeasons } from "./candleSeason";
 
 export type Coach = {
@@ -114,9 +115,13 @@ export type interfaceState = {
             sparklineSection: boolean,
             newsAndLastGamesSection: boolean,
             chartSection: boolean,
-            tabsInfoSection:boolean
+            tabsInfoSection:boolean,
         }
-    }
+    },
+    team_tabs: {
+        active_team_tab: teamTabsTypes
+    },
+    expanded_section: expandTypes
 }
 
 type TipParams = {

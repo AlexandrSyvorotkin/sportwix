@@ -70,6 +70,8 @@ export default {
         'violet-gradient': 'var(--violet-gradient)',
         'grey-gradient': 'var(--grey-gradient)',
         'btn-hover': 'var(--btn-hover)',
+
+        'grey': 'var(--grey-separator)',
         
         // Добавленные цвета из legacy
         'bg-color': 'var(--bg-color)',

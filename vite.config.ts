@@ -18,6 +18,7 @@ export default defineConfig({
       '@charts': path.resolve(__dirname, './src/charts'),
       '@ui': path.resolve(__dirname, './src/ui'),
       '@assets': path.resolve(__dirname, './src/assets'),
+      '@shared': path.resolve(__dirname, './src/shared'),
       // '@legacy': path.resolve(__dirname, './src/legacy'),
     },
   },

@@ -9,6 +9,7 @@
 	justify-content: space-between;
 	border-bottom: none;
 	flex-direction: column;
+	overflow-y: auto;
 	@media (max-width: 576px) {
 		overflow: auto;
 	}

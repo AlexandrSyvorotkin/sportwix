@@ -12,6 +12,7 @@
       "@charts/*": ["src/charts/*"],
       "@ui/*": ["src/ui/*"],
       "@assets/*": ["src/assets/*"],
+      "@shared/*": ["src/shared/*"],
       // "@styles/*": ["src/styles/*"],
       // "@utils/*": ["src/utils/*"],
       // "@hooks/*": ["src/hooks/*"],

@@ -10,6 +10,8 @@ import PlayerStatIcon from '@assets/icons/player-stat.svg?react'
 import FootballFieldIcon from '@assets/icons/football-field.svg?react'
 import CalendarIcon from '@assets/icons/calendar.svg?react'
 import { NewsTab } from '@components/news-tab';
+import { useAppSelector } from '../../hooks/hooks';
+import { RootState } from '../../store/store';
 
 type Tab = 'news' | 'about-team' | 'championships-performance' | 'team-stats' | 'player-stat' | 'football-field' | 'calendar'
 
@@ -61,54 +63,56 @@ const TeamDetailInfoSection = ({ }) => {
         { id: 'calendar', component: <div >Футбольное поле</div> },
     ]
 
-    const [tabs, setTabs] = useState<Tab>('news')
 
-    const rigthTabBtns = useMemo(() =>
-        [
-            {
-                id: 1,
-                icon: <NewsIcon/>,
-                onClick: () => setTabs('news'),
-                disabled: false
-            },
-            {
-                id: 2,
-                icon: <AboutTeamIcon/>,
-                onClick: () => setTabs('about-team'),
-                disabled: false
-            },
-            {
-                id: 3,
-                icon: <ChampionshipsPerformanceIcon/>,
-                onClick: () => setTabs('championships-performance'),
-                disabled: false
-            },
-            {
-                id: 4,
-                icon: <TeamStatsIcon/>,
-                onClick: () => setTabs('team-stats'),
-                disabled: false
-            },
-            {
-                id: 5,
-                icon: <PlayerStatIcon/>,
-                onClick: () => setTabs('player-stat'),
-                disabled: false
-            },
-            {
-                id: 6,
-                icon: <FootballFieldIcon/>,
-                onClick: () => setTabs('football-field'),
-                disabled: false
-            },
-            {
-                id: 7,
-                icon: <CalendarIcon/>,
-                onClick: () => setTabs('calendar'),
-                disabled: false
-            }
-        ]
-    , [])
+
+    const activeTeamTab = useAppSelector((state: RootState) => state.interfaceState.team_tabs.active_team_tab)
+
+    // const rigthTabBtns = useMemo(() =>
+    //     [
+    //         {
+    //             id: 1,
+    //             icon: <NewsIcon/>,
+    //             onClick: () => setTabs('news'),
+    //             disabled: false
+    //         },
+    //         {
+    //             id: 2,
+    //             icon: <AboutTeamIcon/>,
+    //             onClick: () => setTabs('about-team'),
+    //             disabled: false
+    //         },
+    //         {
+    //             id: 3,
+    //             icon: <ChampionshipsPerformanceIcon/>,
+    //             onClick: () => setTabs('championships-performance'),
+    //             disabled: false
+    //         },
+    //         {
+    //             id: 4,
+    //             icon: <TeamStatsIcon/>,
+    //             onClick: () => setTabs('team-stats'),
+    //             disabled: false
+    //         },
+    //         {
+    //             id: 5,
+    //             icon: <PlayerStatIcon/>,
+    //             onClick: () => setTabs('player-stat'),
+    //             disabled: false
+    //         },
+    //         {
+    //             id: 6,
+    //             icon: <FootballFieldIcon/>,
+    //             onClick: () => setTabs('football-field'),
+    //             disabled: false
+    //         },
+    //         {
+    //             id: 7,
+    //             icon: <CalendarIcon/>,
+    //             onClick: () => setTabs('calendar'),
+    //             disabled: false
+    //         }
+    //     ]
+    // , [])
 
     // const windowWidth = window.innerWidth
 
@@ -123,13 +127,8 @@ const TeamDetailInfoSection = ({ }) => {
 
     return (
         <div className={styles.team_defail_info_section} id='full-tabs'>
-            <div className='w-full border-r border-[#5C5C5C]'>
-                {detailInfoAboutTeamTabs.find(tab => tab.id === tabs)?.component}
-            </div>
-            <div className={styles.panel_section}>
-                {rigthTabBtns.map(({ id, ...btnProps }) => (
-                    <PanelBtn key={id} {...btnProps} />
-                ))}
+            <div className='w-full'>
+                {detailInfoAboutTeamTabs.find(tab => tab.id === activeTeamTab)?.component}
             </div>
         </div>
     );

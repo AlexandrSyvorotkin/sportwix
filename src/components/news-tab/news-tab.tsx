@@ -180,23 +180,23 @@ const NewsTab = () => {
 
     return (
         <div className={styles.news_wrapper}>
-            <div className={styles.news_header_tags} id='news-tags' style={{ borderBottom: border }}>
+            {/* <div className={styles.news_header_tags} id='news-tags' style={{ borderBottom: border }}>
                 <div className={tabListStyles}>
-                    {/* <TabBtn onClick={() => null} activeTab={false}>Reset tags</TabBtn> */}
-                    {/* <TabBtn onClick={allTagsHandles} activeTab={false}>All tags</TabBtn> */}
-                    {/* {newsTags?.results.slice(0, 3).map((tag: any, id: number) =>
+                    <TabBtn onClick={() => null} activeTab={false}>Reset tags</TabBtn>
+                    <TabBtn onClick={allTagsHandles} activeTab={false}>All tags</TabBtn>
+                    {newsTags?.results.slice(0, 3).map((tag: any, id: number) =>
                         <TabBtn key={id} activeTab={activeFilterTags.includes(tag)} onClick={() => addDeleteTagToActivaTagsPool(tag)}>{tag}</TabBtn>
-                    )} */}
+                    )}
                 </div>
-                {/* <div className={styles.filters}>
+                <div className={styles.filters}>
                     <NewsTagsSelector tags={newsTags?.results} activeFilterTags={activeFilterTags} filterNewsByTagsHandler={addDeleteTagToActivaTagsPool} />
                     <NewsTeamSelector
                         filterNewsBySelectedTeam={() => null}
                         teamFilterName={teamFilterName}
                         setTeamFilterName={setTeamFilterName}
                     />
-                </div> */}
-            </div>
+                </div>
+            </div> */}
             {data?.results && data?.results.length > 0 ?
                 <div className={styles.news}>
                     {data?.results.length === 0 ? <div className={styles.nonews}>{"Нет новостей по вашим выбранным параметрам"}</div> :

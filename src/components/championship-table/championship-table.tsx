@@ -104,11 +104,6 @@ const ChampionShipTable = ({}: ChampionshipTableProps) => {
                         )}
                     </div>
                 </div>
-            <div className={styles.panel_section}>
-                {rightTableBtns.map(({ id, ...btnProps }) => (
-                        <PanelBtn key={id} {...btnProps} />
-                    ))}
-            </div>
         </div>
     );
 };

@@ -1,35 +1,21 @@
 
-import { FC, useState, useEffect, useMemo } from "react";
+import { FC, useState, useEffect } from "react";
 
 // import { useXSMAX, useSMMIN } from "../../legacy/media-queries";
 import { switchVersion, switchMobileOrientation } from "../../store/InterfaceSlice/InterfaceSlice";
-import styles from './chart.module.scss'
-import { useAppDispatch } from "../../hooks/hooks";
-
-//left btns
-import DiagonalLevels from '../../assets/icons/diagonal-levels.svg?react'
-import PublishPost from '../../assets/icons/publish-post.svg?react'
-import LabelSelection from '../../assets/icons/label-selection.svg?react'
-import Nuler from '../../assets/icons/nuler.svg?react'
-import PutYourLables from '../../assets/icons/put-your-labels.svg?react'
-
-//right btns
-import Expand from '../../assets/icons/expand.svg?react'
-import FilterByCups from '../../assets/icons/filter-by-cups.svg?react'
-import ChartSettings from '../../assets/icons/chart-settings.svg?react'
-import FilterByTimes from '../../assets/icons/filter-by-times.svg?react'
-import FilterByGoals from '../../assets/icons/filter-by-goals.svg?react'
-import FilterBySeasons from '../../assets/icons/filter-by-seasons.svg?react'
-import FilterByHomeAwayGames from '../../assets/icons/filter-by-home-away-games.svg?react'
-
-
-import PanelBtn from "../../ui/panel-btn/panel-btn";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import Banner from "../../components/banner/banner";
 import SparkLineSection from "../../components/sparkline-table/sparkline-table";
 import ChampionshipTable from "../../components/championship-table/championship-table";
 
 import { TeamDetailInfoSection } from "@components/team-info-detail-section";
 import { CommonInfoSection } from "@components/common-info-section";
+import { Separator } from "@shared/separator";
+
+import { TeamTabPanel, ChartFunctionsPanel, ChartFiltersPanel, ChampionshipTablePanel } from "@components/control-panels";
+import { CommonPanel } from "@components/control-panels/common-panel";
+import { RootState } from "../../store/store";
+
 
 const Chart: FC = () => {
 
@@ -181,7 +167,7 @@ const Chart: FC = () => {
         }
     }, []);
 
-    
+
     // useEffect(() => {
     //     if (data) {
     //         dispatch(chooseSecondTeam(data?.teams[0]))
@@ -505,96 +491,28 @@ const Chart: FC = () => {
 
     // const tournamentType = useAppSelector((state => state.tournamentSlice.isNationalTournament))
 
-    const leftChartBtns = useMemo(() => [
-        {
-            id: 1,
-            icon: <PublishPost/>,
-            onClick: () => null,
-            disabled: true
-        },
-        {
-            id: 2,
-            icon: <DiagonalLevels/>,
-            onClick: () => null,
-            disabled: true
-        },
-        {
-            id: 3,
-            icon: <LabelSelection />,
-            onClick: () => null,
-            disabled: true
-        },
-        {
-            id: 4,
-            icon: <Nuler/>,
-            onClick: () => null,
-            disabled: true
-        },
-        {
-            id: 5,
-            icon: <PutYourLables/>,
-            onClick: () => null,
-            disabled: true
-        }
-    ], [])
+    
 
-    const rightChartBtns = useMemo(() => [
-        {
-            id: 1,
-            icon: <Expand/>,
-            onClick: () => null,
-            disabled: false
-        },
-        {
-            id: 2,
-            icon: <FilterBySeasons/>,
-            onClick: () => null,
-            disabled: false
-        },
-        {
-            id: 3,
-            icon: <ChartSettings/>,
-            onClick: () => null,
-            disabled: false
-        },
-        {
-            id: 4,
-            icon: <FilterByCups/>,
-            onClick: () => null,
-            disabled: false
-        },
-        {
-            id: 5,
-            icon: <FilterByHomeAwayGames/>,
-            onClick: () => null,
-            disabled: false
-        },
-        {
-            id: 6,
-            icon: <FilterByTimes/>,
-            onClick: () => null,
-            disabled: false
-        },
-        {
-            id: 7,
-            icon: <FilterByGoals/>,
-            onClick: () => null,
-            disabled: false
-        },
-    ], [])
+    
+    const expandSection = useAppSelector((state: RootState) => state.interfaceState.expanded_section)
+    
+
+    
+
+
+   
 
     const desktop = (
-        <div className={`${styles.panels} ${styles[theme]}`}>
-            <div className={styles.work_panel_left} style={{ position: 'relative', borderRight: border }}>
-                <div className="flex flex-col gap-2">
-                    {leftChartBtns.map(({ id, ...btnProps }) => (
-                        <PanelBtn key={id} {...btnProps} />
-                    ))}
+        <div className="w-full h-[calc(100vh-50px)] flex">
+            <div className="w-[53px] flex h-full">
+                <div className="flex h-full">
+                    <ChartFunctionsPanel />
+                    <Separator className="w-[1px] h-full" />
                 </div>
             </div>
-            <div style={{ width: `${leftPaneWidthPercentage}%` }} className='border-r border-[#5C5C5C]'>
-            <div className={styles.right_section_chart}>
-                        <div style={{ height: `${chartPanelHeightPercentage}%` }} className={styles.chart} id='candle-chart'>
+            <div className={`${expandSection === 'sparkline' ? 'w-full' : 'w-2/3'}`}>
+                <div className='h-full flex flex-col'>
+                    <div className={`flex w-full ${expandSection === 'sparkline' ? 'h-[calc(100vh-100px)]' : 'h-1/2'} `} id='candle-chart'>
                         {/* {isSingleTeamView ?
                                             <CandleChart
                                                 rulerActive={drawRulerActive}
@@ -611,29 +529,48 @@ const Chart: FC = () => {
                                                 height={championshipTableHeightPercentage}
                                             />                                            
                                         } */}
+                        <div className="w-[calc(100%-53px)] flex">
                             <SparkLineSection sectionWidth={leftPaneWidthPercentage} />
-                            <div className={styles.panel_section} id='candle-chart-panel-section' style={{ borderLeft: border }}>
-                            <div className="flex flex-col gap-2">
-                                {rightChartBtns.map(({ id, ...btnProps }) => (
-                                    <PanelBtn key={id} {...btnProps} />
-                                ))}
-                            </div>
-                            </div>
+                        </div>                   
+                        <div className="w-[55px] flex h-full" id='candle-chart-panel-section'>
+                            <Separator className="w-[10px] h-full" />
+                            <ChartFiltersPanel />
                         </div>
-                        <div className={styles.news_section} style={{ display: expandSections ? 'none' : 'flex' }}>
-                            <Banner />
-                            <div className={styles.news_section_inner}>
-                                <TeamDetailInfoSection />
+                    </div>
+                    <div className='flex h-1/2 flex-col overflow-y-hidden'>
+                        <Banner />
+                        <div className={`${expandSection === 'sparkline' ? 'hidden' : 'flex'} overflow-y-hidden h-full`}>
+                            <div className="flex h-full w-full">
+                                <div className="w-full h-full">
+                                    <TeamDetailInfoSection />
+                                </div>
+                                <div className="flex h-full">
+                                    <Separator className="w-[1px] h-full"/>
+                                    <TeamTabPanel />
+                                </div>
                             </div>
                         </div>
                     </div>
-            </div>
-            <div className={styles.championship_table_section} style={{ display: expandSections ? 'none' : 'flex' }}>
-                <div style={{ height: `${championshipTableHeightPercentage}%` }}>
-                    <ChampionshipTable />
                 </div>
-                <div className={styles.recent_games_section}>
-                    <CommonInfoSection />
+            </div>
+            <Separator className="w-[1px] h-full"/>
+            <div className={`w-1/3 flex-col ${expandSection === 'sparkline' ? 'hidden' : 'flex'}`}>
+                <div className="w-full flex flex-col h-1/2">
+                    <div className="h-full flex flex w-full">
+                        <div className="w-full">
+                            <ChampionshipTable />
+                        </div>
+                        <Separator className="w-[1px] h-full" />
+                        <ChampionshipTablePanel />
+                </div>
+                </div>
+                <Separator className="w-full h-[1px]" />
+                <div className="h-[49%] flex w-full justify-end">
+                    <div className="w-full h-full">
+                        <CommonInfoSection />
+                    </div>
+                    <Separator className="w-[1px] h-full" />
+                    <CommonPanel />
                 </div>
             </div>
         </div>

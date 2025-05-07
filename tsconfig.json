@@ -11,6 +11,7 @@
       "@charts/*": ["src/charts/*"],
       "@ui/*": ["src/ui/*"],
       "@assets/*": ["src/assets/*"],
+      "@shared/*": ["src/shared/*"],
       // "@utils/*": ["src/utils/*"]
     }
   }

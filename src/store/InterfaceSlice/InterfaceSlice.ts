@@ -1,7 +1,8 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { interfaceState } from "../../types/types";
 
-export type expandTypes = "sparkline" | "newsAndLastGames" | "candleChart" | "tabsInfo";
+export type expandTypes = "sparkline" | "newsAndLastGames" | "candleChart" | "tabsInfo" | 'none';
+export type teamTabsTypes = "news" | "about-team" | "championships-performance" | "team-stats" | "player-stat" | "football-field" | "calendar";
 
 const initialState: interfaceState = {
     desktop: {
@@ -20,9 +21,13 @@ const initialState: interfaceState = {
             sparklineSection: false,
             newsAndLastGamesSection: false,
             chartSection: false,
-            tabsInfoSection:false
+            tabsInfoSection:false,
         }
-    }
+    },
+    team_tabs: {
+        active_team_tab: 'news'
+    },
+    expanded_section: 'none'
 }
 
 const interfaceSlice = createSlice({
@@ -57,9 +62,15 @@ const interfaceSlice = createSlice({
             if (action.payload === 'mobile') {
                 state.mobile.isMobile = true
             } else state.desktop.isDesktop = true
+        },
+        onSwitchActiveTeamTab (state, action: PayloadAction<teamTabsTypes>) {
+            state.team_tabs.active_team_tab = action.payload
+        },
+        onExpandSection(state, action: PayloadAction<expandTypes>) {
+            state.expanded_section = action.payload
         }
     }
 })
 
-export const { switchMobileOrientation, expandSection, switchVersion, expandDesktopSection } = interfaceSlice.actions
+export const { switchMobileOrientation, expandSection, switchVersion, expandDesktopSection, onSwitchActiveTeamTab, onExpandSection } = interfaceSlice.actions
 export default interfaceSlice.reducer

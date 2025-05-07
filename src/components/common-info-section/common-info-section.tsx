@@ -180,18 +180,10 @@ const CommonInfoSection = ({}) => {
     ], [])
 
     return (
-        <>  
-            <div style={{width: '100%', overflowY: 'auto'}} id='recent-games' className='border-t border-l border-[#5C5C5C]'>
-                <LastResultsSection />
-            </div>
-            <div className="max-w-[55px] border-l border-[#5C5C5C] p-[7px] flex flex-col items-center gap-[3px] relative">
-                {rightChartBtns.map(({id, ...btnProps}) => (
-                    <PanelBtn key={id} {...btnProps} />
-                ))}
-                {/* <EducationOffer/> */}
-            </div>
-
-        </>
+        <div className="flex h-full w-full">  
+            <LastResultsSection />
+            {/* <EducationOffer/> */}
+        </div>
     );
 };
 
