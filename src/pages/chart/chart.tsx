@@ -483,7 +483,7 @@ const Chart: FC = () => {
 
     // }
 
-    const theme = 'dark'
+    // const theme = 'dark'
     // const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
 
     // const tournamentType = useAppSelector((state => state.tournamentSlice.isNationalTournament))

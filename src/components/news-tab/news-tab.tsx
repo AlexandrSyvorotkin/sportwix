@@ -2,7 +2,6 @@ import styles from './news-tab.module.scss';
 import { NewsTabItem } from '../news-tab-item';
 // import { singleNews } from '../../legacy/types/types';
 // import TabBtn from '../../legacy/ui/Buttons/TabBtn/TabBtn';
-import classNames from 'classnames';
 import newsMock from '../../mocks/news-mock.json';
 
 // type tags = string[]
@@ -142,7 +141,7 @@ const NewsTab = () => {
     // };
 
 
-    const theme = 'dark'
+    // const theme = 'dark'
     // const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
 
     // if (isFetching) {
