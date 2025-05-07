@@ -11,6 +11,7 @@ import CalendarIcon from '@assets/icons/calendar.svg?react'
 import { useAppDispatch, useAppSelector } from "../../../hooks/hooks"
 import { useMemo } from "react"
 import { RootState } from "../../../store/store"
+import { type PanelBtnProps } from "@ui/panel-btn/panel-btn";
 
 const activeColor = '#A266F4'
 
@@ -20,53 +21,65 @@ const TeamTabPanel = () => {
     const dispatch = useAppDispatch()
     const activeTeamDetailInfoTab = useAppSelector((state: RootState) => state.interfaceState.team_tabs.active_team_tab)
 
-    console.log(activeTeamDetailInfoTab)
 
     
-
-    const rigthTabBtns = useMemo(() =>
+    const rigthTabBtns:PanelBtnProps[] = useMemo(() =>
         [
             {
-                id: 1,
                 icon: <NewsIcon fill={activeTeamDetailInfoTab === 'news' ? activeColor : ''}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('news')),
-                disabled: false
+                disabled: false,
+                isActive: activeTeamDetailInfoTab === 'news',
+                tooltipText: 'Новости',
+                tooltipSide: 'left'
             },
             {
-                id: 2,
                 icon: <AboutTeamIcon fill={activeTeamDetailInfoTab === 'about-team' ? activeColor : ''}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('about-team')),
-                disabled: false
+                disabled: false,
+                isActive: activeTeamDetailInfoTab === 'about-team',
+                tooltipText: 'О команде',
+                tooltipSide: 'left'
             },
             {
-                id: 3,
                 icon: <ChampionshipsPerformanceIcon fill={activeTeamDetailInfoTab === 'championships-performance' ? activeColor : ''}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('championships-performance')),
-                disabled: false
+                disabled: false,
+                isActive: activeTeamDetailInfoTab === 'championships-performance',
+                tooltipText: 'Выступление',
+                tooltipSide: 'left'
             },
             {
-                id: 4,
                 icon: <TeamStatsIcon fill={activeTeamDetailInfoTab === 'team-stats' ? activeColor : ''}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('team-stats')),
-                disabled: false
+                disabled: false,
+                isActive: activeTeamDetailInfoTab === 'team-stats',
+                tooltipText: 'Статистика команды',
+                tooltipSide: 'left'
             },
             {
-                id: 5,
                 icon: <PlayerStatIcon fill={activeTeamDetailInfoTab === 'player-stat' ? activeColor : ''}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('player-stat')),
-                disabled: false
+                disabled: false,
+                isActive: activeTeamDetailInfoTab === 'player-stat',
+                tooltipText: 'Статистика игрока',
+                tooltipSide: 'left'
             },
             {
-                id: 6,
                 icon: <FootballFieldIcon fill={activeTeamDetailInfoTab === 'football-field' ? activeColor : ''}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('football-field')),
-                disabled: false
+                disabled: false,
+                isActive: activeTeamDetailInfoTab === 'football-field',
+                tooltipText: 'Футбольное поле',
+                tooltipSide: 'left'
             },
             {
-                id: 7,
                 icon: <CalendarIcon fill={activeTeamDetailInfoTab === 'calendar' ? activeColor : ''}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('calendar')),
-                disabled: false
+                disabled: false,
+                isActive: activeTeamDetailInfoTab === 'calendar',
+                tooltipText: 'Календарь',
+                tooltipSide: 'left'
             }
         ]
     , [activeTeamDetailInfoTab])

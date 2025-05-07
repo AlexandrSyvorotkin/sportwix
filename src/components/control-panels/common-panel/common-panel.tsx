@@ -5,39 +5,50 @@ import EmailIcon from '@assets/icons/email.svg?react'
 import UserGuideIcon from '@assets/icons/user-guide.svg?react'
 import { useMemo } from 'react'
 import PanelBtn from '@ui/panel-btn/panel-btn'
+import { type PanelBtnProps } from "@ui/panel-btn/panel-btn";
 
 const CommonPanel = () => {
 
-    const rightCommonBtns = useMemo(() => [
+    const rightCommonBtns: PanelBtnProps[] = useMemo(() => [
         {
-            id: 1,
-            icon: <InformationTableIcon/>,
+            icon: <InformationTableIcon stroke='#A266F4'/>,
             onClick: () => null,
-            disabled: true
+            disabled: false,
+            isActive: true,
+            tooltipText: 'Информационная доска',
+            tooltipSide: 'left'
         },
         {
-            id: 2,
             icon: <ChatIcon/>,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: 'Чат',
+            tooltipSide: 'left'
         },
         {
-            id: 3,
             icon: <TechSupportIcon/>,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: 'Помощь',
+            tooltipSide: 'left'
         },
         {
-            id: 4,
             icon: <EmailIcon/>,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: 'Почта',
+            tooltipSide: 'left'
         },
         {
-            id: 5,
             icon: <UserGuideIcon/>,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: 'Обучение',
+            tooltipSide: 'left'
         }
     ], [])
 

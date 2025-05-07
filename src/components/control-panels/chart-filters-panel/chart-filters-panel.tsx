@@ -10,6 +10,7 @@ import { useMemo } from "react"
 import { useAppDispatch, useAppSelector } from "../../../hooks/hooks"
 import { onExpandSection } from "../../../store/InterfaceSlice/InterfaceSlice"
 import { RootState } from "src/store/store"
+import { type PanelBtnProps } from "@ui/panel-btn/panel-btn";
 
 const activeColor = '#A266F4'
 
@@ -18,48 +19,62 @@ const ChartFiltersPanel = () => {
     const dispatch = useAppDispatch()
     const expandedSection = useAppSelector((state: RootState) => state.interfaceState.expanded_section)
 
-    const rightChartBtns = useMemo(() => [
+    const rightChartBtns: PanelBtnProps[] = useMemo(() => [
         {
-            id: 1,
             icon: <Expand fill={expandedSection === 'sparkline' ? activeColor : ''}/>,
             onClick: () => dispatch(onExpandSection(expandedSection === 'none' ? 'sparkline' : 'none')),
-            disabled: false
+            disabled: false,
+            isActive: expandedSection === 'sparkline',
+            tooltipText: 'Expand',
+            tooltipSide: 'left'
         },
         {
-            id: 2,
             icon: <FilterBySeasons />,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: 'Filter by seasons',
+            tooltipSide: 'left'
         },
         {
-            id: 3,
             icon: <ChartSettings />,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: 'Expand',
+            tooltipSide: 'left',
         },
         {
-            id: 4,
             icon: <FilterByCups />,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: 'Expand',
+            tooltipSide: 'left'
         },
         {
-            id: 5,
             icon: <FilterByHomeAwayGames />,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: 'Expand',
+            tooltipSide: 'left'
         },
         {
-            id: 6,
             icon: <FilterByTimes />,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: 'Expand',
+            tooltipSide: 'left'
         },
         {
-            id: 7,
             icon: <FilterByGoals />,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: 'Expand',
+            tooltipSide: 'left'
         },
     ], [expandedSection])
 

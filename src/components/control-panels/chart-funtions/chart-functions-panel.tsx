@@ -6,39 +6,50 @@ import PublishPost from '@assets/icons/publish-post.svg?react'
 import LabelSelection from '@assets/icons/label-selection.svg?react'
 import Nuler from '@assets/icons/nuler.svg?react'
 import PutYourLables from '@assets/icons/put-your-labels.svg?react'
+import { type PanelBtnProps } from "@ui/panel-btn/panel-btn";
 
 const ChartFunctionsPanel = () => {
 
-    const leftChartBtns = useMemo(() => [
+    const leftChartBtns: PanelBtnProps[] = useMemo(() => [
         {
-            id: 1,
             icon: <PublishPost />,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: '',
+            tooltipSide: 'right'
         },
         {
-            id: 2,
             icon: <DiagonalLevels />,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: 'Уровень',
+            tooltipSide: 'right'
         },
         {
-            id: 3,
             icon: <LabelSelection />,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: '',
+            tooltipSide: 'right'
         },
         {
-            id: 4,
             icon: <Nuler />,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: 'Линейка',
+            tooltipSide: 'right'
         },
         {
-            id: 5,
             icon: <PutYourLables />,
             onClick: () => null,
-            disabled: true
+            disabled: true,
+            isActive: false,
+            tooltipText: '',
+            tooltipSide: 'right'
         }
     ], [])
     
