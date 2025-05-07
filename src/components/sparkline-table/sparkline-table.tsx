@@ -9,7 +9,6 @@ import teamsMock from '../../mocks/teams-mock.json'
 import TeamSparkLine from '../sparkline-team/sparkline-team'
 
 interface SparkLineSectionProps {
-    sectionWidth: number,
 }
 
 const SparkLineSection: FC<SparkLineSectionProps> = ({ }) => {

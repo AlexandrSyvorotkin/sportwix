@@ -29,11 +29,8 @@ const Chart: FC = () => {
     // const smMin = useSMMIN()
 
     // const { BASE_PATH, API, V1, EVENT, TEAM } = API_VARIABLES
-    const [leftPaneWidthPercentage, setLeftPaneWidthPercentage] = useState(65);
-    const [championshipTableHeightPercentage] = useState(50);
-    const [chartPanelHeightPercentage, setChartPanelHeightPercentage] = useState(50)
     // const [sparkLineActive, setSparklineActive] = useState<boolean>(true)
-    const [expandSections] = useState<boolean>(false)
+
     // const [bordersResizableActive, setBorderResizableActive] = useState<boolean>(true)
     // const [sectionDisplay, setSectionDisplay] = useState<string>('flex')
     // const borderResizableStatus = bordersResizableActive
@@ -56,7 +53,7 @@ const Chart: FC = () => {
     // const firstSelectedTeamSeasons = useAppSelector((state: RootState) => state.candleSliceNew.firstSelectedTeam.seasons)
     // const loading = useAppSelector(state => state.candleSliceNew.loading)
     // const isTeamStatsControlsVisible = useAppSelector(state => state.TeamStatsControls.isVisible)
-    const windowWidth = window.innerWidth
+    // const windowWidth = window.innerWidth
     // const isDoubleTeamView = useAppSelector(state => state.tournamentSlice.isDoubleTeamView)
     // const [isTeamSectionMobileExpanded, setIsTeamSectionMobileExpanded] = useState<boolean>(false)
     // const [chartMobileWidth, setChartMobileWidth] = useState(100)
@@ -67,24 +64,24 @@ const Chart: FC = () => {
     // const [isTipsModal, setIsTipsModal] = useState<boolean>(false)
     // const [isShowGuideline, setIsShowGuideline] = useState(false);
 
-    useEffect(() => {
-        if (windowWidth < 758) {
-            dispatch(switchVersion('mobile'))
-        } else if (windowWidth > 758) {
-            dispatch(switchVersion('desktop'))
-        }
-    }, [windowWidth])
+    // useEffect(() => {
+    //     if (windowWidth < 758) {
+    //         dispatch(switchVersion('mobile'))
+    //     } else if (windowWidth > 758) {
+    //         dispatch(switchVersion('desktop'))
+    //     }
+    // }, [windowWidth])
 
 
-    useEffect(() => {
-        if (expandSections) {
-            setLeftPaneWidthPercentage(100)
-            setChartPanelHeightPercentage(100)
-        } else {
-            setLeftPaneWidthPercentage(65)
-            setChartPanelHeightPercentage(50)
-        }
-    }, [expandSections])
+    // useEffect(() => {
+    //     if (expandSections) {
+    //         setLeftPaneWidthPercentage(100)
+    //         setChartPanelHeightPercentage(100)
+    //     } else {
+    //         setLeftPaneWidthPercentage(65)
+    //         setChartPanelHeightPercentage(50)
+    //     }
+    // }, [expandSections])
 
     // const heightSection = interfaceState.mobile.orientation.landscape ? 93 : 100
 
@@ -530,7 +527,7 @@ const Chart: FC = () => {
                                             />                                            
                                         } */}
                         <div className="w-[calc(100%-53px)] flex">
-                            <SparkLineSection sectionWidth={leftPaneWidthPercentage} />
+                            <SparkLineSection />
                         </div>                   
                         <div className="w-[55px] flex h-full" id='candle-chart-panel-section'>
                             <Separator className="w-[10px] h-full" />
