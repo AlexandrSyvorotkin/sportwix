@@ -1,8 +1,8 @@
 
-import { FC, useState, useEffect } from "react";
+import { FC, useEffect } from "react";
 
 // import { useXSMAX, useSMMIN } from "../../legacy/media-queries";
-import { switchVersion, switchMobileOrientation } from "../../store/InterfaceSlice/InterfaceSlice";
+import { switchMobileOrientation } from "../../store/InterfaceSlice/InterfaceSlice";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import Banner from "../../components/banner/banner";
 import SparkLineSection from "../../components/sparkline-table/sparkline-table";
@@ -484,7 +484,7 @@ const Chart: FC = () => {
     // }
 
     const theme = 'dark'
-    const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
+    // const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
 
     // const tournamentType = useAppSelector((state => state.tournamentSlice.isNationalTournament))
 

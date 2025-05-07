@@ -1,18 +1,4 @@
 
-import InformationTableIcon from '@assets/icons/information-table.svg?react'
-import ChatIcon from '@assets/icons/chart.svg?react'
-import TechSupportIcon from '@assets/icons/tech-support.svg?react'
-import EmailIcon from '@assets/icons/email.svg?react'
-import UserGuideIcon from '@assets/icons/user-guide.svg?react'
-
-// interface RecentGamesSectionProps {
-//     leftPaneWidthPercentage: number,
-//     setIsTipsModal: Dispatch<SetStateAction<boolean>>
-//     setShowGuideline: Dispatch<SetStateAction<boolean>>
-// }
-
-import PanelBtn from "@ui/panel-btn/panel-btn";
-import { useMemo } from "react";
 import { LastResultsSection } from '@components/last-games/last-games'
 
 const CommonInfoSection = ({}) => {
@@ -145,39 +131,6 @@ const CommonInfoSection = ({}) => {
     // const theme = 'dark'
 
     // const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
-
-    const rightChartBtns = useMemo(() => [
-        {
-            id: 1,
-            icon: <InformationTableIcon/>,
-            onClick: () => null,
-            disabled: true
-        },
-        {
-            id: 2,
-            icon: <ChatIcon/>,
-            onClick: () => null,
-            disabled: true
-        },
-        {
-            id: 3,
-            icon: <TechSupportIcon/>,
-            onClick: () => null,
-            disabled: true
-        },
-        {
-            id: 4,
-            icon: <EmailIcon/>,
-            onClick: () => null,
-            disabled: true
-        },
-        {
-            id: 5,
-            icon: <UserGuideIcon/>,
-            onClick: () => null,
-            disabled: true
-        }
-    ], [])
 
     return (
         <div className="flex h-full w-full">  

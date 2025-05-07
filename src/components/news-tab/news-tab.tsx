@@ -143,7 +143,7 @@ const NewsTab = () => {
 
 
     const theme = 'dark'
-    const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
+    // const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
 
     // if (isFetching) {
     //     return <LoaderAlt />;
@@ -159,11 +159,11 @@ const NewsTab = () => {
     //     setActiveFilterTags([])
     // }
 
-    const tabListStyles = classNames({
-        [styles.tags_list]: true,
-        [styles.darkBorder]: theme === 'dark',
-        // [styles.lightBorder]: theme === 'light'
-    })
+    // const tabListStyles = classNames({
+    //     [styles.tags_list]: true,
+    //     [styles.darkBorder]: theme === 'dark',
+    //     // [styles.lightBorder]: theme === 'light'
+    // })
 
     // filterNewsByTagsHandler(tag, id) 
 

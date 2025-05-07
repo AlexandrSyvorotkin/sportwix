@@ -1,24 +1,19 @@
-import { useMemo, useState } from 'react';
+import {  useState } from 'react';
 import styles from './championship-table.module.scss'
 
 // import { useAppSelector } from "../../legacy/types/hooks";
 
 import teamsMock from '../../mocks/teams-mock.json'
 import ChampionShipTableTeam from '../championship-table-team/championship-table-team';
-import PanelBtn from '../../ui/panel-btn/panel-btn';
 
-import ChampionshipTableIcon from '../../assets/icons/championship-table.svg?react'
-import ChampionshipTableCoachesIcon from '../../assets/icons/championmship-table-coaches.svg?react'
-import ComparePlayersIcon from '../../assets/icons/compare-players.svg?react'
-import FavouriteListIcon from '../../assets/icons/favourite-list.svg?react'
 
 interface ChampionshipTableProps {
     // Add your props here
 }
 
-const ChampionShipTable = ({}: ChampionshipTableProps) => {
+const ChampionShipTable = ({ }: ChampionshipTableProps) => {
 
-    
+
     // const {championshipId, season} = useAppSelector(state => state.tournamentSlice)
 
     // const { data, isLoading, error, isFetching } = useFetchChampionshipInfoQuery({ championshipId, season })
@@ -30,8 +25,8 @@ const ChampionShipTable = ({}: ChampionshipTableProps) => {
     const [selectedTeamUuid, setSelectedTeamUuid] = useState<string>('')
     const maxPts = teams ? Math.max(...teams.map(team => team.score)) : 0;
 
-   
-    
+
+
 
 
     // const championshipTableControls = [
@@ -51,59 +46,34 @@ const ChampionShipTable = ({}: ChampionshipTableProps) => {
 
     // const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
 
-    const rightTableBtns = useMemo(() => [
-        {
-            id: 1,
-            icon: <ChampionshipTableIcon/>,
-            onClick: () => null,
-            disabled: true
-        },
-        {
-            id: 2,
-            icon: <ChampionshipTableCoachesIcon/>,
-            onClick: () => null,
-            disabled: true
-        },
-        {
-            id: 3,
-            icon: <ComparePlayersIcon/>,
-            onClick: () => null,
-            disabled: true
-        },{
-            id: 4,
-            icon: <FavouriteListIcon/>,
-            onClick: () => null,
-            disabled: true
-        }
-    ], [])
 
-    
+
     return (
         <div className={styles.championship_table} >
             <div className={styles.table} id='championship-table'>
-                    <div className={styles.table_tabs}>
-                        <div className={styles.info_panel}>
-                            <span>№</span>
-                            <span>{language === 'Eng' ? "Teams" : "Команды"}</span>
-                        </div>
-                        <ul className={styles.param_list}>
-                            {/* <li className={styles.tab_item} style={{display: `${displayTeamGames}`}}>games</li> */}
-                            <li className={styles.tab_item}>{language === 'Eng' ? "points" : "очки"}</li>
-                        </ul>
+                <div className={styles.table_tabs}>
+                    <div className={styles.info_panel}>
+                        <span>№</span>
+                        <span>{language === 'Eng' ? "Teams" : "Команды"}</span>
                     </div>
-                     <div className={styles.table_teams}>
-                        {teams?.map((team, id) =>
-                                <ChampionShipTableTeam
-                                    key={team.team_uuid}
-                                    place={!teamReverseStatus ? id + 1 : teams.length - id}
-                                    maxPts={maxPts}
-                                    team={team}
-                                    selectedTeamUuid={selectedTeamUuid}
-                                    setSelectedTeamUuid={setSelectedTeamUuid}
-                                />
-                        )}
-                    </div>
+                    <ul className={styles.param_list}>
+                        {/* <li className={styles.tab_item} style={{display: `${displayTeamGames}`}}>games</li> */}
+                        <li className={styles.tab_item}>{language === 'Eng' ? "points" : "очки"}</li>
+                    </ul>
                 </div>
+                <div className={styles.table_teams}>
+                    {teams?.map((team, id) =>
+                        <ChampionShipTableTeam
+                            key={team.team_uuid}
+                            place={!teamReverseStatus ? id + 1 : teams.length - id}
+                            maxPts={maxPts}
+                            team={team}
+                            selectedTeamUuid={selectedTeamUuid}
+                            setSelectedTeamUuid={setSelectedTeamUuid}
+                        />
+                    )}
+                </div>
+            </div>
         </div>
     );
 };

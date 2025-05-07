@@ -1,19 +1,9 @@
-import { useMemo, useState } from 'react';
 import styles from './team-detail-info-section.module.scss'
-import PanelBtn from '@ui/panel-btn/panel-btn';
 
-import NewsIcon from '@assets/icons/news.svg?react'
-import AboutTeamIcon from '@assets/icons/about-team.svg?react'
-import ChampionshipsPerformanceIcon from '@assets/icons/championships-performance.svg?react'
-import TeamStatsIcon from '@assets/icons/team-stats.svg?react'
-import PlayerStatIcon from '@assets/icons/player-stat.svg?react'
-import FootballFieldIcon from '@assets/icons/football-field.svg?react'
-import CalendarIcon from '@assets/icons/calendar.svg?react'
 import { NewsTab } from '@components/news-tab';
 import { useAppSelector } from '../../hooks/hooks';
 import { RootState } from '../../store/store';
 
-type Tab = 'news' | 'about-team' | 'championships-performance' | 'team-stats' | 'player-stat' | 'football-field' | 'calendar'
 
 // interface TeamDetailInfoSectionProps {
 //     expandTeamSectionMobile?: any
@@ -66,53 +56,6 @@ const TeamDetailInfoSection = ({ }) => {
 
 
     const activeTeamTab = useAppSelector((state: RootState) => state.interfaceState.team_tabs.active_team_tab)
-
-    // const rigthTabBtns = useMemo(() =>
-    //     [
-    //         {
-    //             id: 1,
-    //             icon: <NewsIcon/>,
-    //             onClick: () => setTabs('news'),
-    //             disabled: false
-    //         },
-    //         {
-    //             id: 2,
-    //             icon: <AboutTeamIcon/>,
-    //             onClick: () => setTabs('about-team'),
-    //             disabled: false
-    //         },
-    //         {
-    //             id: 3,
-    //             icon: <ChampionshipsPerformanceIcon/>,
-    //             onClick: () => setTabs('championships-performance'),
-    //             disabled: false
-    //         },
-    //         {
-    //             id: 4,
-    //             icon: <TeamStatsIcon/>,
-    //             onClick: () => setTabs('team-stats'),
-    //             disabled: false
-    //         },
-    //         {
-    //             id: 5,
-    //             icon: <PlayerStatIcon/>,
-    //             onClick: () => setTabs('player-stat'),
-    //             disabled: false
-    //         },
-    //         {
-    //             id: 6,
-    //             icon: <FootballFieldIcon/>,
-    //             onClick: () => setTabs('football-field'),
-    //             disabled: false
-    //         },
-    //         {
-    //             id: 7,
-    //             icon: <CalendarIcon/>,
-    //             onClick: () => setTabs('calendar'),
-    //             disabled: false
-    //         }
-    //     ]
-    // , [])
 
     // const windowWidth = window.innerWidth
 
