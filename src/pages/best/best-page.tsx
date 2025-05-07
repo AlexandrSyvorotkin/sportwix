@@ -1,5 +1,5 @@
 import WorkInProgress from '../../components/work-in-progress/work-in-progress';
-import styles from './Best.module.scss'
+import styles from './best-page.module.scss'
 
 
 const Best = () => {

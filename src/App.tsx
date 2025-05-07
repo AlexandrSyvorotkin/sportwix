@@ -8,8 +8,11 @@ import NotFound from './pages/404'
 import Main from './pages/main'
 import PolicyPage from './pages/policy-page'
 import background from './assets/bg/background.png'
-import Chart from './pages/chart/chart'
+import Chart from './pages/chart/chart-page'
 import Header from './layout/header-legacy/legacy-header'
+import Best from './pages/best/best-page'
+import News from './pages/news/news-page'
+import Community from './pages/community/community-page'
 
 function App() {
 
@@ -19,7 +22,7 @@ function App() {
   const location = useLocation()
   useEffect(() => {
 
-		if ( location.pathname === '/community'  || location.pathname === '/news' ) {
+		if ( location.pathname === '/community'  || location.pathname === '/news' || location.pathname === '/company'  || location.pathname === '/best') {
 			setBackgroundVisible(true)
 		} else {
 			setBackgroundVisible(false)
@@ -41,9 +44,9 @@ function App() {
         <Route path="/chart" element={<Chart />} />
 
 
-        <Route path="/best" element={<div>Best</div>} />
-        <Route path="/community" element={<div>Community</div>} />
-        <Route path="/news" element={<div>News</div>} />
+        <Route path="/best" element={<Best />} />
+        <Route path="/community" element={<Community />} />
+        <Route path="/news" element={<News />} />
       </Routes>
       {!is404Page && (
         <>

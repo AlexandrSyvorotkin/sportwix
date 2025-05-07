@@ -1,6 +1,6 @@
 
 import WorkInProgress from '../../components/work-in-progress/work-in-progress';
-import styles from './Community.module.scss'
+import styles from './community-page.module.scss'
 
 const Community = () => {
     return (

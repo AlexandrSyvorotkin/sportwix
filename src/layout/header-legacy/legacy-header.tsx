@@ -7,7 +7,7 @@ import navbar from '../../localization/navbar/navbar.json';
 
 
 const routes = [
-	{id: 1, titleEng: navbar.chart.eng,titleRu: navbar.chart.ru, path: '/chart/epl'},
+	{id: 1, titleEng: navbar.chart.eng,titleRu: navbar.chart.ru, path: '/chart'},
 	{id: 2, titleEng: navbar.news.eng,titleRu: navbar.news.ru, path: '/news'},
 	{id: 3, titleEng: navbar.community.eng,titleRu: navbar.community.ru, path: '/community'},
 	{id: 4, titleEng: navbar.best.eng,titleRu: navbar.best.ru, path: '/best'},

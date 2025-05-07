@@ -20,7 +20,6 @@ const Main = ({ isOpen, setIsOpen }: MainProps) => {
     <Community />
     <FAQ />
     <Platform />
-    
     <Modal 
     modalType="teams"
     className="w-[556px] h-[556px]"

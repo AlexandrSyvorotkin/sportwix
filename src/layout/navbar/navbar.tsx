@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 const links = [
     {
-        name: "Chart",
+        name: "Графики",
         href: "/chart"
     },
     {
         name: "Компания",
-        href: "/"
+        href: "/company"
     },
     {
         name: "Новости",
@@ -19,7 +19,7 @@ const links = [
     },
     {
         name: "FAQ",
-        href: "/login"
+        href: "/faq"
     }
 ]
 
