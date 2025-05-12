@@ -1,9 +1,9 @@
 import styles from './single-team-info-card-logo.module.scss'
-import {useAppSelector} from "../../legacy/types/hooks";
+import { useAppSelector } from '@hooks/hooks'
 import classNames from 'classnames';
-
+import { RootState } from '@store/store';
 const SingleTeamInfoCardLogo = () => {
-    const firstTeamSelected = useAppSelector(state => state.tournamentSlice.firstSelectedTeam) || null
+    const firstTeamSelected = useAppSelector((state: RootState) => state.tournamentSlice.firstSelectedTeam) || null
     
     const theme = 'dark'
     const textColor = theme === 'dark' ? 'white' : '#333333'

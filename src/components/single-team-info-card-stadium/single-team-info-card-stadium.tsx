@@ -1,9 +1,10 @@
 import styles from './single-team-info-card-stadium.module.scss'
-import {useAppSelector} from "../../legacy/types/hooks";
+import { useAppSelector } from '@hooks/hooks'
+import { RootState } from '@store/store';
 // import {IMG_PATH} from "../../legacy/api/variables";
 
 const SingleTeamInfoStadiumCard = () => {
-    const firstTeamSelected = useAppSelector(state => state.tournamentSlice?.firstSelectedTeam) || null
+    const firstTeamSelected = useAppSelector((state: RootState) => state.tournamentSlice?.firstSelectedTeam) || null
     // const {language} = useContext(LanguageContext)
 
     const stadium_name = firstTeamSelected?.tabs?.stadium?.stadion_name || ''
