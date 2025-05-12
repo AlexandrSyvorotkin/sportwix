@@ -7,10 +7,10 @@ const SingleTeamInfoStadiumCard = () => {
     const firstTeamSelected = useAppSelector((state: RootState) => state.tournamentSlice?.firstSelectedTeam) || null
     // const {language} = useContext(LanguageContext)
 
-    const stadium_name = firstTeamSelected?.tabs?.stadium?.stadion_name || ''
-    const stadium_found_date = firstTeamSelected?.tabs?.stadium?.stadion_found_date || ''
-    const stadium_capacity = firstTeamSelected?.tabs?.stadium?.stadion_capacity || ''
-    const stadium_img = firstTeamSelected?.tabs?.stadium?.stadion_img || ''
+    const stadium_name = firstTeamSelected?.tabs?.stadion?.stadion_name || ''
+    const stadium_found_date = firstTeamSelected?.tabs?.stadion?.stadion_found_date || ''
+    const stadium_capacity = firstTeamSelected?.tabs?.stadion?.stadion_capacity || ''
+    const stadium_img = firstTeamSelected?.tabs?.stadion?.stadion_img || ''
     const stadium_alt_name = firstTeamSelected?.tabs?.stadion?.stadion_alt_name_ru || ''
 
     return (
