@@ -5,7 +5,6 @@ import classNames from 'classnames';
 const SingleTeamInfoCardLogo = () => {
     const firstTeamSelected = useAppSelector(state => state.tournamentSlice.firstSelectedTeam) || null
     
-    const language = 'Ru'
     const theme = 'dark'
     const textColor = theme === 'dark' ? 'white' : '#333333'
 

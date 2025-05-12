@@ -1,7 +1,5 @@
 import { useAppSelector } from "@hooks/hooks";
-import styles from './team-results-table.module.scss'
 import { RootState } from "@store/store";
-import classNames from "classnames";
 import team_results_table from '../../localization/team_detail_info_section/team_results_table/team_results_table.json'
 import { SingleTeamInfoCardLogo } from "@components/single-team-info-card-logo";
 import { Separator } from "@shared/separator";

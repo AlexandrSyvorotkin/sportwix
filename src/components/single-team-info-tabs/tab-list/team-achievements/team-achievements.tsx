@@ -12,7 +12,6 @@ const TeamAchievements = () => {
     const achievements: Achievement[] | undefined = firstSelectedTeam?.tabs?.achievements
 
     const language = 'Eng'
-    const theme = 'dark'
     return (
         <div className={styles.team_achievements}>
             <div className={styles.team_achievements_header}>
