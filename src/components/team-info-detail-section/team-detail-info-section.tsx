@@ -3,7 +3,8 @@ import styles from './team-detail-info-section.module.scss'
 import { NewsTab } from '@components/news-tab';
 import { useAppSelector } from '../../hooks/hooks';
 import { RootState } from '../../store/store';
-
+import { SingleTeamInfo } from '@components/single-team-info';
+import { TeamResultsTable } from '@components/team-results-table';
 
 // interface TeamDetailInfoSectionProps {
 //     expandTeamSectionMobile?: any
@@ -45,8 +46,8 @@ const TeamDetailInfoSection = ({ }) => {
 
     const detailInfoAboutTeamTabs =[
         { id: 'news', component: <NewsTab /> },
-        { id: 'about-team', component: <div >Последние результаты</div>},
-        { id: 'championships-performance', component: <div >Информация о команде</div> },
+        { id: 'about-team', component: <SingleTeamInfo />},
+        { id: 'championships-performance', component: <TeamResultsTable /> },
         { id: 'team-stats', component: <div >Результаты команды</div> },
         { id: 'player-stat', component: <div >Статистика команды</div> },
         { id: 'football-field', component: <div >Игроки команды</div> },

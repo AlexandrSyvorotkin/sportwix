@@ -21,7 +21,8 @@ const TeamTabPanel = () => {
     const dispatch = useAppDispatch()
     const activeTeamDetailInfoTab = useAppSelector((state: RootState) => state.interfaceState.team_tabs.active_team_tab)
 
-
+    const isAnyTeamSelected = useAppSelector((state: RootState) => state.tournamentSlice.isSingleTeamView)
+    console.log(isAnyTeamSelected)
     
     const rigthTabBtns:PanelBtnProps[] = useMemo(() =>
         [
@@ -36,7 +37,7 @@ const TeamTabPanel = () => {
             {
                 icon: <AboutTeamIcon fill={activeTeamDetailInfoTab === 'about-team' ? activeColor : ''}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('about-team')),
-                disabled: false,
+                disabled: !isAnyTeamSelected,
                 isActive: activeTeamDetailInfoTab === 'about-team',
                 tooltipText: 'О команде',
                 tooltipSide: 'left'
@@ -44,7 +45,7 @@ const TeamTabPanel = () => {
             {
                 icon: <ChampionshipsPerformanceIcon fill={activeTeamDetailInfoTab === 'championships-performance' ? activeColor : ''}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('championships-performance')),
-                disabled: false,
+                disabled: !isAnyTeamSelected,
                 isActive: activeTeamDetailInfoTab === 'championships-performance',
                 tooltipText: 'Выступление',
                 tooltipSide: 'left'
@@ -52,7 +53,7 @@ const TeamTabPanel = () => {
             {
                 icon: <TeamStatsIcon fill={activeTeamDetailInfoTab === 'team-stats' ? activeColor : ''}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('team-stats')),
-                disabled: false,
+                disabled: true,
                 isActive: activeTeamDetailInfoTab === 'team-stats',
                 tooltipText: 'Статистика команды',
                 tooltipSide: 'left'
@@ -60,7 +61,7 @@ const TeamTabPanel = () => {
             {
                 icon: <PlayerStatIcon fill={activeTeamDetailInfoTab === 'player-stat' ? activeColor : ''}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('player-stat')),
-                disabled: false,
+                disabled: true,
                 isActive: activeTeamDetailInfoTab === 'player-stat',
                 tooltipText: 'Статистика игрока',
                 tooltipSide: 'left'
@@ -68,7 +69,7 @@ const TeamTabPanel = () => {
             {
                 icon: <FootballFieldIcon fill={activeTeamDetailInfoTab === 'football-field' ? activeColor : ''}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('football-field')),
-                disabled: false,
+                disabled: true,
                 isActive: activeTeamDetailInfoTab === 'football-field',
                 tooltipText: 'Футбольное поле',
                 tooltipSide: 'left'
@@ -76,13 +77,13 @@ const TeamTabPanel = () => {
             {
                 icon: <CalendarIcon fill={activeTeamDetailInfoTab === 'calendar' ? activeColor : ''}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('calendar')),
-                disabled: false,
+                disabled: true,
                 isActive: activeTeamDetailInfoTab === 'calendar',
                 tooltipText: 'Календарь',
                 tooltipSide: 'left'
             }
         ]
-    , [activeTeamDetailInfoTab])
+    , [activeTeamDetailInfoTab, isAnyTeamSelected])
     
     return (
         <div className="flex flex-col gap-[5px] p-[7px]">

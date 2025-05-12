@@ -27,6 +27,9 @@ export default {
       'xl': '1920px', // ++
     },
     extend: {
+      width: {
+        '1/7': '14.285714%',
+      },
       keyframes: {
         'expand-width': {
           '0%': {

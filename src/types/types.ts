@@ -98,6 +98,8 @@ export type TeamStatsMetrics = {
     xG_sum: number
 }
 
+export type singleTeamInfoTabsTypes = 'Achievements' | 'Kits' | 'Sponsors' | 'ClubRecords' | 'PlayerRecords' | 'Facts'
+
 export type interfaceState = {
     desktop: {
         isDesktop?: boolean,
@@ -120,6 +122,9 @@ export type interfaceState = {
     },
     team_tabs: {
         active_team_tab: teamTabsTypes
+    },
+    single_team_info_tabs: {
+        active_single_team_info_tab: singleTeamInfoTabsTypes
     },
     expanded_section: expandTypes
 }

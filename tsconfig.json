@@ -12,6 +12,9 @@
       "@ui/*": ["src/ui/*"],
       "@assets/*": ["src/assets/*"],
       "@shared/*": ["src/shared/*"],
+      "@types/*": ["src/types/*"],
+      "@store/*": ["src/store/*"],
+      "@hooks/*": ["src/hooks/*"],
       // "@utils/*": ["src/utils/*"]
     }
   }

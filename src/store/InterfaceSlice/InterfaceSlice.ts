@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { interfaceState } from "../../types/types";
+import { interfaceState, singleTeamInfoTabsTypes } from "../../types/types";
 
 export type expandTypes = "sparkline" | "newsAndLastGames" | "candleChart" | "tabsInfo" | 'none';
 export type teamTabsTypes = "news" | "about-team" | "championships-performance" | "team-stats" | "player-stat" | "football-field" | "calendar";
@@ -26,6 +26,9 @@ const initialState: interfaceState = {
     },
     team_tabs: {
         active_team_tab: 'news'
+    },
+    single_team_info_tabs: {
+        active_single_team_info_tab: 'Achievements'
     },
     expanded_section: 'none'
 }
@@ -68,9 +71,12 @@ const interfaceSlice = createSlice({
         },
         onExpandSection(state, action: PayloadAction<expandTypes>) {
             state.expanded_section = action.payload
+        },
+        onSwitchActiveSingleTeamInfoTab (state, action: PayloadAction<singleTeamInfoTabsTypes>) {
+            state.single_team_info_tabs.active_single_team_info_tab = action.payload
         }
     }
 })
 
-export const { switchMobileOrientation, expandSection, switchVersion, expandDesktopSection, onSwitchActiveTeamTab, onExpandSection } = interfaceSlice.actions
+export const { switchMobileOrientation, expandSection, switchVersion, expandDesktopSection, onSwitchActiveTeamTab, onExpandSection, onSwitchActiveSingleTeamInfoTab } = interfaceSlice.actions
 export default interfaceSlice.reducer

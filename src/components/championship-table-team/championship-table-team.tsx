@@ -1,11 +1,10 @@
 
 import classNames from "classnames";
-import {useAppSelector} from "../../types/hooks";
+import {useAppDispatch, useAppSelector} from "../../types/hooks";
 import styles from './championship-table-team.module.scss'
 import { useState } from "react";
-
-
-
+import { ITeam } from "src/models/ITeam";
+import { chooseFirstTeam, switchToSingleCandleChart } from "../../store/tournament-slice/tournament-slice";
 
 interface ChampionShipTableTeamProps {
     maxPts: number,
@@ -17,7 +16,7 @@ interface ChampionShipTableTeamProps {
 
 const ChampionShipTableTeam = ({maxPts, team, place}: ChampionShipTableTeamProps) => {
 
-    // const dispatch = useAppDispatch()
+    const dispatch = useAppDispatch()
 
 
     // const {BASE_PATH, API, V1, EVENT, TEAM} = API_VARIABLES
@@ -76,9 +75,12 @@ const ChampionShipTableTeam = ({maxPts, team, place}: ChampionShipTableTeamProps
     //     dispatch(clearFilters())
     // }
 
-
+    const onSelectTeam = (team: ITeam) => {
+        dispatch(chooseFirstTeam(team))
+        dispatch(switchToSingleCandleChart())
+    }
     return (
-        <div className={tableTeamStyles} onClick={() => null} id={`selected_team+${team.team_name}`}>
+        <div className={tableTeamStyles} onClick={() => onSelectTeam(team)} id={`selected_team+${team.team_name}`}>
             <div className={styles.team_name}>
                 <div className={placeStyles}>{place}</div>
                 <div className={styles.name}>{language === 'Eng' ? team.team_name : team.team_name_ru}</div>

@@ -1,0 +1,22 @@
+// @import '../../styles/variables.scss';
+
+.tabs_header {
+        padding: 10px 10px;
+        min-height: 50px;
+        width: 100%;
+        display: flex;
+        gap: 2px;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 576px) {
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+        
+    }
+    .tabs_header_border_dark {
+        // border-bottom: 1px solid $substrate-color;
+    }
+    .tabs_header_border_light {
+        // border-bottom: 1px solid $substrate-color-light;
+    }
