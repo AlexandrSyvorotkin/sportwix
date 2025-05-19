@@ -87,7 +87,6 @@ const Navbar:FC<Routes> = ({ routes }) => {
 
     const location = useLocation()
 
-    const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
 
     // const sportsDefaultValue = language === 'Eng' ? sportOptions[0].engTitle : sportOptions[0].ruTitle
     // const championshipDefaultValue = language === 'Eng' ? championshipsOptions[0].engTitle : championshipsOptions[0].ruTitle

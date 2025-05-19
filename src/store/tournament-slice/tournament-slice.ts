@@ -1,8 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { ITeam } from "../../models/ITeam";
 import { ILastMatch } from "../../models/ILastMatch";
-import { onSwitchActiveTeamTab } from "../InterfaceSlice/InterfaceSlice";
-
 
 interface Tournament {
     teams: ITeam[],
