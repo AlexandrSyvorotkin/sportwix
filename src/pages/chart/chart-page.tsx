@@ -287,7 +287,7 @@ const Chart: FC = () => {
 
     const desktop = (
         <div className="w-full h-[calc(100vh-50px)] flex">
-            <div className="w-[53px] flex h-full">
+            <div className="flex h-full">
                 <div className="flex h-full">
                     <ChartFunctionsPanel />
                     <Separator className="w-[1px] h-full" />

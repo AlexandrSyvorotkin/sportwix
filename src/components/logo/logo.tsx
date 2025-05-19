@@ -1,15 +1,10 @@
 import styles from './Logo.module.scss'
 import logo from '../../assets/logo.svg'
-import {useAppDispatch} from "../../hooks/hooks";
-import { switchPageToStartPostition } from '../../store/tournament-slice/tournament-slice';
 
-const Logo = () => {
-
-	const dispatch = useAppDispatch()
-
+const Logo = ({onClick}: {onClick?: () => void}) => {
 
 	return (
-		<div className={styles.logo} onClick={() => dispatch(switchPageToStartPostition())} style={{cursor: 'pointer'}}>
+		<div className={styles.logo} onClick={onClick} style={{cursor: 'pointer'}}>
 			<div className={styles.logo_img}  >
 				<img src={logo} alt=""/>
 			</div>

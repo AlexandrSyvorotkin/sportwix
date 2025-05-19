@@ -4,6 +4,8 @@ import Navbar from '../../components/navbar/navbar';
 import { Logo } from "@components/logo";
 // import {useNavigate} from 'react-router-dom';
 import navbar from '../../localization/navbar/navbar.json';
+import { switchPageToStartPostition } from '@store/tournament-slice/tournament-slice';
+import { useNavigate } from 'react-router-dom';
 
 
 const routes = [
@@ -39,10 +41,11 @@ const LegacyHeader = () => {
 	// const [isMobileMenuActive, setIsMobileMenuActive] = useState(false)
 
 	const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
+	const navigate = useNavigate()
 
 	return (
 		<header className={`${styles.header} ${styles[theme]}`} style={{borderBottom: border}}>
-			<Logo/>
+			<Logo onClick={() => navigate('/')}/>
 			<Navbar routes={routes}/>
 			<div className={styles.login_locales}>
 				<div className={styles.lng_switcher}>
