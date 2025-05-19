@@ -6,7 +6,8 @@
             "open": 0,
             "close": 2,
             "high": 2,
-            "low": 0
+            "low": 0,
+            "match_uuid": "match-1"
         },
         {
             "tour": "Тур 2",
@@ -14,7 +15,8 @@
             "open": 2,
             "close": 3,
             "high": 3,
-            "low": 2
+            "low": 2,
+            "match_uuid": "match-2"
         },
         {
             "tour": "Тур 3",
@@ -22,7 +24,8 @@
             "open": 3,
             "close": 5,
             "high": 5,
-            "low": 3
+            "low": 3,
+            "match_uuid": "match-3"
         },
         {
             "tour": "Тур 4",
@@ -30,7 +33,8 @@
             "open": 5,
             "close": 5,
             "high": 5,
-            "low": 5
+            "low": 5,
+            "match_uuid": "match-4"
         },
         {
             "tour": "Тур 5",
@@ -38,7 +42,8 @@
             "open": 5,
             "close": 8,
             "high": 8,
-            "low": 5
+            "low": 5,
+            "match_uuid": "match-5"
         },
         {
             "tour": "Тур 6",
@@ -46,7 +51,8 @@
             "open": 8,
             "close": 9,
             "high": 9,
-            "low": 8
+            "low": 8,
+            "match_uuid": "match-6"
         },
         {
             "tour": "Тур 7",
@@ -54,7 +60,8 @@
             "open": 9,
             "close": 11,
             "high": 11,
-            "low": 9
+            "low": 9,
+            "match_uuid": "match-7"
         },
         {
             "tour": "Тур 8",
@@ -62,7 +69,8 @@
             "open": 11,
             "close": 12,
             "high": 12,
-            "low": 11
+            "low": 11,
+            "match_uuid": "match-8"
         },
         {
             "tour": "Тур 9",
@@ -70,7 +78,8 @@
             "open": 12,
             "close": 15,
             "high": 15,
-            "low": 12
+            "low": 12,
+            "match_uuid": "match-9"
         },
         {
             "tour": "Тур 10",
@@ -78,7 +87,8 @@
             "open": 15,
             "close": 15,
             "high": 15,
-            "low": 15
+            "low": 15,
+            "match_uuid": "match-10"
         },
         {
             "tour": "Тур 11",
@@ -86,7 +96,8 @@
             "open": 15,
             "close": 17,
             "high": 17,
-            "low": 15
+            "low": 15,
+            "match_uuid": "match-11"
         },
         {
             "tour": "Тур 12",
@@ -94,7 +105,8 @@
             "open": 17,
             "close": 19,
             "high": 19,
-            "low": 17
+            "low": 17,
+            "match_uuid": "match-12"
         },
         {
             "tour": "Тур 13",
@@ -102,7 +114,8 @@
             "open": 19,
             "close": 22,
             "high": 22,
-            "low": 19
+            "low": 19,
+            "match_uuid": "match-13"
         },
         {
             "tour": "Тур 14",
@@ -110,7 +123,8 @@
             "open": 22,
             "close": 23,
             "high": 23,
-            "low": 22
+            "low": 22,
+            "match_uuid": "match-14"
         },
         {
             "tour": "Тур 15",
@@ -118,7 +132,8 @@
             "open": 23,
             "close": 23,
             "high": 23,
-            "low": 23
+            "low": 23,
+            "match_uuid": "match-15"
         },
         {
             "tour": "Тур 16",
@@ -126,7 +141,8 @@
             "open": 23,
             "close": 24,
             "high": 24,
-            "low": 23
+            "low": 23,
+            "match_uuid": "match-16"
         },
         {
             "tour": "Тур 17",
@@ -134,7 +150,8 @@
             "open": 24,
             "close": 26,
             "high": 26,
-            "low": 24
+            "low": 24,
+            "match_uuid": "match-17"
         },
         {
             "tour": "Тур 18",
@@ -142,7 +159,8 @@
             "open": 26,
             "close": 27,
             "high": 27,
-            "low": 26
+            "low": 26,
+            "match_uuid": "match-18"
         },
         {
             "tour": "Тур 19",
@@ -150,7 +168,8 @@
             "open": 27,
             "close": 28,
             "high": 28,
-            "low": 27
+            "low": 27,
+            "match_uuid": "match-19"
         },
         {
             "tour": "Тур 20",
@@ -158,7 +177,8 @@
             "open": 28,
             "close": 28,
             "high": 28,
-            "low": 28
+            "low": 28,
+            "match_uuid": "match-20"
         },
         {
             "tour": "Тур 21",
@@ -166,7 +186,8 @@
             "open": 28,
             "close": 30,
             "high": 30,
-            "low": 28
+            "low": 28,
+            "match_uuid": "match-21"
         },
         {
             "tour": "Тур 22",
@@ -174,7 +195,8 @@
             "open": 30,
             "close": 30,
             "high": 30,
-            "low": 30
+            "low": 30,
+            "match_uuid": "match-22"
         },
         {
             "tour": "Тур 23",
@@ -182,7 +204,8 @@
             "open": 30,
             "close": 31,
             "high": 31,
-            "low": 30
+            "low": 30,
+            "match_uuid": "match-23"
         },
         {
             "tour": "Тур 24",
@@ -190,7 +213,8 @@
             "open": 31,
             "close": 33,
             "high": 33,
-            "low": 31
+            "low": 31,
+            "match_uuid": "match-24"
         },
         {
             "tour": "Тур 25",
@@ -198,7 +222,8 @@
             "open": 33,
             "close": 34,
             "high": 34,
-            "low": 33
+            "low": 33,
+            "match_uuid": "match-25"
         },
         {
             "tour": "Тур 26",
@@ -206,7 +231,8 @@
             "open": 34,
             "close": 36,
             "high": 36,
-            "low": 34
+            "low": 34,
+            "match_uuid": "match-26"
         },
         {
             "tour": "Тур 27",
@@ -214,7 +240,8 @@
             "open": 36,
             "close": 36,
             "high": 36,
-            "low": 36
+            "low": 36,
+            "match_uuid": "match-27"
         },
         {
             "tour": "Тур 28",
@@ -222,7 +249,8 @@
             "open": 36,
             "close": 38,
             "high": 38,
-            "low": 36
+            "low": 36,
+            "match_uuid": "match-28"
         },
         {
             "tour": "Тур 29",
@@ -230,7 +258,8 @@
             "open": 38,
             "close": 40,
             "high": 40,
-            "low": 38
+            "low": 38,
+            "match_uuid": "match-29"
         },
         {
             "tour": "Тур 30",
@@ -238,7 +267,8 @@
             "open": 40,
             "close": 41,
             "high": 41,
-            "low": 40
+            "low": 40,
+            "match_uuid": "match-30"
         }
     ],
     "seasons": []

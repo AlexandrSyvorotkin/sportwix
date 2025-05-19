@@ -1,11 +1,7 @@
-import React, {FC, MouseEventHandler, useContext} from 'react';
-import styles from "./CandleParams.module.scss";
-import {IMG_PATH} from "../../api/variables";
-import {useAppSelector} from "../../types/hooks";
-import classNames from "classnames";
-import chart_expand from '../../assets/expand_mini_candle_chart/expand_candle_chart.svg'
-import chart_expand_active from '../../assets/expand_mini_candle_chart/expand_candle_chart_active.svg'
-import { ThemeContext } from '../../context/ThemeContext/ThemeContext';
+import {MouseEventHandler} from 'react';
+import styles from "./candle-chart-params.module.scss";
+import classNames from 'classnames';
+
 
 interface CandleChartParamsProps {
     team_img: string | undefined,
@@ -16,7 +12,8 @@ interface CandleChartParamsProps {
     chartVisible?: boolean
 }
 
-const CandleChartParams: FC<CandleChartParamsProps> = ({team_img, team_name, two_candle, expandMiniCandle, candleParams, chartVisible}) => {
+const CandleChartParams = ({team_img, team_name, two_candle, candleParams}:CandleChartParamsProps) => {
+    console.log('CandleChartParams received params:', candleParams);
 
     const paramStyles = classNames({
         [styles.candle_draw]: candleParams.close === candleParams.open,
@@ -26,13 +23,12 @@ const CandleChartParams: FC<CandleChartParamsProps> = ({team_img, team_name, two
 
     // console.log(chartVisible, 'chart_visible')
 
-    const {theme} = useContext(ThemeContext)
 
     return (
         <div className={styles.chart_header}>
-            <div className={`${styles.params_wrapper} ${styles[theme]}`}>
+            <div className={styles.params_wrapper}>
                 <div className={styles.img_wrapper}>
-                    <img src={`${IMG_PATH}${team_img}`} alt=""/>
+                    <img src={`${team_img}`} alt=""/>
                 </div>
                 {two_candle ? null : <span>{team_name}</span>}
                 <div className={styles.divider}/>
@@ -67,15 +63,15 @@ const CandleChartParams: FC<CandleChartParamsProps> = ({team_img, team_name, two
                     <div style={{display: 'flex', gap: '5px', alignItems: 'center'}}>
                         {candleParams.home_team_img === undefined ? null :
                             <div className={styles.img_wrapper}>
-                                <img src={`${IMG_PATH}/${candleParams.home_team_img}`} alt=""/>
+                                <img src={`${candleParams.home_team_img}`} alt=""/>
                             </div>
                         }
                         {two_candle ? null : <span>{candleParams.home_team}</span>}
-                        <span>{candleParams.score[0]} : {candleParams.score[1]}</span>
+                        {/* <span>{candleParams.score[0]} : {candleParams.score[1]}</span> */}
                         {two_candle ? null : <span>{candleParams.away_team}</span>}
                         {candleParams.away_team_img === undefined ? null :
                             <div className={styles.img_wrapper}>
-                                <img src={`${IMG_PATH}/${candleParams.away_team_img}`} alt=""/>
+                                <img src={`${candleParams.away_team_img}`} alt=""/>
                             </div>
                         }
                     </div>

@@ -1,5 +1,3 @@
-
-
 const deviceScale = window.devicePixelRatio;
 const buffer = document.createElement('canvas');
 const browserScale = Math.round((window.outerWidth - 15) / window.innerWidth * 100) / 100;
@@ -42,6 +40,7 @@ export function candleChart(
    console.log(canvas, 'CANVAS')
 
    // const ctx = canvas?.getContext("2d");
+   
 
    const newsTooltip = document.querySelector('#news_tooltip')
    const windowWidth = window.innerWidth
@@ -68,7 +67,7 @@ export function candleChart(
       green: "hwb(100 0% 45%)",
       text: "white",
       axis: "#333",
-      bkg: "#1F1F1F"
+      bkg: "#0D0C0E"
    }
 
 
@@ -575,13 +574,14 @@ export function candleChart(
 
       drawCandleTooltip() {
          if (tooltipCandleData === undefined) return;
+         console.log('Setting candle params:', tooltipCandleData);
          setCandleParams({
             params: {
                high: tooltipCandleData.high,
                open: tooltipCandleData.open,
                low: tooltipCandleData.low,
                close: tooltipCandleData.close,
-               date: tooltipCandleData.date.slice(0, 9),
+               date: tooltipCandleData.date,
                home_team_img: tooltipCandleData.home_team_img,
                away_team_img: tooltipCandleData.away_team_img,
                score: tooltipCandleData.score,
@@ -589,7 +589,7 @@ export function candleChart(
                away_team: tooltipCandleData.away_team,
                time: tooltipCandleData?.on_time
             }
-         })
+         });
       }
 
       drawAxisX() {

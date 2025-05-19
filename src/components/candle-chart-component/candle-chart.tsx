@@ -1,4 +1,4 @@
-import { FC, MouseEventHandler, useEffect, useMemo, useRef, useState } from 'react';
+import { FC, MouseEventHandler, useEffect, useRef, useState } from 'react';
 import styles from './candle-chart.module.scss'
 import { useAppSelector } from "../../types/hooks";
 import { Candle } from "../../models/Candle";
@@ -7,7 +7,7 @@ import { candleSeasons } from '../../types/candleSeason';
 import { candleParameters } from '../../types/candleParameters';
 import { useFetchTeamCandlesQuery } from '../../services/candles-api/candle-api';
 import { RootState } from '@store/store';
-// import { CandleChartParams } from '@components/candle-chart-params';
+import { CandleChartParams } from '@components/candle-chart-params';
 // @ts-ignore
 import { candleChart } from '@charts/candle-chart/candle-chart';
 
@@ -111,6 +111,7 @@ const CandleChart: FC<CandleChartProps> = ({ rulerActive, filterByHomeAwayGames,
         )
     }, [ 
         candles?.candles, 
+        // candleParams,
         theme,
         filterByHomeAwayGames,
         filterByAmoutOfGoals, 
@@ -126,7 +127,7 @@ const CandleChart: FC<CandleChartProps> = ({ rulerActive, filterByHomeAwayGames,
 
     return (
         <div className={styles.chart_container} style={{ width: '100%'}}>
-            {/* <CandleChartParams team_img={team_img} team_name={team_name} two_candle={two_candles} expandMiniCandle={expandMiniCandle} candleParams={candleParams.params} chartVisible={chartVisible} /> */}
+                <CandleChartParams team_img={team_img} team_name={firstSelectedTeam?.team_name} two_candle={false} candleParams={candleParams.params} />
                 <div style={{ borderTop: '1px solid #333'}} className={styles.canvas_container}>
                     <canvas ref={canvasRef} className='w-full h-full'/>
                     <div className={styles.team_img}>
