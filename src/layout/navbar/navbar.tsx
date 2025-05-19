@@ -1,31 +1,11 @@
 import { Link } from "react-router-dom";
 
-const links = [
-    {
-        name: "Графики",
-        href: "/chart"
-    },
-    {
-        name: "Компания",
-        href: "/company"
-    },
-    {
-        name: "Новости",
-        href: "/news"
-    },
-    {
-        name: "Комньюнити",
-        href: "/community"
-    },
-    {
-        name: "FAQ",
-        href: "/faq"
-    }
-]
+const Navbar = ({links, isFooter}: {links: {name: string, href: string}[], isFooter: boolean}) => {
 
-const Navbar = () => {
+    const isFooterNavbar = isFooter ? "flex lg:text-[16px]" : "sm:hidden lg:flex";
+
     return (
-        <nav className="flex items-center justify-center gap-6">
+        <nav className={`${isFooterNavbar} items-center justify-center gap-6`}>
             {links.map((link) => (
                 <Link to={link.href}>{link.name}</Link>
             ))}
@@ -33,4 +13,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+export {Navbar};

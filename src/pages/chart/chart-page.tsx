@@ -15,6 +15,7 @@ import { Separator } from "@shared/separator";
 import { TeamTabPanel, ChartFunctionsPanel, ChartFiltersPanel, ChampionshipTablePanel } from "@components/control-panels";
 import { CommonPanel } from "@components/control-panels/common-panel";
 import { RootState } from "../../store/store";
+import { CandleChart } from "@components/candle-chart-component";
 
 
 const Chart: FC = () => {
@@ -278,8 +279,11 @@ const Chart: FC = () => {
     // const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
 
     // const tournamentType = useAppSelector((state => state.tournamentSlice.isNationalTournament))
-    
+
     const expandSection = useAppSelector((state: RootState) => state.interfaceState.expanded_section)
+    const isSingleTeamView = useAppSelector((state: RootState) => state.tournamentSlice.isSingleTeamView)
+    const firstSelectedTeam = useAppSelector((state: RootState) => state.tournamentSlice.firstSelectedTeam)
+
 
     const desktop = (
         <div className="w-full h-[calc(100vh-50px)] flex">
@@ -292,25 +296,24 @@ const Chart: FC = () => {
             <div className={`${expandSection === 'sparkline' ? 'w-full' : 'w-2/3'}`}>
                 <div className='h-full flex flex-col'>
                     <div className={`flex w-full ${expandSection === 'sparkline' ? 'h-[calc(100vh-100px)]' : 'h-1/2'} `} id='candle-chart'>
-                        {/* {isSingleTeamView ?
-                                            <CandleChart
-                                                rulerActive={drawRulerActive}
-                                                modifiedCandles={firstSelectedTeamCandles}
-                                                team_img={firstSelectedTeam?.team_img}
-                                                team_name={firstSelectedTeam?.team_name}
-                                                two_candles={false}
-                                                filterByHomeAwayGames={filterCandleChartByTypeOfGames}
-                                                filterByAmoutOfGoals={filterCandleChartByAmoutOfGoals}
-                                                filterCandleChartByTypeOfTime={filterCandleChartByTypeOfTime}
-                                                seasons={firstSelectedTeamSeasons}
-                                                chartId="single_chart"
-                                                width={leftPaneWidthPercentage}
-                                                height={championshipTableHeightPercentage}
-                                            />                                            
-                                        } */}
-                        <div className="w-[calc(100%-53px)] flex">
-                            <SparkLineSection />
-                        </div>                   
+                        {isSingleTeamView ?
+                            <CandleChart
+                                rulerActive={false}
+                                modifiedCandles={[]}
+                                team_img={firstSelectedTeam?.team_img}
+                                team_name={firstSelectedTeam?.team_name}
+                                two_candles={false}
+                                filterByHomeAwayGames={''}
+                                filterByAmoutOfGoals={''}
+                                filterCandleChartByTypeOfTime={''}
+                                seasons={[]}
+                                chartId="single_chart"
+                                width={100}
+                                height={100}
+                            /> : <div className="w-[calc(100%-53px)] flex">
+                                <SparkLineSection />
+                            </div>
+                        }
                         <div className="w-[55px] flex h-full" id='candle-chart-panel-section'>
                             <Separator className="w-[10px] h-full" />
                             <ChartFiltersPanel />
@@ -324,7 +327,7 @@ const Chart: FC = () => {
                                     <TeamDetailInfoSection />
                                 </div>
                                 <div className="flex h-full">
-                                    <Separator className="w-[1px] h-full"/>
+                                    <Separator className="w-[1px] h-full" />
                                     <TeamTabPanel />
                                 </div>
                             </div>
@@ -332,7 +335,7 @@ const Chart: FC = () => {
                     </div>
                 </div>
             </div>
-            <Separator className="w-[1px] h-full"/>
+            <Separator className="w-[1px] h-full" />
             <div className={`w-1/3 flex-col ${expandSection === 'sparkline' ? 'hidden' : 'flex'}`}>
                 <div className="w-full flex flex-col h-1/2">
                     <div className="h-full flex flex w-full">
@@ -341,7 +344,7 @@ const Chart: FC = () => {
                         </div>
                         <Separator className="w-[1px] h-full" />
                         <ChampionshipTablePanel />
-                </div>
+                    </div>
                 </div>
                 <Separator className="w-full h-[1px]" />
                 <div className="h-[49%] flex w-full justify-end">

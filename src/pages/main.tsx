@@ -6,6 +6,7 @@ import FAQ from "../components/faq/faq";
 import Platform from "../components/platform/platform";
 import Modal from "../ui/modal/modal";
 import Teams from "../components/teams/teams";
+import { Container } from "@shared/main-page-container";
 interface MainProps {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
@@ -14,22 +15,22 @@ interface MainProps {
 const Main = ({ isOpen, setIsOpen }: MainProps) => {
   return (
     <>
-    <Description />
-    <Suggest />
-    <News />
-    <Community />
-    <FAQ />
-    <Platform />
-    <Modal 
-    modalType="teams"
-    className="w-[556px] h-[556px]"
-    title=""
-    isOpen={isOpen}
-    onClose={() => setIsOpen(false)}
-  >
-    <Teams />
-  </Modal>
-  </>
+      <Description setIsOpen={setIsOpen}/>
+      <Suggest />
+      <News />
+      <Community />
+      <FAQ />
+      <Platform />
+      <Modal
+        modalType="teams"
+        className="w-[556px] h-[556px]"
+        title=""
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      >
+        <Teams/>
+      </Modal>
+    </>
   )
 };
 

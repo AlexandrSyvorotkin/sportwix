@@ -103,20 +103,31 @@ const TEAMS:Teams = {
   },
 };
 
+import teams  from '../../mocks/teams-mock.json'
+import { Separator } from "@shared/separator";
+
+const teamsData = teams.map((team) => {
+  return {
+    name: team.team_name,
+    image: team.team_img,
+  }
+})
+
 const Teams = () => {
   const [isActive, setIsActive] = useState("EPL");
+  console.log(teams)
 
   return (
-    <div className="w-full h-full px-[45px] py-[33px]">
-      <div className="flex items-center gap-3">
+    <div className="w-full h-full px-[45px] py-[33px] relative overflow-y-auto">
+      <div className="flex items-center gap-3 w-full sticky top-0 z-10 bg-[#1A191D] pt-2 pb-2">
         {Object.keys(TEAMS).map((key) => (
           <div key={key} className="flex items-center gap-2">
-            <div className="w-[60px] h-[60px]">
+            <div className="w-[40px] h-[40px]">
               <img
                 src={TEAMS[key].image}
                 alt={key}
                 className="w-full h-full object-cover"
-                onMouseEnter={() => setIsActive(key)}
+                // onMouseEnter={() => setIsActive(key)}
               />
             </div>
             {isActive === key && (
@@ -127,13 +138,13 @@ const Teams = () => {
           </div>
         ))}
       </div>
-      <div className="bg-[#35353580] w-full h-[2px] mt-[23px]"></div>
-      <div className="flex items-center gap-2 mt-[44px]">
+      <Separator className="bg-[#35353580] w-full h-[2px] mt-[23px]"/>
+      <div className="flex items-center gap-2 mt-[44px] ">
         <div className="flex items-left flex-col gap-[20px] w-full">
-          {TEAMS[isActive]?.teams.map((team) => (
+          {teamsData.map((team) => (
             <div className="flex items-center flex-col gap-[8px] w-full">
               <div key={team.name} className="flex items-center gap-2 w-full">
-              <div className="w-[60px] h-[60px]">
+              <div className="w-[40px] h-[40px]">
                 <img
                   src={team.image}
                   alt={team.name}

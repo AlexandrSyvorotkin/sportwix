@@ -1,7 +1,7 @@
 // import { useState } from 'react';
 import styles from './legacy-header.module.scss'
 import Navbar from '../../components/navbar/navbar';
-import Logo from "../../components/logo/logo";
+import { Logo } from "@components/logo";
 // import {useNavigate} from 'react-router-dom';
 import navbar from '../../localization/navbar/navbar.json';
 
@@ -22,7 +22,7 @@ const routes = [
 // ]
 
 
-const Header = () => {
+const LegacyHeader = () => {
 
 	// const navigate = useNavigate()
 
@@ -53,4 +53,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export {LegacyHeader};

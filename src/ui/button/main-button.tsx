@@ -8,7 +8,7 @@ interface MainButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> 
 
 const MainButton = ({ children, onClick, className }: MainButtonProps) => {
   return (
-    <button className={cn("bg-violet-gradient rounded-[12px]", className)} onClick={onClick}>
+    <button className={cn("bg-violet-gradient rounded-[12px] xl:py-[20px] xl:px-[57px] lg:py-[17px] lg:px-[30px] md:py-[17px] md:px-[37px] sm:py-[12px] sm:px-[29px]", className)} onClick={onClick}>
       {children}
     </button>
   )

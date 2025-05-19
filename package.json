@@ -24,7 +24,7 @@
     "react-responsive": "^10.0.1",
     "react-slider": "^2.0.6",
     "react-youtube": "^10.1.0",
-    "swiper": "^11.2.4",
+    "swiper": "^11.2.6",
     "tailwind-merge": "^2.5.5",
     "vite-plugin-svgr": "^4.3.0"
   },

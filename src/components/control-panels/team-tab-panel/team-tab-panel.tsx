@@ -22,7 +22,6 @@ const TeamTabPanel = () => {
     const activeTeamDetailInfoTab = useAppSelector((state: RootState) => state.interfaceState.team_tabs.active_team_tab)
 
     const isAnyTeamSelected = useAppSelector((state: RootState) => state.tournamentSlice.isSingleTeamView)
-    console.log(isAnyTeamSelected)
     
     const rigthTabBtns:PanelBtnProps[] = useMemo(() =>
         [

@@ -1,5 +1,5 @@
 import './App.css'
-import RoutingElement from './layout/header/header'
+import { Header } from './layout/header'
 import Policy from './components/policy/policy'
 import { useEffect, useState } from 'react'
 import { Route, useLocation } from 'react-router-dom'
@@ -9,11 +9,11 @@ import Main from './pages/main'
 import PolicyPage from './pages/policy-page'
 import background from './assets/bg/background.png'
 import Chart from './pages/chart/chart-page'
-import Header from './layout/header-legacy/legacy-header'
 import Best from './pages/best/best-page'
 import News from './pages/news/news-page'
 import Community from './pages/community/community-page'
-
+import { LegacyHeader } from './layout/header-legacy'
+import { Footer } from './layout/footer'
 function App() {
 
   const [isOpen, setIsOpen] = useState(false);  
@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="w-full h-screen">
-      {isStartPage ? <RoutingElement tag="header" openModal={() => setIsOpen(true)} />  : <Header />}
+      {isStartPage ? <Header openModal={() => setIsOpen(true)} />  : <LegacyHeader/>}
       <Routes>
         <Route path="/" element={<Main isOpen={isOpen} setIsOpen={setIsOpen} />} />
         <Route path="/policy" element={<PolicyPage />} />
@@ -50,7 +50,7 @@ function App() {
       </Routes>
       {!is404Page && (
         <>
-          <RoutingElement tag="footer" openModal={() => setIsOpen(true)} />
+          <Footer />
           <Policy />
         </>
       )}

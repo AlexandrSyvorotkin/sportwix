@@ -22,8 +22,8 @@ export default {
   theme: {
     screens: {
       'sm': "360px", // ++
-      'md': '800px',
-      'lg': '1280px', // ++
+      'md': '768px',
+      'lg': '1366px', // ++
       'xl': '1920px', // ++
     },
     extend: {

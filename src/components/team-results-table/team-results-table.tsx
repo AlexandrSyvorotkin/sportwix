@@ -26,8 +26,7 @@ const Medal = ({ children, place }: { children: React.ReactNode, place: string }
 
 const TeamResultsTable = () => {
 
-    const firstSelectedTeamSeasonResults = useAppSelector((state: RootState) => state.tournamentSlice.firstSelectedTeam?.tabs.seasons)
-    console.log(firstSelectedTeamSeasonResults)
+    const firstSelectedTeamSeasonResults = useAppSelector((state: RootState) => state.tournamentSlice.firstSelectedTeam?.tabs?.seasons)
     const language = 'Eng'
 
 
@@ -64,7 +63,7 @@ const TeamResultsTable = () => {
                         <div key={it.season} className="w-full flex h-[50px]">
                             <div className='w-1/7 flex justify-center items-center flex-col '>
                                 <div className="w-full text-center items-center flex h-full ">
-                                    <span className="w-full">{it.season}</span>
+                                    <span className="w-full">{it?.seasons }</span>
                                     <Separator className="w-[1px] h-full" />
                                 </div>
                                 <Separator className="w-full h-[1px]" />
@@ -72,7 +71,16 @@ const TeamResultsTable = () => {
                             <div className='w-1/7 flex justify-center items-center flex-col '>
                                 <div className="w-full text-center items-center flex h-full">
                                     <Medal place={it.Premier_League}>
-                                        <span className="w-full">{it.Premier_League}</span>
+                                        <span className="w-full">{it?.Premier_League }</span>
+                                    </Medal>
+                                    <Separator className="w-[1px] h-full" />
+                                </div>
+                                <Separator className="w-full h-[1px]" />
+                            </div>
+                            <div className='w-1/7 flex justify-center items-center flex-col '>
+                                <div className="w-full text-center items-center flex h-full">
+                                    <Medal place={it?.League_Cup}>
+                                        <span className="w-full">{it?.League_Cup }</span>
                                     </Medal>
                                     <Separator className="w-[1px] h-full" />
                                 </div>
@@ -81,16 +89,7 @@ const TeamResultsTable = () => {
                             <div className='w-1/7 flex justify-center items-center flex-col '>
                                 <div className="w-full text-center items-center flex h-full">
                                     <Medal place={it.League_Cup}>
-                                        <span className="w-full">{it.League_Cup}</span>
-                                    </Medal>
-                                    <Separator className="w-[1px] h-full" />
-                                </div>
-                                <Separator className="w-full h-[1px]" />
-                            </div>
-                            <div className='w-1/7 flex justify-center items-center flex-col '>
-                                <div className="w-full text-center items-center flex h-full">
-                                    <Medal place={it.League_Cup}>
-                                        <span className="w-full">{it.League_Cup}</span>
+                                        <span className="w-full">{it?.League_Cup }</span>
                                     </Medal>
                                     <Separator className="w-[1px] h-full" />
                                 </div>
@@ -99,7 +98,7 @@ const TeamResultsTable = () => {
                             <div className='w-1/7 flex justify-center items-center flex-col '>
                                 <div className="w-full text-center items-center flex h-full">
                                     <Medal place={it.UEFA_Champions_League}>
-                                        <span className="w-full">{it.UEFA_Champions_League}</span>
+                                        <span className="w-full">{it?.UEFA_Champions_League }</span>
                                     </Medal>
                                     <Separator className="w-[1px] h-full" />
                                 </div>
@@ -108,7 +107,7 @@ const TeamResultsTable = () => {
                             <div className='w-1/7 flex justify-center items-center flex-col '>
                                 <div className="w-full text-center items-center flex h-full">
                                     <Medal place={it.Community_Shield}>
-                                        <span className="w-full">{it.Europa_League}</span>
+                                        <span className="w-full">{it?.Europa_League }</span>
                                     </Medal>
                                     <Separator className="w-[1px] h-full" />
                                 </div>
@@ -117,7 +116,7 @@ const TeamResultsTable = () => {
                             <div className='w-1/7 flex justify-center items-center flex-col '>
                                 <div className="w-full text-center items-center flex h-full">
                                     <Medal place={it.Community_Shield}>
-                                        <span className="w-full">{it.Community_Shield}</span>
+                                        <span className="w-full">{it?.Community_Shield }</span>
                                     </Medal>
                                 </div>
                                 <Separator className="w-full h-[1px]" />

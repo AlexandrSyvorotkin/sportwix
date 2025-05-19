@@ -1,9 +1,15 @@
+import { Container } from "@shared/main-page-container";
 import MainButton from "../../ui/button/main-button";
+import { useNavigate } from "react-router-dom";
 
 const Platform = () => {
+
+  const navigate = useNavigate()
+
   return (
-    <div className="mt-[120px] pb-[120px] flex flex-col items-center justify-center">
-      <div className="w-[1616px] h-[534px] bg-[#111012] rounded-[16px] relative overflow-hidden flex flex-col items-center justify-center">
+    <Container>
+      <div className="mt-[120px] pb-[120px] flex flex-col items-center justify-center">
+      <div className="w-full xl:h-[534px] lg:h-[384px] md:h-[338px] sm:h-[308px] bg-[#111012] rounded-[16px] relative overflow-hidden flex flex-col items-center justify-center">
         {/* Сетка и градиенты */}
         <div className="absolute inset-0">
           {/* Сама сетка */}
@@ -25,15 +31,15 @@ const Platform = () => {
         </div>
 
         {/* Контент */}
-        <div className="relative flex flex-col items-center gap-8">
-          <h2 className="text-[54px] text-center max-w-[800px]">
+        <div className="relative flex flex-col items-center gap-8 lg:w-1/2 md:w-3/4">
+          <h2 className="xl:text-[54px] lg:text-[40px] md:text-[32px] sm:text-[24px] text-center">
             Всегда можно найти свою идею на платформе SportWix.com
-
           </h2>
-          <MainButton className="py-[22px] px-[57px] flex items-center gap-2 mt-[52px]">Перейти к платформе</MainButton>
+          <MainButton className="flex items-center gap-2 mt-[52px]" onClick={() => navigate('/chart')}>Перейти к платформе</MainButton>
         </div>
       </div>
     </div>
+    </Container>
   );
 };
 
