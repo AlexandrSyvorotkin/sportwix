@@ -11,7 +11,7 @@ const CommonPanel = () => {
 
     const rightCommonBtns: PanelBtnProps[] = useMemo(() => [
         {
-            icon: <InformationTableIcon stroke='#A266F4'/>,
+            icon: <InformationTableIcon className='text-[#A266F4]'/>,
             onClick: () => null,
             disabled: false,
             isActive: true,

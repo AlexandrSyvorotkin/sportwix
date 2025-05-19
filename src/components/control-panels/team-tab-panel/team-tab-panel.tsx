@@ -26,7 +26,7 @@ const TeamTabPanel = () => {
     const rigthTabBtns:PanelBtnProps[] = useMemo(() =>
         [
             {
-                icon: <NewsIcon fill={activeTeamDetailInfoTab === 'news' ? activeColor : ''}/>,
+                icon: <NewsIcon className={activeTeamDetailInfoTab === 'news' ? 'text-[#A266F4]'  : 'text-[#FFFFFF]'}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('news')),
                 disabled: false,
                 isActive: activeTeamDetailInfoTab === 'news',
@@ -34,7 +34,7 @@ const TeamTabPanel = () => {
                 tooltipSide: 'left'
             },
             {
-                icon: <AboutTeamIcon fill={activeTeamDetailInfoTab === 'about-team' ? activeColor : ''}/>,
+                icon: <AboutTeamIcon className={activeTeamDetailInfoTab === 'about-team' ? 'text-[#A266F4]'  : 'text-[#FFFFFF]'}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('about-team')),
                 disabled: !isAnyTeamSelected,
                 isActive: activeTeamDetailInfoTab === 'about-team',
@@ -42,7 +42,7 @@ const TeamTabPanel = () => {
                 tooltipSide: 'left'
             },
             {
-                icon: <ChampionshipsPerformanceIcon fill={activeTeamDetailInfoTab === 'championships-performance' ? activeColor : ''}/>,
+                icon: <ChampionshipsPerformanceIcon className={activeTeamDetailInfoTab === 'championships-performance' ? 'text-[#A266F4]'  : 'text-[#FFFFFF]'}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('championships-performance')),
                 disabled: !isAnyTeamSelected,
                 isActive: activeTeamDetailInfoTab === 'championships-performance',
