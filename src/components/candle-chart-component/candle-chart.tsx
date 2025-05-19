@@ -1,13 +1,13 @@
 import { FC, MouseEventHandler, useEffect, useMemo, useRef, useState } from 'react';
 import styles from './candle-chart.module.scss'
-import { useAppDispatch, useAppSelector } from "../../types/hooks";
+import { useAppSelector } from "../../types/hooks";
 import { Candle } from "../../models/Candle";
 import leagueLogo from '@assets/icons/epllogo.svg'
 import { candleSeasons } from '../../types/candleSeason';
 import { candleParameters } from '../../types/candleParameters';
 import { useFetchTeamCandlesQuery } from '../../services/candles-api/candle-api';
 import { RootState } from '@store/store';
-import { CandleChartParams } from '@components/candle-chart-params';
+// import { CandleChartParams } from '@components/candle-chart-params';
 // @ts-ignore
 import { candleChart } from '@charts/candle-chart/candle-chart';
 
@@ -33,7 +33,7 @@ import candles from '../../mocks/mock-candles.json'
 
 
 
-const CandleChart: FC<CandleChartProps> = ({ rulerActive, modifiedCandles, team_name, two_candles, expandMiniCandle, filterByHomeAwayGames, filterByAmoutOfGoals, filterCandleChartByTypeOfTime,  seasons, chartVisible, chartType, team_img, chartId, width, height }) => {
+const CandleChart: FC<CandleChartProps> = ({ rulerActive, filterByHomeAwayGames, filterByAmoutOfGoals, filterCandleChartByTypeOfTime, chartType, team_img, width, height }) => {
 
 
     const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -42,15 +42,13 @@ const CandleChart: FC<CandleChartProps> = ({ rulerActive, modifiedCandles, team_
     const currentSeasonsAmount = useAppSelector(state => state.tournamentSlice.filters.candleChartFilters.currentSeasonsAmount)
     const spliteType = useAppSelector(state => state.tournamentSlice.filters.candleChartFilters.spliteType)
 
-    const {data, isFetching} = useFetchTeamCandlesQuery({team_uuid: firstTeamSelectedUuid, seasonsAmount: currentSeasonsAmount, spliteType: spliteType})
+    const {data} = useFetchTeamCandlesQuery({team_uuid: firstTeamSelectedUuid, seasonsAmount: currentSeasonsAmount, spliteType: spliteType})
 
     // console.log(data)
 
 
-    console.log(candles)
-
     // console.log(modifiedCandles)
-    const dispatch = useAppDispatch()
+    // const dispatch = useAppDispatch()
     const currentMatchUuid = useAppSelector((state:RootState) => state.test.matchUuid)
     // console.log(currentMatchUuid)
 

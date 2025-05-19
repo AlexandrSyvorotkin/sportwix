@@ -114,7 +114,7 @@ const teamsData = teams.map((team) => {
 })
 
 const Teams = () => {
-  const [isActive, setIsActive] = useState("EPL");
+  const [isActive] = useState("EPL");
   console.log(teams)
 
   return (
