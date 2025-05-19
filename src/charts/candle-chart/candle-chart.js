@@ -35,9 +35,9 @@ export function candleChart(
    ) 
    {
 
-   console.log(candles, 'CANDLES')
+   // console.log(candles, 'CANDLES')
    const canvas = canvasCandleRef
-   console.log(canvas, 'CANVAS')
+   // console.log(canvas, 'CANVAS')
 
    // const ctx = canvas?.getContext("2d");
    
@@ -574,7 +574,7 @@ export function candleChart(
 
       drawCandleTooltip() {
          if (tooltipCandleData === undefined) return;
-         console.log('Setting candle params:', tooltipCandleData);
+         // console.log('Setting candle params:', tooltipCandleData);
          setCandleParams({
             params: {
                high: tooltipCandleData.high,

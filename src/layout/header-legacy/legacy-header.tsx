@@ -5,6 +5,8 @@ import { Logo } from "@components/logo";
 // import {useNavigate} from 'react-router-dom';
 import navbar from '../../localization/navbar/navbar.json';
 import { useNavigate } from 'react-router-dom';
+import { Separator } from '@shared/separator';
+import { InProgress } from '@shared/in-progress';
 
 
 const routes = [
@@ -14,8 +16,6 @@ const routes = [
 	{id: 4, titleEng: navbar.best.eng,titleRu: navbar.best.ru, path: '/best'},
 	{id: 5, titleEng: navbar.live.eng,titleRu: navbar.live.ru, path: '/live'},
 ]
-
-
 
 // const languages = [
 // 	{language: 'Eng'},
@@ -45,10 +45,15 @@ const LegacyHeader = () => {
 	return (
 		<header className={`${styles.header} ${styles[theme]}`} style={{borderBottom: border}}>
 			<Logo onClick={() => navigate('/')}/>
-			<Navbar routes={routes}/>
+			<div className="flex items-center gap-10">
+				<InProgress><div>Футбол</div></InProgress>
+				<InProgress><div>Английская премьер-лига</div></InProgress>
+				<Separator className="w-[1px] h-[34px]" />
+				<Navbar routes={routes}/>
+			</div>
 			<div className={styles.login_locales}>
 				<div className={styles.lng_switcher}>
-					Ru
+					<InProgress>Ru</InProgress>
 				</div>
 			</div>
 		</header>

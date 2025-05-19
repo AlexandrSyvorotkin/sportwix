@@ -1,6 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { ITeam } from "../../models/ITeam";
 import { ILastMatch } from "../../models/ILastMatch";
+import { onSwitchActiveTeamTab } from "../InterfaceSlice/InterfaceSlice";
 
 
 interface Tournament {
@@ -143,6 +144,12 @@ const tournamentSlice = createSlice({
         setFirstSelectedTeamUuid(state, action: PayloadAction<string>) {
             state.firstSelectedTeamUuid = action.payload
         },
+    },
+    extraReducers: (builder) => {
+        builder.addCase(switchPageToStartPostition, (state) => {
+            state.isSingleTeamView = false
+            state.isDoubleTeamView = false
+        })
     }
 })
 

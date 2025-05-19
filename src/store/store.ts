@@ -11,8 +11,7 @@ import { candleApi } from "../services/candles-api/candle-api";
 import { championshipInfoApi } from "../services/championships-api/championship-api";
 import { newsApi } from "../services/news-api/news-api";
 import { newsTagsApi } from "../services/news-tags-api/news-tags-api";
-
-
+import { tournamentMiddleware } from './middleware';
 
 const store = configureStore({
     reducer: {
@@ -34,7 +33,7 @@ const store = configureStore({
         .concat(candleApi.middleware)
         .concat(newsApi.middleware)
         .concat(newsTagsApi.middleware)
-
+        .concat(tournamentMiddleware)
 })
 
 export default store;

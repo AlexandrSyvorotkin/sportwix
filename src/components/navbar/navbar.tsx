@@ -102,11 +102,8 @@ const Navbar:FC<Routes> = ({ routes }) => {
 
     return (
         <nav className={styles.navbar}>
-            <div style={{ color: theme === 'dark' ? 'white' : '#333333' }}>{'Футбол'}</div>
             {/* <CustomSelect defaultValue={sportsDefaultValue} options={sportOptions} type='routing' /> */}
             {/* <CustomSelect defaultValue={championshipDefaultValue} options={championshipsOptions} type='routing' fetchChampionshipData={fetchChampionshipData} /> */}
-            
-            <div className={styles.border} style={{ border: border }} />
             {/* <HeaderRoutingSelect routes={routes} defaul_value={routes[0].titleEng} /> */}
             <ul className={styles.navbar_list}>
                 {
