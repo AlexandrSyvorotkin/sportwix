@@ -1,5 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { interfaceState, singleTeamInfoTabsTypes } from "../../types/types";
+import { switchPageToStartPostition } from "../tournament-slice/tournament-slice";
 
 export type expandTypes = "sparkline" | "newsAndLastGames" | "candleChart" | "tabsInfo" | 'none';
 export type teamTabsTypes = "news" | "about-team" | "championships-performance" | "team-stats" | "player-stat" | "football-field" | "calendar";
@@ -75,6 +76,11 @@ const interfaceSlice = createSlice({
         onSwitchActiveSingleTeamInfoTab (state, action: PayloadAction<singleTeamInfoTabsTypes>) {
             state.single_team_info_tabs.active_single_team_info_tab = action.payload
         }
+    },
+    extraReducers: (builder) => {
+        builder.addCase(switchPageToStartPostition, (state) => {
+            state.team_tabs.active_team_tab = 'news';
+        });
     }
 })
 
