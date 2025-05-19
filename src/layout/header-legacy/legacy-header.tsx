@@ -4,7 +4,6 @@ import Navbar from '../../components/navbar/navbar';
 import { Logo } from "@components/logo";
 // import {useNavigate} from 'react-router-dom';
 import navbar from '../../localization/navbar/navbar.json';
-import { switchPageToStartPostition } from '@store/tournament-slice/tournament-slice';
 import { useNavigate } from 'react-router-dom';
 
 
