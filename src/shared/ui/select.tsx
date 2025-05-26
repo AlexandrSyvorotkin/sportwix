@@ -4,6 +4,7 @@ import { Check, ChevronDown, ChevronUp } from "lucide-react"
 
 import { cn } from "@shared/lib/utils"
 import { SelectProps as RadixSelectProps } from "@radix-ui/react-select"
+import { InProgress } from "@shared/in-progress"
 
 const Select = SelectPrimitive.Root
 
@@ -146,13 +147,15 @@ SelectSeparator.displayName = SelectPrimitive.Separator.displayName
 
 type baseSelectProps = {
   id: number,
-  name: string
+  name: string,
+  isInProgress?: boolean
 }
 
 type EnhancedSelectProps = {
   id: number,
   name: string,
-  img: string
+  img: string,
+  isInProgress?: boolean
 }
 
 type CustomSelectProps = {
@@ -163,7 +166,15 @@ type CustomSelectProps = {
   customSelectElements?: EnhancedSelectProps[]
 } & RadixSelectProps
 
-const EnhancedSelect = ({ items = [], placeholder, customSelectElements = [], className, ...props }: CustomSelectProps) => {
+const EnhancedSelect = (
+  { 
+    items = [], 
+    placeholder, 
+    customSelectElements = [], 
+    className, 
+    ...props }
+    : CustomSelectProps
+  ) => {
 
   const isCustomElements = customSelectElements.length > 0
   const itemsToRender = isCustomElements ? customSelectElements : items
@@ -171,21 +182,31 @@ const EnhancedSelect = ({ items = [], placeholder, customSelectElements = [], cl
 
   return <Select {...props}>
     <SelectTrigger className={cn(triggerWidth, "border-none", className)}>
-      <SelectValue placeholder={placeholder}/>
+      <SelectValue placeholder={placeholder} />
     </SelectTrigger>
     <SelectContent className="bg-bg-main border border-gray-600 shadow-lg">
-      {itemsToRender.map((item) => (
-        <SelectItem key={item.id} value={item.name} className="text-white">
-          {isCustomElements ? (
-            <div className="flex items-center gap-2">
-              <img src={(item as EnhancedSelectProps).img} alt={item.name} className="w-[30px] h-[30px] rounded-full" />
-              <span>{item.name}</span>
-            </div>
-          ) : (
-            <span>{item.name}</span>
-          )}
-        </SelectItem>
-      ))}
+      {itemsToRender.map((item) => {
+        const renderContent = () => {
+          if (isCustomElements) {
+            const content = (
+              <div className="flex items-center gap-2">
+                <img src={(item as EnhancedSelectProps).img} alt={item.name} className="w-[30px] h-[30px] rounded-full" />
+                <span>{item.name}</span>
+              </div>
+            )
+            return item.isInProgress ? <InProgress>{content}</InProgress> : content
+          } else {
+            const content = <span>{item.name}</span>
+            return item.isInProgress ? <InProgress>{content}</InProgress> : content
+          }
+        }
+
+        return (
+          <SelectItem key={item.id} value={item.name} className="text-white">
+            {renderContent()}
+          </SelectItem>
+        )
+      })}
     </SelectContent>
 
   </Select>

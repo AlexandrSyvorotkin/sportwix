@@ -24,23 +24,17 @@ const routes = [
 ]
 
 const dispicplines_list = [
-	{id: 1, name: 'Football'},
-	{id: 2, name: 'Hockey'},
-	{id: 3, name: 'Basketball'},
-	{id: 4, name: 'Tennis'},
-	{id: 5, name: 'Cricket'},
-	{id: 6, name: 'Golf'},
-	{id: 7, name: 'American Football'},
-	{id: 8, name: 'Baseball'},
-	{id: 9, name: 'Volleyball'},
+	{id: 1, name: 'Football', isInProgress: false},
+	{id: 2, name: 'Hockey', isInProgress: true},
+	{id: 3, name: 'Basketball', isInProgress: true},
 ]
 
 const leagues_list = [
-	{id: 1, name: 'Premier League', img: icon_league2},
-	{id: 2, name: 'La Liga', img: icon_league3},
-	{id: 3, name: 'Bundesliga', img: icon_league4},
-	{id: 4, name: 'Serie A', img: icon_league5},
-	{id: 5, name: 'Ligue 1', img: icon_league5},
+	{id: 1, name: 'Premier League', img: icon_league2, isInProgress: false},
+	{id: 2, name: 'La Liga', img: icon_league3, isInProgress: true},
+	{id: 3, name: 'Bundesliga', img: icon_league4, isInProgress: true},
+	{id: 4, name: 'Serie A', img: icon_league5, isInProgress: true},
+	{id: 5, name: 'Ligue 1', img: icon_league5, isInProgress: true},
 ]
 
 
