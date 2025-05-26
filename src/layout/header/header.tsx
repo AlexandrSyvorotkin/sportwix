@@ -6,6 +6,7 @@ import BurgerMenu from "@assets/icons/burger-menu.svg?react";
 import { MenuMobile } from "@components/menu-mobile";
 import CloseIcon from "@assets/icons/close-icon.svg?react";
 import { useState } from "react";
+import { LanguageSelect } from "@shared/language-select";
 
 interface HeaderProps {
   openModal: () => void;
@@ -34,6 +35,8 @@ const links = [
   }
 ]
 
+const languages_list = ["Ru", "En"]
+
 const Header = ({ openModal }: HeaderProps) => {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +46,9 @@ const Header = ({ openModal }: HeaderProps) => {
       <Logo />
       <Navbar links={links} isFooter={false}/>
       <div className="items-center gap-3 sm:hidden lg:flex">
-        <span>RU</span>
+        {/* <InProgress> */}
+          <LanguageSelect onValueChange={(e) => console.log(e)} laguages_list={languages_list}/>
+        {/* </InProgress> */}
         <div className="">
           <img
             src={icon_registration}

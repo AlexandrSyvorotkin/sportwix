@@ -122,7 +122,7 @@ const Teams = () => {
       <div className="flex items-center gap-3 w-full sticky top-0 z-10 bg-[#1A191D] pt-2 pb-2">
         {Object.keys(TEAMS).map((key) => (
           <div key={key} className="flex items-center gap-2">
-            <div className="w-[40px] h-[40px]">
+            <div className="w-[50px] h-[50px]">
               <img
                 src={TEAMS[key].image}
                 alt={key}
