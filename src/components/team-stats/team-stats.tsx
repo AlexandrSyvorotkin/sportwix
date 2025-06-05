@@ -5,16 +5,13 @@ import { useAppDispatch, useAppSelector } from '../../types/hooks';
 import times_selectors from '../../localization/team_detail_info_section/team_stats/times_selectors.json'
 import games_selectors from '../../localization/team_detail_info_section/team_stats/games_selectors.json'
 import team_stats from '../../localization/team_detail_info_section/team_stats/team_stats.json'
-import { useFetchChampionshipInfoQuery } from '../../services/championships-api/championship-api';
 import { TeamStatParameter } from '@components/team-stat-parameter';
 import { RootState } from '../../store/store';
-import ParamStatSelect from '@legacy/ui/Selections/ParamStatSelect/ParamStatSelect';
-import GamesTimeFrameStatSelect from '@legacy/ui/Selections/GameStatSelect/GameStatSelect';
-import TeamStatSelect from '@legacy/ui/Selections/teamStatSelect/TeamStatSelect';
 import { EnhancedSelect } from '@shared/ui/select';
 import { Separator } from '@shared/separator';
-import { ITeam } from 'src/models/ITeam';
+// import { ITeam } from 'src/models/ITeam';
 import { chooseSecondTeam, setGameFrame, setTimeFrame } from '@store/tournament-slice/tournament-slice';
+import { TimeFrameMetrics } from '../../types/types';
 
 
 const timeSelectors = [
@@ -27,8 +24,9 @@ const TeamStats = () => {
 
     const [activeSelector, setActiveSelector] = useState('Полный матч')
 
-    const [firstSelectedTeamMetrics, setFirstSelectedTeamParams] = useState<any>(null)
-    const [secondSelectedTeamMetrics, setSecondSelectedTeamMetrics] = useState<any>(null)
+    
+    const [firstSelectedTeamMetrics, setFirstSelectedTeamParams] = useState<TimeFrameMetrics | undefined>(undefined)
+    const [secondSelectedTeamMetrics, setSecondSelectedTeamMetrics] = useState<TimeFrameMetrics | undefined>(undefined)
         
     console.log(firstSelectedTeamMetrics, secondSelectedTeamMetrics)
 
@@ -42,7 +40,7 @@ const TeamStats = () => {
     const secondTeamH2h = useAppSelector((state: RootState) => state.tournamentSlice.h2h.teamStatsTable.secondTeamH2h)
 
     const h2hTeamTableStatus = useAppSelector((state: RootState) => state.tournamentSlice.h2h.isH2h.teamTable)
-    const [isLoadingH2h, setIsLoadingH2h] = useState<boolean>(false)
+    // const [isLoadingH2h, setIsLoadingH2h] = useState<boolean>(false)
 
     // console.log(firstTeamH2h, secondTeamH2h)
 
@@ -53,6 +51,8 @@ const TeamStats = () => {
             setActiveGameTimeFrame('1 игра')
         }
     }, [teamTableH2h])
+
+    console.log(gamesTimeFrame)
 
     const language = 'Eng'
 
@@ -97,8 +97,8 @@ const TeamStats = () => {
 
 
 
-    const { championshipId, season } = useAppSelector(state => state.tournamentSlice)
-    const { data } = useFetchChampionshipInfoQuery({ championshipId, season })
+    // const { championshipId, season } = useAppSelector(state => state.tournamentSlice)
+    // const { } = useFetchChampionshipInfoQuery({ championshipId, season })
 
 
 
@@ -118,7 +118,7 @@ const TeamStats = () => {
     //     corners: false
     // })
 
-    const [metricsVisibility, setMetricsVisibility] = useState({
+    const [metricsVisibility] = useState({
         goals_scored: true,
         goals_conceded: true,
         delta_goals: true,
@@ -152,21 +152,21 @@ const TeamStats = () => {
     ]
 
 
-    const paramsSelectors = [
-        { id: 1, title: 'goals_scored', componentVisible: metricsVisibility.goals_scored, ruTitle: team_stats.goals_scored.ru, engTitle: team_stats.goals_scored.eng },
-        { id: 2, title: 'goals_conceded', componentVisible: metricsVisibility.goals_conceded, ruTitle: team_stats.goals_conceded.ru, engTitle: team_stats.goals_conceded.eng },
-        { id: 3, title: 'delta_goals', componentVisible: metricsVisibility.delta_goals, ruTitle: team_stats.delta_goals.ru, engTitle: team_stats.delta_goals.eng },
-        { id: 4, title: 'xg_sum', componentVisible: metricsVisibility.xg_sum, ruTitle: team_stats.xgSum.ru, engTitle: team_stats.xgSum.eng },
-        { id: 5, title: 'ball_possession', componentVisible: metricsVisibility.ball_possession, ruTitle: team_stats.ball_possession.ru, engTitle: team_stats.ball_possession.eng },
-        { id: 6, title: 'total_shots', componentVisible: metricsVisibility.total_shots, ruTitle: team_stats.total_shots.ru, engTitle: team_stats.total_shots.eng },
-        { id: 7, title: 'innaccurate_passes', componentVisible: metricsVisibility.innaccurate_passes, ruTitle: team_stats.innaccurate_passes.ru, engTitle: team_stats.innaccurate_passes.eng },
-        { id: 8, title: 'accurate_passes', componentVisible: metricsVisibility.accurate_passes, ruTitle: team_stats.accurate_passes.ru, engTitle: team_stats.accurate_passes.eng },
-        { id: 9, title: 'bch', componentVisible: metricsVisibility.bch, ruTitle: team_stats.bch.ru, engTitle: team_stats.bch.eng },
-        { id: 10, title: 'bchm', componentVisible: metricsVisibility.bchm, ruTitle: team_stats.bchm.ru, engTitle: team_stats.bchm.eng },
-        { id: 11, title: 'avg_coeff', componentVisible: metricsVisibility.avg_coeff, ruTitle: team_stats.avg_coeff.ru, engTitle: team_stats.avg_coeff.eng },
-        { id: 11, title: 'offsides', componentVisible: metricsVisibility.offsides, ruTitle: team_stats.offsides.ru, engTitle: team_stats.offsides.eng },
-        { id: 13, title: 'corners', componentVisible: metricsVisibility.corners, ruTitle: team_stats.corners.ru, engTitle: team_stats.corners.eng },
-    ]
+    // const paramsSelectors = [
+    //     { id: 1, title: 'goals_scored', componentVisible: metricsVisibility.goals_scored, ruTitle: team_stats.goals_scored.ru, engTitle: team_stats.goals_scored.eng },
+    //     { id: 2, title: 'goals_conceded', componentVisible: metricsVisibility.goals_conceded, ruTitle: team_stats.goals_conceded.ru, engTitle: team_stats.goals_conceded.eng },
+    //     { id: 3, title: 'delta_goals', componentVisible: metricsVisibility.delta_goals, ruTitle: team_stats.delta_goals.ru, engTitle: team_stats.delta_goals.eng },
+    //     { id: 4, title: 'xg_sum', componentVisible: metricsVisibility.xg_sum, ruTitle: team_stats.xgSum.ru, engTitle: team_stats.xgSum.eng },
+    //     { id: 5, title: 'ball_possession', componentVisible: metricsVisibility.ball_possession, ruTitle: team_stats.ball_possession.ru, engTitle: team_stats.ball_possession.eng },
+    //     { id: 6, title: 'total_shots', componentVisible: metricsVisibility.total_shots, ruTitle: team_stats.total_shots.ru, engTitle: team_stats.total_shots.eng },
+    //     { id: 7, title: 'innaccurate_passes', componentVisible: metricsVisibility.innaccurate_passes, ruTitle: team_stats.innaccurate_passes.ru, engTitle: team_stats.innaccurate_passes.eng },
+    //     { id: 8, title: 'accurate_passes', componentVisible: metricsVisibility.accurate_passes, ruTitle: team_stats.accurate_passes.ru, engTitle: team_stats.accurate_passes.eng },
+    //     { id: 9, title: 'bch', componentVisible: metricsVisibility.bch, ruTitle: team_stats.bch.ru, engTitle: team_stats.bch.eng },
+    //     { id: 10, title: 'bchm', componentVisible: metricsVisibility.bchm, ruTitle: team_stats.bchm.ru, engTitle: team_stats.bchm.eng },
+    //     { id: 11, title: 'avg_coeff', componentVisible: metricsVisibility.avg_coeff, ruTitle: team_stats.avg_coeff.ru, engTitle: team_stats.avg_coeff.eng },
+    //     { id: 11, title: 'offsides', componentVisible: metricsVisibility.offsides, ruTitle: team_stats.offsides.ru, engTitle: team_stats.offsides.eng },
+    //     { id: 13, title: 'corners', componentVisible: metricsVisibility.corners, ruTitle: team_stats.corners.ru, engTitle: team_stats.corners.eng },
+    // ]
 
 
     // console.log(isLoadingH2h)
