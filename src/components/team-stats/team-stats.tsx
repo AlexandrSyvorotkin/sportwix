@@ -162,14 +162,16 @@ const TeamStats = () => {
 
     //TODO: проверить дату
     const teams = useAppSelector((state: RootState) => state.tournamentSlice.tournament?.teams)
+    const firstSelectedTeam = useAppSelector((state: RootState) => state.tournamentSlice.firstSelectedTeam)
 
     const teamsData = useMemo(() => {
         return teams?.map(team => ({
             id: Number(team.team_uuid),
             name: team.team_name,
-            img: team.team_img
-        }))
-    }, [teams])
+            img: team.team_img,
+            isInProgress: !(team.team_name === 'Arsenal' || team.team_name === 'Liverpool')
+        })).filter(team => team.name !== firstSelectedTeam?.team_name)
+    }, [teams, firstSelectedTeam])
 
     console.log(teams)
 
