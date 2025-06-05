@@ -61,9 +61,19 @@ const LegacyHeader = () => {
 		<header className={`${styles.header} ${styles[theme]}`} style={{borderBottom: border}}>
 			<Logo onClick={() => navigate('/')}/>
 			<div className="flex items-center gap-10">
-				<EnhancedSelect items={dispicplines_list} placeholder="Футбол" onValueChange={(value) => console.log(value)}/>
+				<EnhancedSelect 
+					items={dispicplines_list}  
+					onValueChange={(value) => console.log(value)}
+					triggerWidth="min-w-[120px]"
+					defaultValue="Football"
+				/>
 				<Separator className="w-[1px] h-[34px]" />
-				<EnhancedSelect customSelectElements={leagues_list} placeholder="Премьер-Лига" onValueChange={(value) => console.log(value)}/>
+				<EnhancedSelect 
+					customSelectElements={leagues_list}  
+					customDefaultValue={leagues_list[0]}
+					onValueChange={(value) => console.log(value)}
+					triggerWidth="min-w-[180px]"
+				/>
 				<Navbar routes={routes}/>
 			</div>
 			<div className={styles.login_locales}>

@@ -106,7 +106,7 @@ const TEAMS:Teams = {
 import teams  from '../../mocks/teams-mock.json'
 import { Separator } from "@shared/separator";
 
-const teamsData = teams.map((team) => {
+const teamsData = teams.teams.map((team) => {
   return {
     name: team.team_name,
     image: team.team_img,

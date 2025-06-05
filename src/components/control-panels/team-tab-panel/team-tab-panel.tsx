@@ -52,7 +52,7 @@ const TeamTabPanel = () => {
             {
                 icon: <TeamStatsIcon fill={activeTeamDetailInfoTab === 'team-stats' ? activeColor : ''}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('team-stats')),
-                disabled: true,
+                disabled: !isAnyTeamSelected,
                 isActive: activeTeamDetailInfoTab === 'team-stats',
                 tooltipText: 'Статистика команды',
                 tooltipSide: 'left'

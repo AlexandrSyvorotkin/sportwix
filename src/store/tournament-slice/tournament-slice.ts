@@ -1,6 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { ITeam } from "../../models/ITeam";
 import { ILastMatch } from "../../models/ILastMatch";
+import { TimeFrameMetrics } from "@types/types";
 
 interface Tournament {
     teams: ITeam[],
@@ -23,6 +24,12 @@ type initialStateType = {
         candleChartFilters: {
             currentSeasonsAmount: number,
             spliteType: boolean
+        },
+        stat_metrics: {
+            firstTeamMetrics: TimeFrameMetrics | null,
+            secondTeamMetrics: TimeFrameMetrics | null,
+            timeFrame: '1 тайм' | '2 тайм' | 'Полный матч',
+            gameFrame: '1 game' | '3 games' | '5 games' | '4 games' | '10 games' | '15 games' | 'Season'
         }
     },
     h2h: {
@@ -59,6 +66,12 @@ const initialState: initialStateType = {
         candleChartFilters: {
             currentSeasonsAmount: 3,
             spliteType: false
+        },
+        stat_metrics: {
+            firstTeamMetrics: null,
+            secondTeamMetrics: null,
+            timeFrame: 'Полный матч',
+            gameFrame: '1 game'
         }
     },
     h2h: {
@@ -111,10 +124,20 @@ const tournamentSlice = createSlice({
         },
         chooseFirstTeam(state, action: PayloadAction<ITeam>) {
             state.firstSelectedTeam = action.payload
+            state.filters.stat_metrics.firstTeamMetrics = action.payload.metrics?.timeframe_1.full_time || null
         },
         chooseSecondTeam(state, action: PayloadAction<ITeam>) {
             state.secondSelectedTeam = action.payload
+            state.filters.stat_metrics.secondTeamMetrics = action.payload.metrics?.timeframe_1.full_time || null
         },
+        setTimeFrame(state, action: PayloadAction<'1 тайм' | '2 тайм' | 'Полный матч'>) {
+            state.filters.stat_metrics.timeFrame = action.payload
+        },
+        setGameFrame(state, action: PayloadAction<'1 game' | '3 games' | '5 games' | '4 games' | '10 games' | '15 games' | 'Season'>) {
+            state.filters.stat_metrics.gameFrame = action.payload
+        },
+
+
         setH2hData(state, action: PayloadAction<{firstTeamH2hParams: any, secondTeamH2hParams: any}>) {
             state.h2h.fieldParams.firstTeamH2h = action.payload.firstTeamH2hParams;
             state.h2h.fieldParams.secondTeamH2h = action.payload.secondTeamH2hParams
@@ -166,6 +189,8 @@ export const {
         h2hTogle, 
         disableH2h, 
         setH2hTeamTableData,
-        setFirstSelectedTeamUuid
+        setFirstSelectedTeamUuid,
+        setTimeFrame,
+        setGameFrame
     } = tournamentSlice.actions
 export default tournamentSlice.reducer

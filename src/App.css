@@ -77,7 +77,7 @@ body {
 
 /* для Firefox */
 ::-moz-scrollbar {
-  width: 8px;
+  width: 0px;
 }
 
 ::-moz-scrollbar-track {
@@ -92,7 +92,7 @@ body {
 
 /* для Internet Explorer и Edge */
 ::-ms-scrollbar {
-  width: 8px;
+  width: 0px;
 }
 
 ::-ms-scrollbar-track {

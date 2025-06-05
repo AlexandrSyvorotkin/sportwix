@@ -15,6 +15,7 @@
       "@types/*": ["src/types/*"],
       "@store/*": ["src/store/*"],
       "@hooks/*": ["src/hooks/*"],
+      "@legacy/*": ["src/legacy/*"],
       // "@utils/*": ["src/utils/*"]
     }
   }

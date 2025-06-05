@@ -6,12 +6,7 @@ import styles from './championship-table.module.scss'
 import teamsMock from '../../mocks/teams-mock.json'
 import ChampionShipTableTeam from '../championship-table-team/championship-table-team';
 
-
-interface ChampionshipTableProps {
-    // Add your props here
-}
-
-const ChampionShipTable = ({ }: ChampionshipTableProps) => {
+const ChampionShipTable = () => {
 
 
     // const {championshipId, season} = useAppSelector(state => state.tournamentSlice)
@@ -20,7 +15,7 @@ const ChampionShipTable = ({ }: ChampionshipTableProps) => {
 
 
     // const teams = data?.teams?.filter((team: ITeam) => !team.is_event)
-    const teams = teamsMock
+    const teams = teamsMock.teams
     const [teamReverseStatus] = useState<boolean>(false)
     const [selectedTeamUuid, setSelectedTeamUuid] = useState<string>('')
     const maxPts = teams ? Math.max(...teams.map(team => team.score)) : 0;

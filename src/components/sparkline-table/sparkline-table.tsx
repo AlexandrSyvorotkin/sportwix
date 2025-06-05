@@ -8,10 +8,8 @@ import classNames from 'classnames';
 import teamsMock from '../../mocks/teams-mock.json'
 import TeamSparkLine from '../sparkline-team/sparkline-team'
 
-interface SparkLineSectionProps {
-}
 
-const SparkLineSection: FC<SparkLineSectionProps> = ({ }) => {
+const SparkLineSection: FC = () => {
 
     // const interfaceState = useAppSelector((state: RootState) => state.interfaceState)
 
@@ -53,7 +51,7 @@ const SparkLineSection: FC<SparkLineSectionProps> = ({ }) => {
                         <div className={styles.next_game}>{sparklineCap[8].ru}</div>
                     </div>
                 </div>
-                {teamsMock?.map(team =>
+                {teamsMock?.teams?.map(team =>
                     <TeamSparkLine team={team}/>
                 )}
             </div>

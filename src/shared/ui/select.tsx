@@ -4,7 +4,6 @@ import { Check, ChevronDown, ChevronUp } from "lucide-react"
 
 import { cn } from "@shared/lib/utils"
 import { SelectProps as RadixSelectProps } from "@radix-ui/react-select"
-import { InProgress } from "@shared/in-progress"
 
 const Select = SelectPrimitive.Root
 
@@ -163,7 +162,10 @@ type CustomSelectProps = {
   placeholder?: string,
   className?: string,
   children?: React.ReactNode,
-  customSelectElements?: EnhancedSelectProps[]
+  customSelectElements?: EnhancedSelectProps[],
+  triggerWidth?: string,
+  defaultValue?: string,
+  customDefaultValue?: EnhancedSelectProps
 } & RadixSelectProps
 
 const EnhancedSelect = (
@@ -172,15 +174,22 @@ const EnhancedSelect = (
     placeholder, 
     customSelectElements = [], 
     className, 
-    ...props }
-    : CustomSelectProps
+    triggerWidth,
+    defaultValue,
+    customDefaultValue,
+    ...props 
+  }: CustomSelectProps
   ) => {
 
   const isCustomElements = customSelectElements.length > 0
   const itemsToRender = isCustomElements ? customSelectElements : items
-  const triggerWidth = isCustomElements ? "min-w-[180px]" : "min-w-[120px]"
+  
+  // Определяем правильное значение по умолчанию
+  const effectiveDefaultValue = isCustomElements 
+    ? customDefaultValue?.name 
+    : defaultValue
 
-  return <Select {...props}>
+  return <Select defaultValue={effectiveDefaultValue} {...props}>
     <SelectTrigger className={cn(triggerWidth, "border-none", className)}>
       <SelectValue placeholder={placeholder} />
     </SelectTrigger>
@@ -188,21 +197,27 @@ const EnhancedSelect = (
       {itemsToRender.map((item) => {
         const renderContent = () => {
           if (isCustomElements) {
-            const content = (
+            return (
               <div className="flex items-center gap-2">
                 <img src={(item as EnhancedSelectProps).img} alt={item.name} className="w-[30px] h-[30px] rounded-full" />
                 <span>{item.name}</span>
               </div>
             )
-            return item.isInProgress ? <InProgress>{content}</InProgress> : content
           } else {
-            const content = <span>{item.name}</span>
-            return item.isInProgress ? <InProgress>{content}</InProgress> : content
+            return <span>{item.name}</span>
           }
         }
 
         return (
-          <SelectItem key={item.id} value={item.name} className="text-white">
+          <SelectItem 
+            key={item.id} 
+            value={item.name} 
+            className={cn(
+              "text-white",
+              item.isInProgress && "opacity-50 cursor-not-allowed pointer-events-none"
+            )}
+            disabled={item.isInProgress}
+          >
             {renderContent()}
           </SelectItem>
         )

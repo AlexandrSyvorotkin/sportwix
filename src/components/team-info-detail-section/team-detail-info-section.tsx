@@ -5,13 +5,14 @@ import { useAppSelector } from '../../hooks/hooks';
 import { RootState } from '../../store/store';
 import { SingleTeamInfo } from '@components/single-team-info';
 import { TeamResultsTable } from '@components/team-results-table';
+import { TeamStats } from '@components/team-stats';
 
 // interface TeamDetailInfoSectionProps {
 //     expandTeamSectionMobile?: any
 //     isTeamSectionMobileExpanded?: boolean
 // }
 
-const TeamDetailInfoSection = ({ }) => {
+const TeamDetailInfoSection = () => {
 
     // const dispatch = useAppDispatch()
     // const {isSingleTeamView, isDoubleTeamView} = useAppSelector((state: RootState) => state.tournamentSlice)
@@ -48,7 +49,7 @@ const TeamDetailInfoSection = ({ }) => {
         { id: 'news', component: <NewsTab /> },
         { id: 'about-team', component: <SingleTeamInfo />},
         { id: 'championships-performance', component: <TeamResultsTable /> },
-        { id: 'team-stats', component: <div >Результаты команды</div> },
+        { id: 'team-stats', component: <TeamStats /> },
         { id: 'player-stat', component: <div >Статистика команды</div> },
         { id: 'football-field', component: <div >Игроки команды</div> },
         { id: 'calendar', component: <div >Футбольное поле</div> },

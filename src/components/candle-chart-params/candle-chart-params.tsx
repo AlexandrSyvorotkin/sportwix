@@ -13,7 +13,7 @@ interface CandleChartParamsProps {
 }
 
 const CandleChartParams = ({team_img, team_name, two_candle, candleParams}:CandleChartParamsProps) => {
-    console.log('CandleChartParams received params:', candleParams);
+    // console.log('CandleChartParams received params:', candleParams);
 
     const paramStyles = classNames({
         [styles.candle_draw]: candleParams.close === candleParams.open,

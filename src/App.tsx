@@ -14,6 +14,10 @@ import News from './pages/news/news-page'
 import Community from './pages/community/community-page'
 import { LegacyHeader } from './layout/header-legacy'
 import { Footer } from './layout/footer'
+import { useAppDispatch } from '@hooks/hooks'
+import { getTournamentData } from './store/tournament-slice/tournament-slice'
+import data from './mocks/teams-mock.json'
+
 function App() {
 
   const [isOpen, setIsOpen] = useState(false);  
@@ -21,7 +25,6 @@ function App() {
   const [backgroundVisible, setBackgroundVisible] = useState(false);
   const location = useLocation()
   useEffect(() => {
-
 		if ( location.pathname === '/community'  || location.pathname === '/news' || location.pathname === '/company'  || location.pathname === '/best') {
 			setBackgroundVisible(true)
 		} else {
@@ -29,6 +32,14 @@ function App() {
 
 		}
 	}, [location])
+
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    // @ts-expect-error mock data
+    dispatch(getTournamentData(data))
+  }, [dispatch]);
+  
 
   const is404Page = location.pathname !== '/' && location.pathname !== '/policy';
 
