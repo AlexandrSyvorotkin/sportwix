@@ -1,4 +1,4 @@
-import {Goal, LastMatchTeam} from "../types/types";
+import {LastMatchTeam} from "../types/types";
 
 export interface ILastMatch {
     accurate_passes_realized_away: number
@@ -23,8 +23,20 @@ export interface ILastMatch {
         short_score: {
             full_time: number[] | []
         },
-        goals_away: Goal[] | []
-        goals_home: Goal[] | []
+        goals_away: {
+            munite: number,
+            player: string,
+            player_img: string,
+            assist_player: string,
+            assist_player_img: string
+        }[] | []
+        goals_home: {
+            munite: number,
+            player: string,
+            player_img: string,
+            assist_player: string,
+            assist_player_img: string
+        }[] | []
     },
     total_shots_away: number,
     total_shots_home: number,
