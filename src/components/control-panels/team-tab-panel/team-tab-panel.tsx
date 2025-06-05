@@ -4,10 +4,10 @@ import { onSwitchActiveTeamTab } from "../../../store/InterfaceSlice/InterfaceSl
 import NewsIcon from '@assets/icons/news.svg?react'
 import AboutTeamIcon from '@assets/icons/about-team.svg?react'
 import ChampionshipsPerformanceIcon from '@assets/icons/championships-performance.svg?react'
-import TeamStatsIcon from '@assets/icons/team-stats.svg?react'
+import TeamStatsIcon from '@assets/icons/team-stats-icon.svg?react'
 import PlayerStatIcon from '@assets/icons/player-stat.svg?react'
 import FootballFieldIcon from '@assets/icons/football-field.svg?react'
-import CalendarIcon from '@assets/icons/calendar.svg?react'
+import CalendarIcon from '@assets/icons/calendar-icon.svg?react'
 import { useAppDispatch, useAppSelector } from "../../../hooks/hooks"
 import { useMemo } from "react"
 import { RootState } from "../../../store/store"
@@ -50,7 +50,7 @@ const TeamTabPanel = () => {
                 tooltipSide: 'left'
             },
             {
-                icon: <TeamStatsIcon fill={activeTeamDetailInfoTab === 'team-stats' ? activeColor : ''}/>,
+                icon: <TeamStatsIcon className={activeTeamDetailInfoTab === 'team-stats' ? 'text-[#A266F4]'  : 'text-[#FFFFFF]'}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('team-stats')),
                 disabled: !isAnyTeamSelected,
                 isActive: activeTeamDetailInfoTab === 'team-stats',
@@ -74,15 +74,15 @@ const TeamTabPanel = () => {
                 tooltipSide: 'left'
             },
             {
-                icon: <CalendarIcon fill={activeTeamDetailInfoTab === 'calendar' ? activeColor : ''}/>,
+                icon: <CalendarIcon className={activeTeamDetailInfoTab === 'calendar' ? 'text-[#A266F4]'  : 'text-[#FFFFFF]'}/>,
                 onClick: () => dispatch(onSwitchActiveTeamTab('calendar')),
-                disabled: true,
+                disabled: !isAnyTeamSelected,
                 isActive: activeTeamDetailInfoTab === 'calendar',
                 tooltipText: 'Календарь',
                 tooltipSide: 'left'
             }
         ]
-    , [activeTeamDetailInfoTab, isAnyTeamSelected])
+    , [activeTeamDetailInfoTab, isAnyTeamSelected, dispatch])
     
     return (
         <div className="flex flex-col gap-[5px] p-[7px]">

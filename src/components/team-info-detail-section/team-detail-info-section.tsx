@@ -6,6 +6,8 @@ import { RootState } from '../../store/store';
 import { SingleTeamInfo } from '@components/single-team-info';
 import { TeamResultsTable } from '@components/team-results-table';
 import { TeamStats } from '@components/team-stats';
+import { Calendar } from '@features/calendar/';
+// import Calendar from '../../legacy/components/Calendar/Calendar';
 
 // interface TeamDetailInfoSectionProps {
 //     expandTeamSectionMobile?: any
@@ -52,7 +54,7 @@ const TeamDetailInfoSection = () => {
         { id: 'team-stats', component: <TeamStats /> },
         { id: 'player-stat', component: <div >Статистика команды</div> },
         { id: 'football-field', component: <div >Игроки команды</div> },
-        { id: 'calendar', component: <div >Футбольное поле</div> },
+        { id: 'calendar', component: <Calendar/> },
     ]
 
 

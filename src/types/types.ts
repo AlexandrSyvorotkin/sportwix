@@ -17,15 +17,13 @@ export type LastMatchTeam = {
     short_name_ru: string
 }
 
-export type Goal = {
-    goal: {
-        munite: number,
-        player: string,
-        player_img: string,
-        assist_player: string,
-        assist_player_img: string
-    }
-}
+// export type Goal = {
+//     munite: number,
+//     player: string,
+//     player_img: string,
+//     assist_player: string,
+//     assist_player_img: string
+// }
 
 export type Candle = {
     away_team: string,

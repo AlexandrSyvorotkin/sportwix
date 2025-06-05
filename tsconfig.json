@@ -16,6 +16,7 @@
       "@store/*": ["src/store/*"],
       "@hooks/*": ["src/hooks/*"],
       "@legacy/*": ["src/legacy/*"],
+      "@features/*": ["src/features/*"]
       // "@utils/*": ["src/utils/*"]
     }
   }

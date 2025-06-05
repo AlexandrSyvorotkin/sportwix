@@ -1,10 +1,8 @@
-import {  useState } from 'react';
+import { useState } from 'react';
 import styles from './championship-table.module.scss'
-
-// import { useAppSelector } from "../../legacy/types/hooks";
-
-import teamsMock from '../../mocks/teams-mock.json'
 import ChampionShipTableTeam from '../championship-table-team/championship-table-team';
+import { useAppSelector } from '@hooks/hooks';
+import { RootState } from '@store/store';
 
 const ChampionShipTable = () => {
 
@@ -15,7 +13,7 @@ const ChampionShipTable = () => {
 
 
     // const teams = data?.teams?.filter((team: ITeam) => !team.is_event)
-    const teams = teamsMock.teams
+    const teams = useAppSelector((state: RootState) => state.tournamentSlice.tournament?.teams)
     const [teamReverseStatus] = useState<boolean>(false)
     const [selectedTeamUuid, setSelectedTeamUuid] = useState<string>('')
     const maxPts = teams ? Math.max(...teams.map(team => team.score)) : 0;
@@ -57,16 +55,34 @@ const ChampionShipTable = () => {
                     </ul>
                 </div>
                 <div className={styles.table_teams}>
-                    {teams?.map((team, id) =>
-                        <ChampionShipTableTeam
-                            key={team.team_uuid}
-                            place={!teamReverseStatus ? id + 1 : teams.length - id}
-                            maxPts={maxPts}
-                            team={team}
-                            selectedTeamUuid={selectedTeamUuid}
-                            setSelectedTeamUuid={setSelectedTeamUuid}
-                        />
-                    )}
+                    {teams?.map((team, id) => {
+
+                        if (team.team_name === 'Liverpool') {
+                            return (
+                                <ChampionShipTableTeam
+                                    key={team.team_uuid}
+                                    place={!teamReverseStatus ? id + 1 : teams.length - id}
+                                    maxPts={maxPts}
+                                    team={team}
+                                    selectedTeamUuid={selectedTeamUuid}
+                                    setSelectedTeamUuid={setSelectedTeamUuid}
+                                />
+                            )
+                        }
+
+                        return (
+                            <div className='w-full opacity-50 pointer-events-none'>
+                                <ChampionShipTableTeam
+                                    key={team.team_uuid}
+                                    place={!teamReverseStatus ? id + 1 : teams.length - id}
+                                    maxPts={maxPts}
+                                    team={team}
+                                    selectedTeamUuid={selectedTeamUuid}
+                                    setSelectedTeamUuid={setSelectedTeamUuid}
+                                />
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </div>

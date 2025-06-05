@@ -18,7 +18,8 @@
       "@hooks/*": ["src/hooks/*"],
       "@store/*": ["src/store/*"],
       "@types/*": ["src/types/*"],
-      "@legacy/*": ["src/legacy/*"]
+      "@legacy/*": ["src/legacy/*"],
+      "@features/*": ["src/features/*"]
     },
 
     /* Bundler mode */
