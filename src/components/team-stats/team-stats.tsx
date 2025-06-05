@@ -24,10 +24,10 @@ const TeamStats = () => {
 
     const [activeSelector, setActiveSelector] = useState('Полный матч')
 
-    
+
     const [firstSelectedTeamMetrics, setFirstSelectedTeamParams] = useState<TimeFrameMetrics | undefined>(undefined)
     const [secondSelectedTeamMetrics, setSecondSelectedTeamMetrics] = useState<TimeFrameMetrics | undefined>(undefined)
-        
+
     console.log(firstSelectedTeamMetrics, secondSelectedTeamMetrics)
 
     const firstTeam = useAppSelector(state => state.tournamentSlice.firstSelectedTeam)
@@ -57,25 +57,14 @@ const TeamStats = () => {
     const language = 'Eng'
 
     useEffect(() => {
-        if (h2hTeamTableStatus) {
-            if (activeSelector === '1 тайм') {
-                setFirstSelectedTeamParams(firstTeamH2h?.timeframe_all.time_1)
-                setSecondSelectedTeamMetrics(secondTeamH2h?.timeframe_all.time_1)
-            } else if (activeSelector === '2 тайм') {
-                setFirstSelectedTeamParams(firstTeamH2h?.timeframe_all.time_2)
-                setSecondSelectedTeamMetrics(secondTeamH2h?.timeframe_all.time_2)
-            } else if (activeSelector === 'Полный матч') {
-                setFirstSelectedTeamParams(firstTeamH2h?.timeframe_all.full_time)
-                setSecondSelectedTeamMetrics(secondTeamH2h?.timeframe_all.full_time)
-            }
-        } else if (!h2hTeamTableStatus) {
+        if (!h2hTeamTableStatus) {
             if (activeSelector === '1 тайм') {
                 setFirstSelectedTeamParams(firstTeam?.metrics?.timeframe_1.time_1)
                 setSecondSelectedTeamMetrics(secondTeam?.metrics?.timeframe_1.time_1)
             } else if (activeSelector === '2 тайм') {
                 setFirstSelectedTeamParams(firstTeam?.metrics?.timeframe_1.time_2)
                 setSecondSelectedTeamMetrics(secondTeam?.metrics?.timeframe_1.time_2)
-                } else if (activeSelector === 'Полный матч') {
+            } else if (activeSelector === 'Полный матч') {
                 setFirstSelectedTeamParams(firstTeam?.metrics?.timeframe_1.full_time)
                 setSecondSelectedTeamMetrics(secondTeam?.metrics?.timeframe_1.full_time)
             }
@@ -220,17 +209,17 @@ const TeamStats = () => {
                             />
                             <Separator className='w-full h-[1px]' />
                         </div>
-                        <Separator className='w-[1px] h-full'/>
+                        <Separator className='w-[1px] h-full' />
                         <div className='w-full h-full flex flex-col items-center justify-center'>
                             <div className='w-full h-[99%] flex items-center justify-center'>
                                 {timeSelectors.map((selector, index) => (
                                     <React.Fragment key={selector.id}>
-                                        <div 
-                                        className={`h-full px-4 py-1.5 flex-1 flex items-center justify-center cursor-pointer ${activeSelector === selector.name ? `${styles.active_selector}` : `${styles.time_item}`}`} 
-                                        onClick={() => {
-                                            setActiveSelector(selector.name)
-                                            dispatch(setTimeFrame(selector.name as '1 тайм' | '2 тайм' | 'Полный матч'))
-                                        }}
+                                        <div
+                                            className={`h-full px-4 py-1.5 flex-1 flex items-center justify-center cursor-pointer ${activeSelector === selector.name ? `${styles.active_selector}` : `${styles.time_item}`}`}
+                                            onClick={() => {
+                                                setActiveSelector(selector.name)
+                                                dispatch(setTimeFrame(selector.name as '1 тайм' | '2 тайм' | 'Полный матч'))
+                                            }}
                                         >
                                             {selector.name}
                                         </div>
@@ -268,7 +257,7 @@ const TeamStats = () => {
                         <Separator className='w-full h-[1px]' />
                     </div>
                 </div>
-                
+
             </div>
             <div className='overflow-y-auto'>
                 {teamStatisticsParamsList.map(it => <div key={it.id}>{it.component}</div>)}

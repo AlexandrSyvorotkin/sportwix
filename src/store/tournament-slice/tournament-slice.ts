@@ -1,12 +1,12 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { ITeam } from "../../models/ITeam";
 import { ILastMatch } from "../../models/ILastMatch";
-import { TimeFrameMetrics } from "@types/types";
+import { TimeFrameMetrics } from "../../types/types";
 
 interface Tournament {
     teams: ITeam[],
     last_matches: ILastMatch[],
-    grid?: any
+    // grid?: any
 }
 
 type initialStateType = {
@@ -38,10 +38,13 @@ type initialStateType = {
             teamTable: boolean
         },
         fieldParams: {
-            firstTeamH2h: any,
-            secondTeamH2h: any
+            firstTeamH2h: null,
+            secondTeamH2h: null
         },
-        teamStatsTable: any
+        teamStatsTable: {
+            firstTeamH2h: null,
+            secondTeamH2h: null
+        }
     },
 }
 
@@ -51,7 +54,7 @@ const initialState: initialStateType = {
     tournament: {
         teams: [],
         last_matches: [],
-        grid: null
+        // grid: null
     },
     firstSelectedTeam: null,
     secondSelectedTeam: null,
@@ -138,30 +141,30 @@ const tournamentSlice = createSlice({
         },
 
 
-        setH2hData(state, action: PayloadAction<{firstTeamH2hParams: any, secondTeamH2hParams: any}>) {
-            state.h2h.fieldParams.firstTeamH2h = action.payload.firstTeamH2hParams;
-            state.h2h.fieldParams.secondTeamH2h = action.payload.secondTeamH2hParams
+        // setH2hData(state, action: PayloadAction<{firstTeamH2hParams: any, secondTeamH2hParams: any}>) {
+        //     state.h2h.fieldParams.firstTeamH2h = action.payload.firstTeamH2hParams;
+        //     state.h2h.fieldParams.secondTeamH2h = action.payload.secondTeamH2hParams
             
-        },
-        setH2hTeamTableData(state, action: PayloadAction<{firstTeamH2hTableParams: any, secondTeamH2hTableParams: any}>) {
-            state.h2h.teamStatsTable.firstTeamH2h = action.payload.firstTeamH2hTableParams;
-            state.h2h.teamStatsTable.secondTeamH2h = action.payload.secondTeamH2hTableParams
+        // },
+        // setH2hTeamTableData(state, action: PayloadAction<{firstTeamH2hTableParams: any, secondTeamH2hTableParams: any}>) {
+        //     state.h2h.teamStatsTable.firstTeamH2h = action.payload.firstTeamH2hTableParams;
+        //     state.h2h.teamStatsTable.secondTeamH2h = action.payload.secondTeamH2hTableParams
             
-        },
-        h2hTogle(state, action:PayloadAction<"field" | "teamTable">) {
-            if (action.payload === 'field') {
-                state.h2h.isH2h.field = !state.h2h.isH2h.field
-            } else if (action.payload === 'teamTable') {
-                state.h2h.isH2h.teamTable = !state.h2h.isH2h.teamTable
-            }
-        },
-        disableH2h(state, action:PayloadAction<"field" | "teamTable">) {
-            if (action.payload === 'field') {
-                state.h2h.isH2h.field = false
-            } else if (action.payload === 'teamTable') {
-                state.h2h.isH2h.teamTable = false
-            }
-        },
+        // },
+        // h2hTogle(state, action:PayloadAction<"field" | "teamTable">) {
+        //     if (action.payload === 'field') {
+        //         state.h2h.isH2h.field = !state.h2h.isH2h.field
+        //     } else if (action.payload === 'teamTable') {
+        //         state.h2h.isH2h.teamTable = !state.h2h.isH2h.teamTable
+        //     }
+        // },
+        // disableH2h(state, action:PayloadAction<"field" | "teamTable">) {
+        //     if (action.payload === 'field') {
+        //         state.h2h.isH2h.field = false
+        //     } else if (action.payload === 'teamTable') {
+        //         state.h2h.isH2h.teamTable = false
+        //     }
+        // },
         setFirstSelectedTeamUuid(state, action: PayloadAction<string>) {
             state.firstSelectedTeamUuid = action.payload
         },
@@ -184,11 +187,7 @@ export const {
         switchToDoubleCandleCharts, 
         switchToSingleCandleChart, 
         setSpliteType,
-        setCurrentSeasonsAmount,
-        setH2hData, 
-        h2hTogle, 
-        disableH2h, 
-        setH2hTeamTableData,
+        setCurrentSeasonsAmount, 
         setFirstSelectedTeamUuid,
         setTimeFrame,
         setGameFrame
