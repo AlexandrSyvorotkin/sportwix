@@ -19,24 +19,18 @@
             },
             "goals_home": [
                 {
-                    "goal": {
-                        "player": "Сака",
-                        "munite": 15
-                    }
+                    "player": "Сака",
+                    "munite": 15
                 },
                 {
-                    "goal": {
-                        "player": "Одегаар",
-                        "munite": 67
-                    }
+                    "player": "Одегаар",
+                    "munite": 67
                 }
             ],
             "goals_away": [
                 {
-                    "goal": {
-                        "player": "Фернандеш",
-                        "munite": 53
-                    }
+                    "player": "Фернандеш",
+                    "munite": 53
                 }
             ]
         },
@@ -62,22 +56,16 @@
             },
             "goals_home": [
                 {
-                    "goal": {
-                        "player": "Салах",
-                        "munite": 22
-                    }
+                    "player": "Салах",
+                    "munite": 22
                 },
                 {
-                    "goal": {
-                        "player": "Диас",
-                        "munite": 41
-                    }
+                    "player": "Диас",
+                    "munite": 41
                 },
                 {
-                    "goal": {
-                        "player": "Нуньес",
-                        "munite": 74
-                    }
+                    "player": "Нуньес",
+                    "munite": 74
                 }
             ],
             "goals_away": []
@@ -104,18 +92,14 @@
             },
             "goals_home": [
                 {
-                    "goal": {
-                        "player": "Сон",
-                        "munite": 30
-                    }
+                    "player": "Сон",
+                    "munite": 30
                 }
             ],
             "goals_away": [
                 {
-                    "goal": {
-                        "player": "Холанд",
-                        "munite": 76
-                    }
+                    "player": "Холанд",
+                    "munite": 76
                 }
             ]
         },
@@ -141,30 +125,22 @@
             },
             "goals_home": [
                 {
-                    "goal": {
-                        "player": "Митома",
-                        "munite": 12
-                    }
+                    "player": "Митома",
+                    "munite": 12
                 },
                 {
-                    "goal": {
-                        "player": "Гросс",
-                        "munite": 85
-                    }
+                    "player": "Гросс",
+                    "munite": 85
                 }
             ],
             "goals_away": [
                 {
-                    "goal": {
-                        "player": "Калверт-Льюин",
-                        "munite": 40
-                    }
+                    "player": "Калверт-Льюин",
+                    "munite": 40
                 },
                 {
-                    "goal": {
-                        "player": "Гейе",
-                        "munite": 77
-                    }
+                    "player": "Гейе",
+                    "munite": 77
                 }
             ]
         },
@@ -191,10 +167,8 @@
             "goals_home": [],
             "goals_away": [
                 {
-                    "goal": {
-                        "player": "Боуэн",
-                        "munite": 67
-                    }
+                    "player": "Боуэн",
+                    "munite": 67
                 }
             ]
         },
@@ -220,30 +194,22 @@
             },
             "goals_home": [
                 {
-                    "goal": {
-                        "player": "Уоткинс",
-                        "munite": 55
-                    }
+                    "player": "Уоткинс",
+                    "munite": 55
                 }
             ],
             "goals_away": [
                 {
-                    "goal": {
-                        "player": "Варди",
-                        "munite": 14
-                    }
+                    "player": "Варди",
+                    "munite": 14
                 },
                 {
-                    "goal": {
-                        "player": "Мэддисон",
-                        "munite": 39
-                    }
+                    "player": "Мэддисон",
+                    "munite": 39
                 },
                 {
-                    "goal": {
-                        "player": "Барнс",
-                        "munite": 81
-                    }
+                    "player": "Барнс",
+                    "munite": 81
                 }
             ]
         },
@@ -269,28 +235,20 @@
             },
             "goals_home": [
                 {
-                    "goal": {
-                        "player": "Исаак",
-                        "munite": 9
-                    }
+                    "player": "Исаак",
+                    "munite": 9
                 },
                 {
-                    "goal": {
-                        "player": "Гордон",
-                        "munite": 23
-                    }
+                    "player": "Гордон",
+                    "munite": 23
                 },
                 {
-                    "goal": {
-                        "player": "Исаак",
-                        "munite": 62
-                    }
+                    "player": "Исаак",
+                    "munite": 62
                 },
                 {
-                    "goal": {
-                        "player": "Жоэлитон",
-                        "munite": 75
-                    }
+                    "player": "Жоэлитон",
+                    "munite": 75
                 }
             ],
             "goals_away": []
@@ -317,24 +275,18 @@
             },
             "goals_home": [
                 {
-                    "goal": {
-                        "player": "Соланке",
-                        "munite": 70
-                    }
+                    "player": "Соланке",
+                    "munite": 70
                 }
             ],
             "goals_away": [
                 {
-                    "goal": {
-                        "player": "Авонийи",
-                        "munite": 45
-                    }
+                    "player": "Авонийи",
+                    "munite": 45
                 },
                 {
-                    "goal": {
-                        "player": "Гиббс-Уайт",
-                        "munite": 89
-                    }
+                    "player": "Гиббс-Уайт",
+                    "munite": 89
                 }
             ]
         },
@@ -360,30 +312,22 @@
             },
             "goals_home": [
                 {
-                    "goal": {
-                        "player": "Мбеумо",
-                        "munite": 30
-                    }
+                    "player": "Мбеумо",
+                    "munite": 30
                 },
                 {
-                    "goal": {
-                        "player": "Тони",
-                        "munite": 68
-                    }
+                    "player": "Тони",
+                    "munite": 68
                 }
             ],
             "goals_away": [
                 {
-                    "goal": {
-                        "player": "Заха",
-                        "munite": 14
-                    }
+                    "player": "Заха",
+                    "munite": 14
                 },
                 {
-                    "goal": {
-                        "player": "Эзе",
-                        "munite": 90
-                    }
+                    "player": "Эзе",
+                    "munite": 90
                 }
             ]
         },

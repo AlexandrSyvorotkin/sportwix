@@ -191,7 +191,7 @@ const LastGameItem = ({result, match_id}:RecentResultItemProps) => {
                         <div className={styles.detail_match_info}>
                             <div className={styles.goal_section_home}>
                                 {result.score.goals_home.map((goal, id: number) =>
-                                    <span key={id}>{goal.goal.player} {goal.goal.munite}`</span>
+                                    <span key={id}>{goal.player} {goal.munite}`</span>
                                 )}
                             </div>
                             <div className={styles.ball_img_wrapper}>
@@ -199,7 +199,7 @@ const LastGameItem = ({result, match_id}:RecentResultItemProps) => {
                             </div>
                             <div className={styles.goal_section_away}>
                                 {result.score.goals_away.map((goal, id: number) =>
-                                    <span key={id}>{goal.goal.player} {goal.goal.munite}`</span>
+                                    <span key={id}>{goal.player} {goal.munite}`</span>
                                 )}
                             </div>
                         </div>
