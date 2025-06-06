@@ -1,14 +1,14 @@
 {
-    "completed_games": {
-        "ru": "Законченные игры",
-        "eng": "Completed games"
-    },
-    "live": {
-        "ru": "Live",
-        "eng": "Live"
-    },
-    "next_games": {
-        "ru": "Следующие игры",
-        "eng": "Next games"
-    }
+  "completed_games": {
+    "ru": "Законченные игры",
+    "eng": "Completed games"
+  },
+  "live": {
+    "ru": "Live",
+    "eng": "Live"
+  },
+  "next_games": {
+    "ru": "Следующие игры",
+    "eng": "Next games"
+  }
 }

@@ -1,1 +1,1 @@
-export {ChartFiltersPanel} from './chart-filters-panel'
+export { ChartFiltersPanel } from './chart-filters-panel'

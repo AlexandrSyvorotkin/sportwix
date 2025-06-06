@@ -7,53 +7,53 @@
 
 :root {
   /* Основные цвета */
-  --bg-black-main: #0D0C0E;
-  --text-white-main: #EDF1EE;
-  --color-violet-main: #5724FF;
-  --violet-gradient: #6A2DBF;
-  --grey-gradient: #D5D6E9B2;
+  --bg-black-main: #0d0c0e;
+  --text-white-main: #edf1ee;
+  --color-violet-main: #5724ff;
+  --violet-gradient: #6a2dbf;
+  --grey-gradient: #d5d6e9b2;
 
-  --grey-separator: #5C5C5C;
+  --grey-separator: #5c5c5c;
 
-  --active-panel-btn: #A266F4;
+  --active-panel-btn: #a266f4;
   --btn-hover: #181818;
-  
+
   /* Цвета из legacy */
-  --bg-color: #1F1F1F;
-  --active-el-color: #A266F4;
-  --hove-el-color: #B279FF;
-  --main-color: #FFFFFF;
+  --bg-color: #1f1f1f;
+  --active-el-color: #a266f4;
+  --hove-el-color: #b279ff;
+  --main-color: #ffffff;
   --bg-rectangle-color: #333333;
-  
+
   /* Цвета для чемпионата */
-  --championship-champions-league-place-color: #4E4EFD;
-  --championship-europa-league-place-color: #B7A503;
-  --championship-conference-league-place-color: #51B136;
-  --championship-bottom-place: #C00000;
-  
+  --championship-champions-league-place-color: #4e4efd;
+  --championship-europa-league-place-color: #b7a503;
+  --championship-conference-league-place-color: #51b136;
+  --championship-bottom-place: #c00000;
+
   /* Цвета для результатов */
-  --results-first-place: #B3891F;
-  --results-second-place: #867D7D;
-  --results-third-place: #5C3E1F;
-  
+  --results-first-place: #b3891f;
+  --results-second-place: #867d7d;
+  --results-third-place: #5c3e1f;
+
   /* Цвета для прогресс-бара */
   --championship-table-team-progress-bar-dark: #181818;
-  --championship-table-team-progress-bar-light: #E6D4FF;
-  
+  --championship-table-team-progress-bar-light: #e6d4ff;
+
   /* Цвета подложки */
-  --substrate-color: #5C5C5C;
-  --substrate-color-light: #E1E3EA;
-  
+  --substrate-color: #5c5c5c;
+  --substrate-color-light: #e1e3ea;
+
   /* Цвет текста */
   --text-color-light: #333333;
-  
+
   /* Цвета баннера */
   --banner-color-dark: #181818;
-  --banner-color-light: #F3F4F7;
-  
+  --banner-color-light: #f3f4f7;
+
   /* Цвета границы */
-  --resizable-border-dark: #5C5C5C;
-  --resizable-border-light: #E1E3EA;
+  --resizable-border-dark: #5c5c5c;
+  --resizable-border-light: #e1e3ea;
 }
 
 body {
@@ -81,12 +81,12 @@ body {
 }
 
 ::-moz-scrollbar-track {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 7px;
 }
 
 ::-moz-scrollbar-thumb {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 7px;
 }
 
@@ -96,7 +96,7 @@ body {
 }
 
 ::-ms-scrollbar-track {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 7px;
 }
 
@@ -107,13 +107,13 @@ body {
 
 /* отображать scroll-полосы только при наведении курсора мыши */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 ::-moz-scrollbar-thumb:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 ::-ms-scrollbar-thumb:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }

@@ -19,41 +19,42 @@ import { getTournamentData } from './store/tournament-slice/tournament-slice'
 import data from './mocks/teams-mock.json'
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false)
 
-  const [isOpen, setIsOpen] = useState(false);  
-  
-  const [backgroundVisible, setBackgroundVisible] = useState(false);
+  const [backgroundVisible, setBackgroundVisible] = useState(false)
   const location = useLocation()
   useEffect(() => {
-		if ( location.pathname === '/community'  || location.pathname === '/news' || location.pathname === '/company'  || location.pathname === '/best') {
-			setBackgroundVisible(true)
-		} else {
-			setBackgroundVisible(false)
-
-		}
-	}, [location])
+    if (
+      location.pathname === '/community' ||
+      location.pathname === '/news' ||
+      location.pathname === '/company' ||
+      location.pathname === '/best'
+    ) {
+      setBackgroundVisible(true)
+    } else {
+      setBackgroundVisible(false)
+    }
+  }, [location])
 
   const dispatch = useAppDispatch()
 
   useEffect(() => {
     // @ts-expect-error mock data
     dispatch(getTournamentData(data))
-  }, [dispatch]);
-  
+  }, [dispatch])
 
-  const is404Page = location.pathname !== '/' && location.pathname !== '/policy';
+  const is404Page = location.pathname !== '/' && location.pathname !== '/policy'
 
-  const isStartPage = location.pathname === '/';
+  const isStartPage = location.pathname === '/'
 
   return (
     <div className="w-full h-screen">
-      {isStartPage ? <Header openModal={() => setIsOpen(true)} />  : <LegacyHeader/>}
+      {isStartPage ? <Header openModal={() => setIsOpen(true)} /> : <LegacyHeader />}
       <Routes>
         <Route path="/" element={<Main isOpen={isOpen} setIsOpen={setIsOpen} />} />
         <Route path="/policy" element={<PolicyPage />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/chart" element={<Chart />} />
-
 
         <Route path="/best" element={<Best />} />
         <Route path="/community" element={<Community />} />
@@ -65,14 +66,13 @@ function App() {
           <Policy />
         </>
       )}
-      {backgroundVisible ? <div className='absolute w-full h-full top-0 left-0 pointer-events-none'>
-					<img src={background} alt="" className='w-full h-full bg-cover bg-no-repeat bg-fixed'/>
-				</div> : null}
-    </div>  
+      {backgroundVisible ? (
+        <div className="absolute w-full h-full top-0 left-0 pointer-events-none">
+          <img src={background} alt="" className="w-full h-full bg-cover bg-no-repeat bg-fixed" />
+        </div>
+      ) : null}
+    </div>
   )
-} 
+}
 
 export default App
-
-
-        

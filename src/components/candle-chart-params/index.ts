@@ -1,1 +1,1 @@
-export {CandleChartParams} from './candle-chart-params'
+export { CandleChartParams } from './candle-chart-params'

@@ -1,44 +1,44 @@
-import MainButton from "../../ui/button/main-button";
-import arrow_icon from "../../assets/arrow-up-right.svg";
-import img_bg from "../../assets/bg/ImgPrimary.png";
+import MainButton from '../../ui/button/main-button'
+import arrow_icon from '../../assets/arrow-up-right.svg'
+import img_bg from '../../assets/bg/ImgPrimary.png'
 
-import epl from "../../assets/ligues/epl.png";
-import laliga from "../../assets/ligues/laliga.svg";
-import bundesliga from "../../assets/ligues/bundesliga.png";
-import ligueone from "../../assets/ligues/ligueone.svg";
-import nfl from "../../assets/ligues/nfl.svg";
-import erd from "../../assets/ligues/eridivise.svg";
-import Marquee from "react-fast-marquee";
-import { Container } from "@shared/main-page-container";
+import epl from '../../assets/ligues/epl.png'
+import laliga from '../../assets/ligues/laliga.svg'
+import bundesliga from '../../assets/ligues/bundesliga.png'
+import ligueone from '../../assets/ligues/ligueone.svg'
+import nfl from '../../assets/ligues/nfl.svg'
+import erd from '../../assets/ligues/eridivise.svg'
+import Marquee from 'react-fast-marquee'
+import { Container } from '@shared/main-page-container'
 
 const LIGUES = [
   {
-    name: "Premier League",
+    name: 'Premier League',
     img: epl,
   },
   {
-    name: "La-Liga",
+    name: 'La-Liga',
     img: laliga,
   },
   {
-    name: "Bundesliga",
+    name: 'Bundesliga',
     img: bundesliga,
   },
   {
-    name: "Ligue 1",
+    name: 'Ligue 1',
     img: ligueone,
   },
   {
-    name: "NFL",
+    name: 'NFL',
     img: nfl,
   },
   {
-    name: "Eridivisie",
+    name: 'Eridivisie',
     img: erd,
   },
-];
+]
 
-const Description = ({setIsOpen}: {setIsOpen: (isOpen: boolean) => void}) => {
+const Description = ({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) => {
   return (
     <Container>
       <div className="mt-36 flex flex-col items-center relative xl:pb-[120px] lg:pb-[85px] md:pb-[65px] sm:pb-[55px]">
@@ -85,22 +85,19 @@ const Description = ({setIsOpen}: {setIsOpen: (isOpen: boolean) => void}) => {
 
           <div className="flex justify-center mt-[80px]">
             <div className="xl:w-[1200px] lg:w-[1090px] md:w-[656px] sm:w-[328px] relative">
-              
               <div className="absolute inset-y-0 left-0 w-[100px] bg-gradient-to-r from-[#0D0C0E] to-transparent z-10"></div>
               <div className="absolute inset-y-0 right-0 w-[100px] bg-gradient-to-l from-[#0D0C0E] to-transparent z-10"></div>
 
               <Marquee>
                 <div className="flex gap-[64px]">
-                  {LIGUES.map((ligue) => (
+                  {LIGUES.map(ligue => (
                     <div className="flex items-center gap-2">
                       <div className="xl:w-[40px] xl:h-[40px] lg:w-[32px] lg:h-[32px] md:w-[24px] md:w-[24px]">
-                        <img
-                          src={ligue.img}
-                          alt=""
-                          className="w-full h-full object-cover"
-                        />
+                        <img src={ligue.img} alt="" className="w-full h-full object-cover" />
                       </div>
-                      <p className="xl:text-[19px] lg:text-[16px] md:text-[14px] sm:text-[13px]">{ligue.name}</p>
+                      <p className="xl:text-[19px] lg:text-[16px] md:text-[14px] sm:text-[13px]">
+                        {ligue.name}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -110,7 +107,7 @@ const Description = ({setIsOpen}: {setIsOpen: (isOpen: boolean) => void}) => {
         </div>
       </div>
     </Container>
-  );
-};
+  )
+}
 
-export default Description;
+export default Description

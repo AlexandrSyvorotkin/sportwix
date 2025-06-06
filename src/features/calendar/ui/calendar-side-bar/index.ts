@@ -1,1 +1,1 @@
-export {CalendarSideBar} from './calendar-side-bar';
+export { CalendarSideBar } from './calendar-side-bar'

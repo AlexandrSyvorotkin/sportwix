@@ -1,30 +1,30 @@
 {
-    "season": {
-        "ru": "Сезон",
-        "eng": "Season"
-    },
-    "epl": {
-        "ru": "Английская премьер лига",
-        "eng": "Premier League"
-    },
-    "eng_cup": {
-        "ru": "Кубок Англии",
-        "eng": "England Cup"
-    },
-    "league_cup": {
-        "ru": "Кубок Лиги",
-        "eng": "League Cup"
-    },
-    "ucl": {
-        "ru": "Лига Чемпионов",
-        "eng": "Champions League"
-    },
-    "el": {
-        "ru": "Лига Европы",
-        "eng": "Europa League"
-    },
-    "cs": {
-        "ru": "Суперкубок Англии",
-        "eng": "FA Community Shield"
-    }
+  "season": {
+    "ru": "Сезон",
+    "eng": "Season"
+  },
+  "epl": {
+    "ru": "Английская премьер лига",
+    "eng": "Premier League"
+  },
+  "eng_cup": {
+    "ru": "Кубок Англии",
+    "eng": "England Cup"
+  },
+  "league_cup": {
+    "ru": "Кубок Лиги",
+    "eng": "League Cup"
+  },
+  "ucl": {
+    "ru": "Лига Чемпионов",
+    "eng": "Champions League"
+  },
+  "el": {
+    "ru": "Лига Европы",
+    "eng": "Europa League"
+  },
+  "cs": {
+    "ru": "Суперкубок Англии",
+    "eng": "FA Community Shield"
+  }
 }

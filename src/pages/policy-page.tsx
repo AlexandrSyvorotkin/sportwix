@@ -1,7 +1,7 @@
-import PolicyList from "../components/policy-list/policy-list";
+import PolicyList from '../components/policy-list/policy-list'
 
 const PolicyPage = () => {
-  return <PolicyList />;
-};
+  return <PolicyList />
+}
 
-export default PolicyPage;
+export default PolicyPage

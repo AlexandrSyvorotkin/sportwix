@@ -13,4 +13,4 @@ export const ROUTER_PATHS = {
   PAYMENT_SUCCESS: 'pay/success-payment',
   PAYMENT_FAILED: 'pay/success-payment',
   RESTORE_PASSWORD: 'restore-password',
-} as const;
+} as const

@@ -1,1 +1,1 @@
-export {TeamTabPanel} from './team-tab-panel'
+export { TeamTabPanel } from './team-tab-panel'

@@ -1,1 +1,1 @@
-export {CalendarGameGoal} from './calendar-game-goal';
+export { CalendarGameGoal } from './calendar-game-goal'

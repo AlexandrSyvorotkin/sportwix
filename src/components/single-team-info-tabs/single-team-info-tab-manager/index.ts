@@ -1,1 +1,1 @@
-export {SingleTeamInfoTabManager} from './single-team-info-tab-manager'
+export { SingleTeamInfoTabManager } from './single-team-info-tab-manager'

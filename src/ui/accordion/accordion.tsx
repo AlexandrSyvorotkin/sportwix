@@ -1,6 +1,6 @@
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import * as React from 'react'
-import {cn} from '../../utils/utils'  
+import { cn } from '../../utils/utils'
 import PlusIcon from '../../assets/plus/Icon_plus.svg'
 
 const Accordion = AccordionPrimitive.Root
@@ -17,20 +17,18 @@ const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, asChild, ...props }, ref) => (
-  <AccordionPrimitive.Header className='flex'>
+  <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
-      className={cn(
-        'flex flex-1 items-center justify-between transition-all',
-        className,
-      )}
-      {...props}>
+      className={cn('flex flex-1 items-center justify-between transition-all', className)}
+      {...props}
+    >
       {asChild ? (
         children
       ) : (
         <>
           {children}
-          <div className='transition-transform duration-300 data-[state=open]:rotate-45'>
+          <div className="transition-transform duration-300 data-[state=open]:rotate-45">
             <img src={PlusIcon} alt="" />
           </div>
         </>
@@ -50,7 +48,8 @@ const AccordionContent = React.forwardRef<
       'overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
       className
     )}
-    {...props}>
+    {...props}
+  >
     <div className={cn('pb-4', className)}>{children}</div>
   </AccordionPrimitive.Content>
 ))

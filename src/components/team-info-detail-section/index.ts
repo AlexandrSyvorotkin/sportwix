@@ -1,1 +1,1 @@
-export {TeamDetailInfoSection} from './team-detail-info-section'
+export { TeamDetailInfoSection } from './team-detail-info-section'

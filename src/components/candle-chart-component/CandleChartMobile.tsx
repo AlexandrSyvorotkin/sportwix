@@ -38,7 +38,6 @@
 
 //     const dispatch = useAppDispatch()
 
-
 //     const [candleParams, setCandleParams] = useState({
 //         params: {
 //             high: undefined,
@@ -65,13 +64,10 @@
 //         second_team_img: secondSelectedTeam?.team_svg_img,
 //     }
 
-
-
 //     const { theme } = useContext(ThemeContext)
 
 //     const [miniNews, setMiniNews] = useState([])
 
-    
 //     // console.log(width)
 
 //     useEffect(() => {
@@ -89,7 +85,7 @@
 //                         </div>
 //                     </div> : null}
 //                     <div className={styles.news_tooltip} id='news_tooltip'>
-//                         {miniNews.map((single_news: any, id: number) => 
+//                         {miniNews.map((single_news: any, id: number) =>
 //                                 <div className={styles.mini_news} key={id}>
 //                                     <div className={styles.img_wrapper}>
 //                                         <img src={`${IMG_PATH}${single_news.header_img}`} alt="" />

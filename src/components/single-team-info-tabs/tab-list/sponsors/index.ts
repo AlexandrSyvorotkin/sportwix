@@ -1,1 +1,1 @@
-export {Sponsors} from './sponsors'
+export { Sponsors } from './sponsors'

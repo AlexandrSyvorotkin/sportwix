@@ -1,1 +1,1 @@
-export {ChartFunctionsPanel} from './chart-functions-panel'
+export { ChartFunctionsPanel } from './chart-functions-panel'

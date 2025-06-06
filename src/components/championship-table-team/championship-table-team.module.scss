@@ -1,152 +1,151 @@
 // @import "../../styles/variables.scss";
 
 .championship_table_team {
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 18px;
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	align-items: center;
-	padding: 4px 9px;
-	text-decoration: none;
-	gap: 5px;
-	background: transparent;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 4px 9px;
+  text-decoration: none;
+  gap: 5px;
+  background: transparent;
 
-	// white-space: nowrap;
-	.championship_table_team_light {
-		// color: $text-color-light
-	}
+  // white-space: nowrap;
+  .championship_table_team_light {
+    // color: $text-color-light
+  }
 
-	.championship_table_team_dark {
-		// color: $main-color
-	}
+  .championship_table_team_dark {
+    // color: $main-color
+  }
 
-	&:hover {
-		background: rgba(255, 255, 255, 0.1);
-		border-radius: 4px;
-		cursor: pointer;
-	}
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-	.team_name {
-		display: flex;
-		gap: 8px;
-		justify-content: flex-start;
-		align-items: center;
-		min-width: 65%;
-	}
+  .team_name {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 65%;
+  }
 
-	.place_main {
-		border-radius: 4px;
-		//padding: 4px 12px;
-		padding: 4px 12px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		min-width: 45px;
-	}
+  .place_main {
+    border-radius: 4px;
+    //padding: 4px 12px;
+    padding: 4px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 45px;
+  }
 
-	.place_main_light {
-		background: white;
-		border: 1px solid #E1E3EA;
-	}
+  .place_main_light {
+    background: white;
+    border: 1px solid #e1e3ea;
+  }
 
-	.place_champions_league {
-		background: #4E4EFD;
-	}
+  .place_champions_league {
+    background: #4e4efd;
+  }
 
-	.place_champions_league_light {
-		color: white;
-		background-color: #449782;
+  .place_champions_league_light {
+    color: white;
+    background-color: #449782;
+  }
 
-	}
+  .place_europe_league {
+    background: #ff7b33;
+  }
 
-	.place_europe_league {
-		background: #FF7B33;
-	}
+  .place_conference_league {
+    background: #51b136;
+  }
 
-	.place_conference_league {
-		background: #51B136;
-	}
+  .place_conference_league_light {
+    background: #51b136;
+    color: white;
+  }
 
-	.place_conference_league_light {
-		background: #51B136;
-		color: white;
-	}
+  .place_etc {
+    background: #333333;
+  }
 
-	.place_etc {
-		background: #333333;
-	}
+  .place_etc_light {
+    color: #333333;
+  }
 
-	.place_etc_light {
-		color: #333333;
-	}
+  .place_leave {
+    background: #c00000;
+  }
 
-	.place_leave {
-		background: #C00000;
-	}
+  .place_leave_light {
+    color: white;
+  }
 
-	.place_leave_light {
-		color: white
-	}
+  .name {
+    text-align: start;
+  }
 
-	.name {
-		text-align: start;
-	}
+  .team_parameters {
+    display: flex;
+    padding-right: 10px;
 
-	.team_parameters {
-		display: flex;
-		padding-right: 10px;
+    @media (max-width: 768px) {
+      padding-right: 0;
+    }
+  }
 
-		@media (max-width: 768px) {
-			padding-right: 0;
-		}
-	}
+  .progress_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 30%;
+  }
 
-	.progress_wrapper {
-		display: flex;
-		justify-content: flex-end;
-		min-width: 30%;
-	}
+  .progress_bar {
+    border-radius: 13px;
+    height: 12px;
 
-	.progress_bar {
-		border-radius: 13px;
-		height: 12px;
+    @media (max-width: 1300px) {
+      display: none !important;
+    }
+  }
 
-		@media (max-width: 1300px) {
-			display: none !important;
-		}
-	}
+  .progress_bar_dark {
+    border: 1px solid white;
+  }
 
-	.progress_bar_dark {
-		border: 1px solid white;
-	}
+  .progress_bar_light {
+    // border: 1px solid $substrate-color-light;
+  }
 
-	.progress_bar_light {
-		// border: 1px solid $substrate-color-light;
-	}
+  .progress_bar_dark {
+    // background: $championship-table-team-progress-bar-dark;
+  }
 
-	.progress_bar_dark {
-		// background: $championship-table-team-progress-bar-dark;
-	}
+  .progress_bar_light {
+    // background: $championship-table-team-progress-bar-light;
+  }
 
-	.progress_bar_light {
-		// background: $championship-table-team-progress-bar-light;
-	}
+  .param_list {
+    display: flex;
+    gap: 25px;
+    color: #5c5c5c;
+  }
 
-	.param_list {
-		display: flex;
-		gap: 25px;
-		color: #5C5C5C;
-	}
-
-	.metrics {
-		display: flex;
-		gap: 50px;
-	}
+  .metrics {
+    display: flex;
+    gap: 50px;
+  }
 }
 
 .team_selected {
-	background: rgba(255, 255, 255, 0.1);
-	border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
 }

@@ -1,1 +1,1 @@
-export {CommonPanel} from './common-panel'
+export { CommonPanel } from './common-panel'

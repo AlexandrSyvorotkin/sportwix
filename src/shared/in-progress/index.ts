@@ -1,2 +1,1 @@
-export {InProgress} from './in-progress'
-
+export { InProgress } from './in-progress'

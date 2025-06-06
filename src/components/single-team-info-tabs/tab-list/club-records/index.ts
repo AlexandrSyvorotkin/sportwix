@@ -1,1 +1,1 @@
-export {ClubRecords} from './club-records';
+export { ClubRecords } from './club-records'

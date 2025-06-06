@@ -1,1 +1,1 @@
-export {ChampionshipTablePanel} from './championship-table-panel'
+export { ChampionshipTablePanel } from './championship-table-panel'

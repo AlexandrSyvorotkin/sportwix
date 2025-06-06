@@ -1,1 +1,1 @@
-export {CalendarOddsBar} from './calendar-odds-bar';
+export { CalendarOddsBar } from './calendar-odds-bar'

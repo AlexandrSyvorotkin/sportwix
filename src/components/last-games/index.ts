@@ -1,1 +1,1 @@
-export {LastResultsSection} from './last-games';
+export { LastResultsSection } from './last-games'

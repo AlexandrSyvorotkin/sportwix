@@ -1,19 +1,19 @@
-import { FootballMetricTimeFrame } from "../../FootballField/FootballMetricTimeFrame/FootbalMetricTimeFrame"
-import { TimeFrameMetrics } from "../../types"
+import { FootballMetricTimeFrame } from '../../FootballField/FootballMetricTimeFrame/FootbalMetricTimeFrame'
+import { TimeFrameMetrics } from '../../types'
 
 type h2hTeamData = {
-    field: {
-        timeframe_all: FootballMetricTimeFrame
-    },
-    metrics: {
-        timeframe_all: {
-            full_time: TimeFrameMetrics,
-            time_1: TimeFrameMetrics,
-            time_2: TimeFrameMetrics
-        },
+  field: {
+    timeframe_all: FootballMetricTimeFrame
+  }
+  metrics: {
+    timeframe_all: {
+      full_time: TimeFrameMetrics
+      time_1: TimeFrameMetrics
+      time_2: TimeFrameMetrics
     }
+  }
 }
 
 export type h2h = {
-    result: h2hTeamData[]
+  result: h2hTeamData[]
 }

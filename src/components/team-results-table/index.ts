@@ -1,1 +1,1 @@
-export {TeamResultsTable} from './team-results-table'
+export { TeamResultsTable } from './team-results-table'

@@ -1,1 +1,1 @@
-export {NextGameSparkLine} from './sparkline-next-game'
+export { NextGameSparkLine } from './sparkline-next-game'

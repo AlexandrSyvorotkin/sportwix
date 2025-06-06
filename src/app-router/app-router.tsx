@@ -11,7 +11,7 @@
 //   {
 //       path: ROUTER_PATHS.HOME,
 //       element: null,
-//       children: [ 
+//       children: [
 //           {
 //               path: ROUTER_PATHS.HOME,
 //               element: <Main isOpen={false} setIsOpen={() => {}}/>,

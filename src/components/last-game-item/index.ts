@@ -1,1 +1,1 @@
-export {LastGameItem} from './last-game-item';
+export { LastGameItem } from './last-game-item'

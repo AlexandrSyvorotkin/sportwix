@@ -1,1 +1,1 @@
-export {LegacyHeader} from "./legacy-header";
+export { LegacyHeader } from './legacy-header'

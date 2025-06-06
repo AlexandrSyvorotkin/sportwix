@@ -1,60 +1,60 @@
 .uniform_and_emblems {
-	padding: 20px 12px;
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 
-	@media (min-width: 320px) and (max-width: 576px) {
-		gap: 10px;
-		padding: 10px;
-	}
+  @media (min-width: 320px) and (max-width: 576px) {
+    gap: 10px;
+    padding: 10px;
+  }
 
-	.uniforms {
-		display: flex;
-		gap: 20px;
-		justify-content: space-between;
-		@media (min-width: 320px) and (max-width: 576px) {
-			gap: 10px;
-		}
-	}
+  .uniforms {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    @media (min-width: 320px) and (max-width: 576px) {
+      gap: 10px;
+    }
+  }
 
-	.img_wrapper {
-		min-width: 100px;
-		min-height: 100px;
-		@media (min-width: 320px) and (max-width: 576px) {
-			display: none;
-			min-width: 50px;
-			min-height: 50px;
-			max-width: 50px;
-			max-height: 50px;
-		}
- 		&>img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			// float: right
-		}
-	}
+  .img_wrapper {
+    min-width: 100px;
+    min-height: 100px;
+    @media (min-width: 320px) and (max-width: 576px) {
+      display: none;
+      min-width: 50px;
+      min-height: 50px;
+      max-width: 50px;
+      max-height: 50px;
+    }
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      // float: right
+    }
+  }
 
-	.club_description {
-		display: flex;
-		gap: 20px;
-		align-items: center;
-		@media (min-width: 320px) and (max-width: 576px) {
-			gap: 10px;
-			align-items: flex-start;
-		}
-	}
+  .club_description {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    @media (min-width: 320px) and (max-width: 576px) {
+      gap: 10px;
+      align-items: flex-start;
+    }
+  }
 
-	.text {
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 18px;
-		color: #FFFFFF;
-		width: 100%;
-		
-		@media (min-width: 320px) and (max-width: 576px) {
-			font-size: 12px;
-		}
-	}
+  .text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    width: 100%;
+
+    @media (min-width: 320px) and (max-width: 576px) {
+      font-size: 12px;
+    }
+  }
 }

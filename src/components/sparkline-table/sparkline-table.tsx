@@ -1,61 +1,56 @@
-import { FC } from 'react';
+import { FC } from 'react'
 import styles from './sparkline-table.module.scss'
 // import { ITeam } from "../../legacy/models/ITeam";
 import sparklineCap from '../../localization/sparkline/sparkline-cap.json'
-import classNames from 'classnames';
+import classNames from 'classnames'
 // import { useFetchChampionshipInfoQuery } from '../../services/championships-api/championship-api';
 // import TeamSparkLine from '../../legacy/components/TeamSparkLine/TeamSparkLine';
 import teamsMock from '../../mocks/teams-mock.json'
 import TeamSparkLine from '../sparkline-team/sparkline-team'
 
-
 const SparkLineSection: FC = () => {
+  // const interfaceState = useAppSelector((state: RootState) => state.interfaceState)
 
-    // const interfaceState = useAppSelector((state: RootState) => state.interfaceState)
+  // const {championshipId, season} = useAppSelector(state => state.tournamentSlice)
+  // const { data, isLoading, error, isFetching } = useFetchChampionshipInfoQuery({ championshipId, season })
 
-    // const {championshipId, season} = useAppSelector(state => state.tournamentSlice)
-    // const { data, isLoading, error, isFetching } = useFetchChampionshipInfoQuery({ championshipId, season })
+  // const teams = data?.teams?.filter((team: ITeam) => !team.is_event)
 
+  const sparklineHeaderColors = classNames({
+    [styles.header]: true,
+    // [styles.bkg_light]: theme === 'light',
+    // [styles.bkg_dark]: theme === 'dark'
+  })
 
-    // const teams = data?.teams?.filter((team: ITeam) => !team.is_event)
+  const theme = 'dark'
 
-    const sparklineHeaderColors = classNames({
-        [styles.header]: true,
-        // [styles.bkg_light]: theme === 'light',
-        // [styles.bkg_dark]: theme === 'dark'
-    })
+  const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
+  // const [isFutureGame, setIsFutureGame] = useState(true)
 
-    const theme = 'dark'
+  // const championshipTeams = useAppSelector(state => state.tournamentSlice.tournament?.teams.filter(((team:ITeam) => !team.is_event)))
 
-    const border = theme === 'dark' ? '1px solid #5C5C5C' : '1px solid #E1E3EA'
-    // const [isFutureGame, setIsFutureGame] = useState(true)
-
-    // const championshipTeams = useAppSelector(state => state.tournamentSlice.tournament?.teams.filter(((team:ITeam) => !team.is_event)))
-
-    return (
-            <div className={styles.sparkline_wrapper} id='sparkline'>
-                <div className={sparklineHeaderColors} style={{borderBottom: border}}>
-                    <div className={styles.header_items} >
-                        <div className={styles.team_pos}>{sparklineCap[0].ru}</div>
-                        <div className={styles.team_img}>{sparklineCap[1].ru}</div>
-                        <div className={styles.team_coach}>{sparklineCap[2].ru}</div>
-                        <div className={styles.team_name}>{sparklineCap[3].ru}</div>
-                        <div className={styles.season_bar}>{sparklineCap[4].ru}</div>
-                        <div className={styles.line_chart}>{sparklineCap[5].ru}</div>
-                        {/* {interfaceState.mobile.expandSections.sparklineSection ? <div className={styles.medals}>{language === 'Eng' ? sparklineCap[6].eng : sparklineCap[6].ru}</div> : null} */}
-                        <div className={styles.last_games}>{sparklineCap[7].ru}</div>
-                        {/* {isFutureGame ?
+  return (
+    <div className={styles.sparkline_wrapper} id="sparkline">
+      <div className={sparklineHeaderColors} style={{ borderBottom: border }}>
+        <div className={styles.header_items}>
+          <div className={styles.team_pos}>{sparklineCap[0].ru}</div>
+          <div className={styles.team_img}>{sparklineCap[1].ru}</div>
+          <div className={styles.team_coach}>{sparklineCap[2].ru}</div>
+          <div className={styles.team_name}>{sparklineCap[3].ru}</div>
+          <div className={styles.season_bar}>{sparklineCap[4].ru}</div>
+          <div className={styles.line_chart}>{sparklineCap[5].ru}</div>
+          {/* {interfaceState.mobile.expandSections.sparklineSection ? <div className={styles.medals}>{language === 'Eng' ? sparklineCap[6].eng : sparklineCap[6].ru}</div> : null} */}
+          <div className={styles.last_games}>{sparklineCap[7].ru}</div>
+          {/* {isFutureGame ?
                             <div className={styles.next_game}>{language === 'Eng' ? sparklineCap[8].eng : sparklineCap[8].ru}</div>
                         :  null
                         } */}
-                        <div className={styles.next_game}>{sparklineCap[8].ru}</div>
-                    </div>
-                </div>
-                {teamsMock?.teams?.map(team =>
-                    <TeamSparkLine team={team}/>
-                )}
-            </div>
-    );
-};
+          <div className={styles.next_game}>{sparklineCap[8].ru}</div>
+        </div>
+      </div>
+      {teamsMock?.teams?.map(team => <TeamSparkLine team={team} />)}
+    </div>
+  )
+}
 
-export default SparkLineSection;
+export default SparkLineSection

@@ -1,26 +1,26 @@
 {
-    "1game": {
-        "ru": "1 игра",
-        "eng": "1 game"
-    },
-    "3games": {
-        "ru": "3 игры",
-        "eng": "3 games"
-    },
-    "5games": {
-        "ru": "5 игр",
-        "eng": "5 games"
-    },
-    "10games": {
-        "ru": "10 игр",
-        "eng": "10 games"
-    },
-    "15games": {
-        "ru": "15 игр",
-        "eng": "15 games"
-    },
-    "season": {
-        "ru": "Сезон",
-        "eng": "Season"
-    }
+  "1game": {
+    "ru": "1 игра",
+    "eng": "1 game"
+  },
+  "3games": {
+    "ru": "3 игры",
+    "eng": "3 games"
+  },
+  "5games": {
+    "ru": "5 игр",
+    "eng": "5 games"
+  },
+  "10games": {
+    "ru": "10 игр",
+    "eng": "10 games"
+  },
+  "15games": {
+    "ru": "15 игр",
+    "eng": "15 games"
+  },
+  "season": {
+    "ru": "Сезон",
+    "eng": "Season"
+  }
 }

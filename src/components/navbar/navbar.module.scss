@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   gap: 40px;
- 
+
   @media (max-width: 1200px) {
     gap: 20px;
   }
@@ -14,7 +14,8 @@
   @media (max-width: 768px) {
     display: none;
   }
-  .border { /* толщина и цвет линии */
+  .border {
+    /* толщина и цвет линии */
     height: 34px; /* высота линии - здесь 100% от высоты родительского элемента */
     margin-left: 20px; /* отступ слева от родительского элемента */
     box-sizing: border-box;
@@ -35,15 +36,14 @@
       align-items: center;
       text-decoration: none;
       &:hover {
-        color: #B279FF;
+        color: #b279ff;
       }
     }
   }
-  
 }
 
 .active {
-  color: #A266F4!important;
+  color: #a266f4 !important;
 }
 
 .dark {
@@ -56,6 +56,6 @@
 .light {
   // color: $text-color-light;
   &:hover {
-    color: #B279FF;
+    color: #b279ff;
   }
 }

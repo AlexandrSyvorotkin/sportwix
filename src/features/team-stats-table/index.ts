@@ -1,0 +1,1 @@
+export { TeamStatsTable } from './ui'

@@ -1,5 +1,5 @@
-import MainButton from "../ui/button/main-button";
-import arrow_icon from "../assets/arrow-up-right.svg";
+import MainButton from '../ui/button/main-button'
+import arrow_icon from '../assets/arrow-up-right.svg'
 const NotFound = () => {
   return (
     <div className="flex justify-center items-center h-[calc(100vh-84px)] w-full relative">
@@ -27,24 +27,19 @@ const NotFound = () => {
             <h2 className="text-grey-gradient text-[130px] opacity-70">404</h2>
             <span className="text-[54px] mt-[20px]">Страница не найдена</span>
             <p className="text-grey-gradient text-[18px] mt-[16px]">
-              Возможно она была перемещена, или вы неверно указали адрес
-              страницы
+              Возможно она была перемещена, или вы неверно указали адрес страницы
             </p>
             <MainButton className="p-[20px] mt-[44px] flex items-center gap-2 cursor-pointer">
               <span>Вернуться на главную</span>
               <div className="w-[20px] h-[20px]">
-                <img
-                  src={arrow_icon}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
+                <img src={arrow_icon} alt="" className="w-full h-full object-cover" />
               </div>
             </MainButton>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound

@@ -1,1 +1,1 @@
-export {Kits} from './kits'
+export { Kits } from './kits'

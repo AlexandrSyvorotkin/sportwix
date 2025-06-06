@@ -1,1 +1,1 @@
-export { NewsTab } from './news-tab';
+export { NewsTab } from './news-tab'

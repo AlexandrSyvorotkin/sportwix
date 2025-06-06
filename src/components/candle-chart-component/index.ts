@@ -1,1 +1,1 @@
-export {CandleChart} from './candle-chart'
+export { CandleChart } from './candle-chart'

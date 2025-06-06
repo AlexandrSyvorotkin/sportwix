@@ -1,1 +1,1 @@
-export {CommonInfoSection} from './common-info-section'
+export { CommonInfoSection } from './common-info-section'

@@ -1,1 +1,1 @@
-export {KitItem} from './kit-item'
+export { KitItem } from './kit-item'

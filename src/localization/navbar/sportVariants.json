@@ -1,14 +1,14 @@
 {
-    "football": {
-        "ru": "Футбол",
-        "eng": "Football"
-    },
-    "hockey": {
-        "ru": "Хоккей",
-        "eng": "Hockey"
-    },
-    "basketball": {
-        "ru": "Баскетбол",
-        "eng": "Basketball"
-    }
+  "football": {
+    "ru": "Футбол",
+    "eng": "Football"
+  },
+  "hockey": {
+    "ru": "Хоккей",
+    "eng": "Hockey"
+  },
+  "basketball": {
+    "ru": "Баскетбол",
+    "eng": "Basketball"
+  }
 }

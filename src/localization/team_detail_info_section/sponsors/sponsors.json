@@ -1,18 +1,18 @@
 {
-    "period": {
-        "ru": "Период",
-        "eng": "Period"
-    },
-    "title_sponsor": {
-        "ru": "Титульный спонсор",
-        "eng": "Title Sponsor"
-    },
-    "uniform": {
-        "ru": "Форма",
-        "eng": "Uniform"
-    },
-    "contract": {
-        "ru": "Контракт",
-        "eng": "Contract"
-    }
+  "period": {
+    "ru": "Период",
+    "eng": "Period"
+  },
+  "title_sponsor": {
+    "ru": "Титульный спонсор",
+    "eng": "Title Sponsor"
+  },
+  "uniform": {
+    "ru": "Форма",
+    "eng": "Uniform"
+  },
+  "contract": {
+    "ru": "Контракт",
+    "eng": "Contract"
+  }
 }

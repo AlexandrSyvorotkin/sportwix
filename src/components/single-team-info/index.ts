@@ -1,1 +1,1 @@
-export { SingleTeamInfo } from './single-team-info';
+export { SingleTeamInfo } from './single-team-info'

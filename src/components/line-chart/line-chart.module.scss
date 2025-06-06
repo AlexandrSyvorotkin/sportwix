@@ -1,25 +1,25 @@
 .mini_candles {
-    position: absolute;
-    top: 0;
-    left: 160px;
-    background: #262626;
-    border-radius: 6px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    pointer-events: none;
-    cursor: pointer;
-    width: 400px;
-    height: 150px;
-    z-index: 4;
-    @media (max-width: 1700px) {
-        left: 100px
-    }
-    @media (max-width: 1500px) {
-        left: 60px;
-    }
+  position: absolute;
+  top: 0;
+  left: 160px;
+  background: #262626;
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  cursor: pointer;
+  width: 400px;
+  height: 150px;
+  z-index: 4;
+  @media (max-width: 1700px) {
+    left: 100px;
+  }
+  @media (max-width: 1500px) {
+    left: 60px;
+  }
 }
 
 .line_chart {
-    // @media (max-width: 576px) {
-    //     display: none;
-    // }
+  // @media (max-width: 576px) {
+  //     display: none;
+  // }
 }

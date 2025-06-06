@@ -1,20 +1,20 @@
-import Description from "../components/description/description";
-import Suggest from "../components/suggest/suggest";
-import News from "../components/news/news";
-import Community from "../components/community/community";
-import FAQ from "../components/faq/faq";
-import Platform from "../components/platform/platform";
-import Modal from "../ui/modal/modal";
-import Teams from "../components/teams/teams";
+import Description from '../components/description/description'
+import Suggest from '../components/suggest/suggest'
+import News from '../components/news/news'
+import Community from '../components/community/community'
+import FAQ from '../components/faq/faq'
+import Platform from '../components/platform/platform'
+import Modal from '../ui/modal/modal'
+import Teams from '../components/teams/teams'
 interface MainProps {
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
+  isOpen: boolean
+  setIsOpen: (isOpen: boolean) => void
 }
 
 const Main = ({ isOpen, setIsOpen }: MainProps) => {
   return (
     <>
-      <Description setIsOpen={setIsOpen}/>
+      <Description setIsOpen={setIsOpen} />
       <Suggest />
       <News />
       <Community />
@@ -27,10 +27,10 @@ const Main = ({ isOpen, setIsOpen }: MainProps) => {
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
       >
-        <Teams/>
+        <Teams />
       </Modal>
     </>
   )
-};
+}
 
-export default Main;
+export default Main

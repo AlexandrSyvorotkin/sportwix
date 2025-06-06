@@ -1,22 +1,22 @@
 {
-    "name": {
-        "ru": "Имя",
-        "eng": "Name"
-    },
-    "games": {
-        "ru": "Игр",
-        "eng": "Games"
-    },
-    "goals": {
-        "ru": "Голы",
-        "eng": "Goals"
-    },
-    "goals_games": {
-        "ru": "Голов/Игр",
-        "eng": "Goals/Games"
-    },
-    "period": {
-        "ru": "Период",
-        "eng": "Period"
-    }
+  "name": {
+    "ru": "Имя",
+    "eng": "Name"
+  },
+  "games": {
+    "ru": "Игр",
+    "eng": "Games"
+  },
+  "goals": {
+    "ru": "Голы",
+    "eng": "Goals"
+  },
+  "goals_games": {
+    "ru": "Голов/Игр",
+    "eng": "Goals/Games"
+  },
+  "period": {
+    "ru": "Период",
+    "eng": "Period"
+  }
 }

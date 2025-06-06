@@ -1,14 +1,14 @@
 {
-    "defense": {
-        "ru": "Параметры защиты",
-        "eng": "Defence options"
-    },
-    "midfied": {
-        "ru": "Параметры полузащиты",
-        "eng": "Midfield options"
-    },
-    "attack": {
-        "ru": "Параметры атаки",
-        "eng": "Attack options"
-    }
+  "defense": {
+    "ru": "Параметры защиты",
+    "eng": "Defence options"
+  },
+  "midfied": {
+    "ru": "Параметры полузащиты",
+    "eng": "Midfield options"
+  },
+  "attack": {
+    "ru": "Параметры атаки",
+    "eng": "Attack options"
+  }
 }

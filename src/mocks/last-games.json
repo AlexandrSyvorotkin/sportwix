@@ -1,409 +1,369 @@
 [
-    {
-        "uuid": "match-001",
-        "home_team": {
-            "name_ru": "Арсенал",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-        },
-        "away_team": {
-            "name_ru": "Манчестер Юнайтед",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/10260.png"
-        },
-        "status": "finished",
-        "score": {
-            "short_score": {
-                "full_time": [
-                    2,
-                    1
-                ]
-            },
-            "goals_home": [
-                {
-                    "player": "Сака",
-                    "munite": 15
-                },
-                {
-                    "player": "Одегаар",
-                    "munite": 67
-                }
-            ],
-            "goals_away": [
-                {
-                    "player": "Фернандеш",
-                    "munite": 53
-                }
-            ]
-        },
-        "date": "2025-05-01T14:00:00Z"
+  {
+    "uuid": "match-001",
+    "home_team": {
+      "name_ru": "Арсенал",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
     },
-    {
-        "uuid": "match-002",
-        "home_team": {
-            "name_ru": "Ливерпуль",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png"
-        },
-        "away_team": {
-            "name_ru": "Челси",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8455.png"
-        },
-        "status": "finished",
-        "score": {
-            "short_score": {
-                "full_time": [
-                    3,
-                    0
-                ]
-            },
-            "goals_home": [
-                {
-                    "player": "Салах",
-                    "munite": 22
-                },
-                {
-                    "player": "Диас",
-                    "munite": 41
-                },
-                {
-                    "player": "Нуньес",
-                    "munite": 74
-                }
-            ],
-            "goals_away": []
-        },
-        "date": "2025-05-02T17:30:00Z"
+    "away_team": {
+      "name_ru": "Манчестер Юнайтед",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/10260.png"
     },
-    {
-        "uuid": "match-003",
-        "home_team": {
-            "name_ru": "Тоттенхэм",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8586.png"
+    "status": "finished",
+    "score": {
+      "short_score": {
+        "full_time": [2, 1]
+      },
+      "goals_home": [
+        {
+          "player": "Сака",
+          "munite": 15
         },
-        "away_team": {
-            "name_ru": "Манчестер Сити",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png"
-        },
-        "status": "finished",
-        "score": {
-            "short_score": {
-                "full_time": [
-                    1,
-                    1
-                ]
-            },
-            "goals_home": [
-                {
-                    "player": "Сон",
-                    "munite": 30
-                }
-            ],
-            "goals_away": [
-                {
-                    "player": "Холанд",
-                    "munite": 76
-                }
-            ]
-        },
-        "date": "2025-05-03T19:45:00Z"
+        {
+          "player": "Одегаар",
+          "munite": 67
+        }
+      ],
+      "goals_away": [
+        {
+          "player": "Фернандеш",
+          "munite": 53
+        }
+      ]
     },
-    {
-        "uuid": "match-004",
-        "home_team": {
-            "name_ru": "Брайтон",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/10204.png"
-        },
-        "away_team": {
-            "name_ru": "Эвертон",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8668.png"
-        },
-        "status": "finished",
-        "score": {
-            "short_score": {
-                "full_time": [
-                    2,
-                    2
-                ]
-            },
-            "goals_home": [
-                {
-                    "player": "Митома",
-                    "munite": 12
-                },
-                {
-                    "player": "Гросс",
-                    "munite": 85
-                }
-            ],
-            "goals_away": [
-                {
-                    "player": "Калверт-Льюин",
-                    "munite": 40
-                },
-                {
-                    "player": "Гейе",
-                    "munite": 77
-                }
-            ]
-        },
-        "date": "2025-05-04T13:00:00Z"
+    "date": "2025-05-01T14:00:00Z"
+  },
+  {
+    "uuid": "match-002",
+    "home_team": {
+      "name_ru": "Ливерпуль",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png"
     },
-    {
-        "uuid": "match-005",
-        "home_team": {
-            "name_ru": "Фулхэм",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/9879.png"
-        },
-        "away_team": {
-            "name_ru": "Вест Хэм",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8654.png"
-        },
-        "status": "inprogress",
-        "score": {
-            "short_score": {
-                "full_time": [
-                    0,
-                    1
-                ]
-            },
-            "goals_home": [],
-            "goals_away": [
-                {
-                    "player": "Боуэн",
-                    "munite": 67
-                }
-            ]
-        },
-        "date": "2025-05-04T15:00:00Z"
+    "away_team": {
+      "name_ru": "Челси",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8455.png"
     },
-    {
-        "uuid": "match-006",
-        "home_team": {
-            "name_ru": "Астон Вилла",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/10252.png"
+    "status": "finished",
+    "score": {
+      "short_score": {
+        "full_time": [3, 0]
+      },
+      "goals_home": [
+        {
+          "player": "Салах",
+          "munite": 22
         },
-        "away_team": {
-            "name_ru": "Лестер",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8197.png"
+        {
+          "player": "Диас",
+          "munite": 41
         },
-        "status": "inprogress",
-        "score": {
-            "short_score": {
-                "full_time": [
-                    1,
-                    3
-                ]
-            },
-            "goals_home": [
-                {
-                    "player": "Уоткинс",
-                    "munite": 55
-                }
-            ],
-            "goals_away": [
-                {
-                    "player": "Варди",
-                    "munite": 14
-                },
-                {
-                    "player": "Мэддисон",
-                    "munite": 39
-                },
-                {
-                    "player": "Барнс",
-                    "munite": 81
-                }
-            ]
-        },
-        "date": "2025-05-03T16:30:00Z"
+        {
+          "player": "Нуньес",
+          "munite": 74
+        }
+      ],
+      "goals_away": []
     },
-    {
-        "uuid": "match-007",
-        "home_team": {
-            "name_ru": "Ньюкасл",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/10261.png"
-        },
-        "away_team": {
-            "name_ru": "Саутгемптон",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8466.png"
-        },
-        "status": "finished",
-        "score": {
-            "short_score": {
-                "full_time": [
-                    4,
-                    0
-                ]
-            },
-            "goals_home": [
-                {
-                    "player": "Исаак",
-                    "munite": 9
-                },
-                {
-                    "player": "Гордон",
-                    "munite": 23
-                },
-                {
-                    "player": "Исаак",
-                    "munite": 62
-                },
-                {
-                    "player": "Жоэлитон",
-                    "munite": 75
-                }
-            ],
-            "goals_away": []
-        },
-        "date": "2025-05-02T18:00:00Z"
+    "date": "2025-05-02T17:30:00Z"
+  },
+  {
+    "uuid": "match-003",
+    "home_team": {
+      "name_ru": "Тоттенхэм",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8586.png"
     },
-    {
-        "uuid": "match-008",
-        "home_team": {
-            "name_ru": "Борнмут",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8678.png"
-        },
-        "away_team": {
-            "name_ru": "Ноттингем Форест",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/10203.png"
-        },
-        "status": "finished",
-        "score": {
-            "short_score": {
-                "full_time": [
-                    1,
-                    2
-                ]
-            },
-            "goals_home": [
-                {
-                    "player": "Соланке",
-                    "munite": 70
-                }
-            ],
-            "goals_away": [
-                {
-                    "player": "Авонийи",
-                    "munite": 45
-                },
-                {
-                    "player": "Гиббс-Уайт",
-                    "munite": 89
-                }
-            ]
-        },
-        "date": "2025-05-02T20:00:00Z"
+    "away_team": {
+      "name_ru": "Манчестер Сити",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png"
     },
-    {
-        "uuid": "match-009",
-        "home_team": {
-            "name_ru": "Брентфорд",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/9937.png"
-        },
-        "away_team": {
-            "name_ru": "Кристал Пэлас",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/9826.png"
-        },
-        "status": "finished",
-        "score": {
-            "short_score": {
-                "full_time": [
-                    2,
-                    2
-                ]
-            },
-            "goals_home": [
-                {
-                    "player": "Мбеумо",
-                    "munite": 30
-                },
-                {
-                    "player": "Тони",
-                    "munite": 68
-                }
-            ],
-            "goals_away": [
-                {
-                    "player": "Заха",
-                    "munite": 14
-                },
-                {
-                    "player": "Эзе",
-                    "munite": 90
-                }
-            ]
-        },
-        "date": "2025-05-01T14:00:00Z"
+    "status": "finished",
+    "score": {
+      "short_score": {
+        "full_time": [1, 1]
+      },
+      "goals_home": [
+        {
+          "player": "Сон",
+          "munite": 30
+        }
+      ],
+      "goals_away": [
+        {
+          "player": "Холанд",
+          "munite": 76
+        }
+      ]
     },
-    {
-        "uuid": "match-010",
-        "home_team": {
-            "name_ru": "Манчестер Сити",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png"
-        },
-        "away_team": {
-            "name_ru": "Арсенал",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
-        },
-        "status": "finished",
-        "score": {
-            "short_score": {
-                "full_time": [
-                    0,
-                    0
-                ]
-            },
-            "goals_home": [
-            ],
-            "goals_away": [
-            ]
-        },
-        "date": "2025-04-30T17:30:00Z"
+    "date": "2025-05-03T19:45:00Z"
+  },
+  {
+    "uuid": "match-004",
+    "home_team": {
+      "name_ru": "Брайтон",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/10204.png"
     },
-    {
-        "uuid": "match-011",
-        "home_team": {
-            "name_ru": "Челси",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8455.png"
-        },
-        "away_team": {
-            "name_ru": "Ливерпуль",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png"
-        },
-        "status": "finished",
-        "score": {
-            "short_score": {
-                "full_time": [
-                    0,
-                    0
-                ]
-            },
-            "goals_home": [],
-            "goals_away": []
-        },
-        "date": "2025-04-29T21:00:00Z"
+    "away_team": {
+      "name_ru": "Эвертон",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8668.png"
     },
-    {
-        "uuid": "match-012",
-        "home_team": {
-            "name_ru": "Эвертон",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8668.png"
+    "status": "finished",
+    "score": {
+      "short_score": {
+        "full_time": [2, 2]
+      },
+      "goals_home": [
+        {
+          "player": "Митома",
+          "munite": 12
         },
-        "away_team": {
-            "name_ru": "Ньюкасл",
-            "img": "https://images.fotmob.com/image_resources/logo/teamlogo/10261.png"
+        {
+          "player": "Гросс",
+          "munite": 85
+        }
+      ],
+      "goals_away": [
+        {
+          "player": "Калверт-Льюин",
+          "munite": 40
         },
-        "status": "notstarted",
-        "score": {
-            "short_score": {
-                "full_time": [
-                    0,
-                    0
-                ]
-            },
-            "goals_home": [
-            ],
-            "goals_away": [
-            ]
+        {
+          "player": "Гейе",
+          "munite": 77
+        }
+      ]
+    },
+    "date": "2025-05-04T13:00:00Z"
+  },
+  {
+    "uuid": "match-005",
+    "home_team": {
+      "name_ru": "Фулхэм",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/9879.png"
+    },
+    "away_team": {
+      "name_ru": "Вест Хэм",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8654.png"
+    },
+    "status": "inprogress",
+    "score": {
+      "short_score": {
+        "full_time": [0, 1]
+      },
+      "goals_home": [],
+      "goals_away": [
+        {
+          "player": "Боуэн",
+          "munite": 67
+        }
+      ]
+    },
+    "date": "2025-05-04T15:00:00Z"
+  },
+  {
+    "uuid": "match-006",
+    "home_team": {
+      "name_ru": "Астон Вилла",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/10252.png"
+    },
+    "away_team": {
+      "name_ru": "Лестер",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8197.png"
+    },
+    "status": "inprogress",
+    "score": {
+      "short_score": {
+        "full_time": [1, 3]
+      },
+      "goals_home": [
+        {
+          "player": "Уоткинс",
+          "munite": 55
+        }
+      ],
+      "goals_away": [
+        {
+          "player": "Варди",
+          "munite": 14
         },
-        "date": "2025-04-28T19:00:00Z"
-    }
+        {
+          "player": "Мэддисон",
+          "munite": 39
+        },
+        {
+          "player": "Барнс",
+          "munite": 81
+        }
+      ]
+    },
+    "date": "2025-05-03T16:30:00Z"
+  },
+  {
+    "uuid": "match-007",
+    "home_team": {
+      "name_ru": "Ньюкасл",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/10261.png"
+    },
+    "away_team": {
+      "name_ru": "Саутгемптон",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8466.png"
+    },
+    "status": "finished",
+    "score": {
+      "short_score": {
+        "full_time": [4, 0]
+      },
+      "goals_home": [
+        {
+          "player": "Исаак",
+          "munite": 9
+        },
+        {
+          "player": "Гордон",
+          "munite": 23
+        },
+        {
+          "player": "Исаак",
+          "munite": 62
+        },
+        {
+          "player": "Жоэлитон",
+          "munite": 75
+        }
+      ],
+      "goals_away": []
+    },
+    "date": "2025-05-02T18:00:00Z"
+  },
+  {
+    "uuid": "match-008",
+    "home_team": {
+      "name_ru": "Борнмут",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8678.png"
+    },
+    "away_team": {
+      "name_ru": "Ноттингем Форест",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/10203.png"
+    },
+    "status": "finished",
+    "score": {
+      "short_score": {
+        "full_time": [1, 2]
+      },
+      "goals_home": [
+        {
+          "player": "Соланке",
+          "munite": 70
+        }
+      ],
+      "goals_away": [
+        {
+          "player": "Авонийи",
+          "munite": 45
+        },
+        {
+          "player": "Гиббс-Уайт",
+          "munite": 89
+        }
+      ]
+    },
+    "date": "2025-05-02T20:00:00Z"
+  },
+  {
+    "uuid": "match-009",
+    "home_team": {
+      "name_ru": "Брентфорд",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/9937.png"
+    },
+    "away_team": {
+      "name_ru": "Кристал Пэлас",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/9826.png"
+    },
+    "status": "finished",
+    "score": {
+      "short_score": {
+        "full_time": [2, 2]
+      },
+      "goals_home": [
+        {
+          "player": "Мбеумо",
+          "munite": 30
+        },
+        {
+          "player": "Тони",
+          "munite": 68
+        }
+      ],
+      "goals_away": [
+        {
+          "player": "Заха",
+          "munite": 14
+        },
+        {
+          "player": "Эзе",
+          "munite": 90
+        }
+      ]
+    },
+    "date": "2025-05-01T14:00:00Z"
+  },
+  {
+    "uuid": "match-010",
+    "home_team": {
+      "name_ru": "Манчестер Сити",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png"
+    },
+    "away_team": {
+      "name_ru": "Арсенал",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png"
+    },
+    "status": "finished",
+    "score": {
+      "short_score": {
+        "full_time": [0, 0]
+      },
+      "goals_home": [],
+      "goals_away": []
+    },
+    "date": "2025-04-30T17:30:00Z"
+  },
+  {
+    "uuid": "match-011",
+    "home_team": {
+      "name_ru": "Челси",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8455.png"
+    },
+    "away_team": {
+      "name_ru": "Ливерпуль",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png"
+    },
+    "status": "finished",
+    "score": {
+      "short_score": {
+        "full_time": [0, 0]
+      },
+      "goals_home": [],
+      "goals_away": []
+    },
+    "date": "2025-04-29T21:00:00Z"
+  },
+  {
+    "uuid": "match-012",
+    "home_team": {
+      "name_ru": "Эвертон",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/8668.png"
+    },
+    "away_team": {
+      "name_ru": "Ньюкасл",
+      "img": "https://images.fotmob.com/image_resources/logo/teamlogo/10261.png"
+    },
+    "status": "notstarted",
+    "score": {
+      "short_score": {
+        "full_time": [0, 0]
+      },
+      "goals_home": [],
+      "goals_away": []
+    },
+    "date": "2025-04-28T19:00:00Z"
+  }
 ]
