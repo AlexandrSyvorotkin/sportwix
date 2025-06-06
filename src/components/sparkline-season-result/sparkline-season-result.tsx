@@ -26,9 +26,9 @@ const SparkLineSeasonResultBar: FC<SparkLineSeasonResultBarProps> = ({
 
   const language = 'Ru'
 
-  const win = language === 'Eng' ? 'W' : 'В'
-  const loss = language === 'Eng' ? 'L' : 'П'
-  const draw = language === 'Eng' ? 'D' : 'Н'
+  const win = language === 'Ru' ? 'W' : 'В'
+  const loss = language === 'Ru' ? 'L' : 'П'
+  const draw = language === 'Ru' ? 'D' : 'Н'
 
   const padding = isDopInfo ? '10px' : '0px'
 
