@@ -1,5 +1,3 @@
-import type { JSX } from "react"
-
 const CentralCircle = () => <div className="absolute w-[250px] h-[250px] border-2 border-white opacity-50 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10" />
 
 const CentralLine = () => <div className="absolute w-full h-0.5 bg-white opacity-50 top-1/2 left-0 right-0 mx-auto z-10" />

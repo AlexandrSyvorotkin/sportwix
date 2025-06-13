@@ -9,7 +9,7 @@ interface FiledLastGamesProps {
   setSelectedGamesCount: Dispatch<SetStateAction<number>>,
 }
 
-const FieldGames = ({ selectedGamesCount, setSelectedGamesCount }: FiledLastGamesProps) => {
+const FieldGames = ({ setSelectedGamesCount }: FiledLastGamesProps) => {
 
 
   const isH2hStatus = useAppSelector((state: RootState) => state.tournamentSlice.h2h.isH2h.field)
