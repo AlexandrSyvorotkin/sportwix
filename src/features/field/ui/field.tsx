@@ -2,7 +2,7 @@ import {FootballField} from './football-field';
 import { FieldTimes } from './field-times';
 import { FieldGames } from './field-games';
 import { useState } from 'react';
-import { Time } from '@legacy/types/gameFrameTimeTypes';
+import { Time } from '../../../types/gameFrameTimeTypes';
 
 
 const Field = () => {
