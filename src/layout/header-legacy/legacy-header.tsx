@@ -66,8 +66,14 @@ const LegacyHeader = () => {
         />
         <Separator className="w-[1px] h-[34px]" />
         <EnhancedSelect
-          customSelectElements={leagues_list}
-          customDefaultValue={leagues_list[0]}
+          items={leagues_list}
+          defaultValue={leagues_list[0].name}
+          renderCustomItem={(league) => (
+            <div className="flex items-center gap-2">
+              <img src={league.img} alt={league.name} className="w-[30px] h-[30px] rounded-full" />
+              <span>{league.name}</span>
+            </div>
+          )}
           onValueChange={value => console.log(value)}
           triggerWidth="min-w-[180px]"
         />

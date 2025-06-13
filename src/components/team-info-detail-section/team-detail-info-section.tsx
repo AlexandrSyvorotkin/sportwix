@@ -7,6 +7,7 @@ import { SingleTeamInfo } from '@components/single-team-info'
 import { TeamResultsTable } from '@components/team-results-table'
 import { TeamStatsTable } from '@features/team-stats-table/ui'
 import { Calendar } from '@features/calendar/'
+import { Field } from '@features/field/ui'
 // import Calendar from '../../legacy/components/Calendar/Calendar';
 
 // interface TeamDetailInfoSectionProps {
@@ -51,7 +52,7 @@ const TeamDetailInfoSection = () => {
     { id: 'championships-performance', component: <TeamResultsTable /> },
     { id: 'team-stats', component: <TeamStatsTable /> },
     { id: 'player-stat', component: <div>Статистика команды</div> },
-    { id: 'football-field', component: <div>Игроки команды</div> },
+    { id: 'football-field', component: <Field /> },
     { id: 'calendar', component: <Calendar /> },
   ]
 

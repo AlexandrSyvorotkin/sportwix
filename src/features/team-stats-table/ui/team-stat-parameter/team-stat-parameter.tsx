@@ -12,7 +12,6 @@ type title = {
 interface TeamPerameterProps {
   first_selected_param?: number
   second_selected_param?: number
-  visible: boolean
   type: number
   title: title
   setFirstSelectedTeamParams?: (params: unknown) => void
@@ -22,13 +21,9 @@ interface TeamPerameterProps {
 const TeamStatParameter = ({
   first_selected_param,
   second_selected_param,
-  visible,
   type,
   title,
 }: TeamPerameterProps) => {
-  if (!visible) {
-    return null
-  }
 
   return (
     <div className="w-full">

@@ -13,6 +13,7 @@ import { onExpandSection } from '../../../store/InterfaceSlice/InterfaceSlice'
 import { RootState } from 'src/store/store'
 import { type PanelBtnProps } from '@ui/panel-btn/panel-btn'
 import { switchPageToStartPostition } from '@store/tournament-slice/tournament-slice'
+import { CandleChartFilter } from '@features/candle-chart/ui'
 
 const activeColor = '#A266F4'
 
@@ -48,15 +49,18 @@ const ChartFiltersPanel = () => {
         tooltipSide: 'left',
       },
       {
-        icon: <FilterBySeasons />,
+        icon: <CandleChartFilter
+          trigger={<FilterBySeasons />}
+          content={<div className='text-white'>Фильтр по сезонам</div>}
+        />,
         onClick: () => null,
-        disabled: true,
+        disabled: !isSingleTeamView,
         isActive: false,
         tooltipText: 'Filter by seasons',
         tooltipSide: 'left',
       },
       {
-        icon: <ChartSettings />,
+        icon:<ChartSettings />,
         onClick: () => null,
         disabled: true,
         isActive: false,
@@ -64,7 +68,11 @@ const ChartFiltersPanel = () => {
         tooltipSide: 'left',
       },
       {
-        icon: <FilterByCups />,
+        icon:
+          <CandleChartFilter
+            trigger={<FilterByCups />}
+            content={<div className='text-white'>Фильтр по кубкам</div>}
+          />,
         onClick: () => null,
         disabled: true,
         isActive: false,
@@ -72,31 +80,37 @@ const ChartFiltersPanel = () => {
         tooltipSide: 'left',
       },
       {
-        icon: <FilterByHomeAwayGames />,
+        icon: <CandleChartFilter
+        trigger={<FilterByHomeAwayGames />}
+        content={<div className='text-white'>Фильтр по домашним/выездным играм</div>}/>,
         onClick: () => null,
-        disabled: true,
+        disabled: !isSingleTeamView,
         isActive: false,
         tooltipText: 'Expand',
         tooltipSide: 'left',
       },
       {
-        icon: <FilterByTimes />,
+        icon: <CandleChartFilter
+        trigger={<FilterByTimes />}
+        content={<div className='text-white'>Фильтр по таймам</div>}/>,
         onClick: () => null,
-        disabled: true,
+        disabled: !isSingleTeamView,
         isActive: false,
         tooltipText: 'Expand',
         tooltipSide: 'left',
       },
       {
-        icon: <FilterByGoals />,
+        icon: <CandleChartFilter
+        trigger={<FilterByGoals />}
+        content={<div className='text-white'>Фильтр по голам</div>}/>,
         onClick: () => null,
-        disabled: true,
+        disabled: !isSingleTeamView,
         isActive: false,
         tooltipText: 'Expand',
         tooltipSide: 'left',
       },
     ],
-    [expandedSection, isSingleTeamView]
+    [expandedSection, isSingleTeamView, dispatch]
   )
 
   return (
@@ -109,3 +123,4 @@ const ChartFiltersPanel = () => {
 }
 
 export { ChartFiltersPanel }
+

@@ -1,13 +1,13 @@
 import { FC, MouseEventHandler, useEffect, useRef, useState } from 'react'
 import styles from './candle-chart.module.scss'
-import { useAppSelector } from '../../types/hooks'
-import { Candle } from '../../models/Candle'
+import { useAppSelector } from '../../../../types/hooks'
+import { Candle } from '../../../../models/Candle'
 import leagueLogo from '@assets/icons/epllogo.svg'
-import { candleSeasons } from '../../types/candleSeason'
-import { candleParameters } from '../../types/candleParameters'
-import { useFetchTeamCandlesQuery } from '../../services/candles-api/candle-api'
+import { candleSeasons } from '../../../../types/candleSeason'
+import { candleParameters } from '../../../../types/candleParameters'
+import { useFetchTeamCandlesQuery } from '../../../../services/candles-api/candle-api'
 import { RootState } from '@store/store'
-import { CandleChartParams } from '@components/candle-chart-params'
+import { CandleChartParams } from '../candle-chart-params'
 // @ts-ignore
 import { candleChart } from '@charts/candle-chart/candle-chart'
 
@@ -29,7 +29,7 @@ interface CandleChartProps {
   height?: number
 }
 
-import candles from '../../mocks/mock-candles.json'
+import candles from '../../../../mocks/mock-candles.json'
 
 const CandleChart: FC<CandleChartProps> = ({
   rulerActive,

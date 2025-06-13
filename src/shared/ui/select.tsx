@@ -137,84 +137,67 @@ const SelectSeparator = React.forwardRef<
 ))
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName
 
-type baseSelectProps = {
+export type baseSelectProps = {
   id: number
   name: string
   isInProgress?: boolean
 }
 
-type EnhancedSelectProps = {
-  id: number
+// Базовый тип для всех элементов селекта
+export type BaseSelectItem = {
+  id: number | string
   name: string
-  img: string
+  value?: string // Добавляем опциональное поле value для гибкости
   isInProgress?: boolean
+  [key: string]: unknown // Позволяет добавлять любые дополнительные поля
 }
 
-type CustomSelectProps = {
-  items?: baseSelectProps[]
+type CustomSelectProps<T extends BaseSelectItem = BaseSelectItem> = {
+  items?: T[]
   placeholder?: string
   className?: string
   children?: React.ReactNode
-  customSelectElements?: EnhancedSelectProps[]
   triggerWidth?: string
   defaultValue?: string
-  customDefaultValue?: EnhancedSelectProps
+  renderCustomItem?: (item: T) => React.ReactNode
 } & RadixSelectProps
 
-const EnhancedSelect = ({
+const EnhancedSelect = <T extends BaseSelectItem = BaseSelectItem>({
   items = [],
   placeholder,
-  customSelectElements = [],
   className,
   triggerWidth,
   defaultValue,
-  customDefaultValue,
+  renderCustomItem,
   ...props
-}: CustomSelectProps) => {
-  const isCustomElements = customSelectElements.length > 0
-  const itemsToRender = isCustomElements ? customSelectElements : items
+}: CustomSelectProps<T>) => {
+  
+  // Функция рендеринга по умолчанию
+  const defaultRenderItem = (item: T): React.ReactNode => {
+    return <span>{item.name}</span>
+  }
 
-  // Определяем правильное значение по умолчанию
-  const effectiveDefaultValue = isCustomElements ? customDefaultValue?.name : defaultValue
+  const renderItemContent = renderCustomItem || defaultRenderItem
 
   return (
-    <Select defaultValue={effectiveDefaultValue} {...props}>
+    <Select defaultValue={defaultValue} {...props}>
       <SelectTrigger className={cn(triggerWidth, 'border-none', className)}>
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent className="bg-bg-main border border-gray-600 shadow-lg">
-        {itemsToRender.map(item => {
-          const renderContent = () => {
-            if (isCustomElements) {
-              return (
-                <div className="flex items-center gap-2">
-                  <img
-                    src={(item as EnhancedSelectProps).img}
-                    alt={item.name}
-                    className="w-[30px] h-[30px] rounded-full"
-                  />
-                  <span>{item.name}</span>
-                </div>
-              )
-            } else {
-              return <span>{item.name}</span>
-            }
-          }
-
-          return (
-            <SelectItem
-              key={item.id}
-              value={item.name}
-              className={cn(
-                'text-white',
-                item.isInProgress && 'opacity-50 cursor-not-allowed pointer-events-none'
-              )}
-              disabled={item.isInProgress}
-            >
-              {renderContent()}
-            </SelectItem>
-          )
-        })}
+        {items.map(item => (
+          <SelectItem
+            key={item.id}
+            value={item.value || item.name}
+            className={cn(
+              'text-white',
+              item.isInProgress && 'opacity-50 cursor-not-allowed pointer-events-none'
+            )}
+            disabled={item.isInProgress}
+          >
+            {renderItemContent(item)}
+          </SelectItem>
+        ))}
       </SelectContent>
     </Select>
   )

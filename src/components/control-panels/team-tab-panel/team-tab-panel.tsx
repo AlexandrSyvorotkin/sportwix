@@ -96,11 +96,13 @@ const TeamTabPanel = () => {
       {
         icon: (
           <FootballFieldIcon
-            fill={activeTeamDetailInfoTab === 'football-field' ? activeColor : ''}
+            className={
+              activeTeamDetailInfoTab === 'football-field' ? 'text-[#A266F4]' : 'text-[#FFFFFF]'
+            }
           />
         ),
         onClick: () => dispatch(onSwitchActiveTeamTab('football-field')),
-        disabled: true,
+        disabled: !isAnyTeamSelected,
         isActive: activeTeamDetailInfoTab === 'football-field',
         tooltipText: 'Футбольное поле',
         tooltipSide: 'left',

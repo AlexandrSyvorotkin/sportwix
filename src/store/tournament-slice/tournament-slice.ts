@@ -36,7 +36,19 @@ type initialStateType = {
         | 'timeframe_10'
         | 'timeframe_15'
         | 'timeframe_all'
-    }
+    },
+    field: {
+      firstTeamMetrics: TimeFrameMetrics | undefined
+      secondTeamMetrics: TimeFrameMetrics | undefined
+      timeFrame: 'time_1' | 'time_2' | 'full_time'
+      gameFrame:
+        | 'timeframe_1'
+        | 'timeframe_3'
+        | 'timeframe_5'
+        | 'timeframe_10'
+        | 'timeframe_15'
+        | 'timeframe_all'
+    },
   }
   h2h: {
     isH2h: {
@@ -75,6 +87,12 @@ const initialState: initialStateType = {
       spliteType: false,
     },
     stat_metrics: {
+      firstTeamMetrics: undefined,
+      secondTeamMetrics: undefined,
+      timeFrame: 'full_time',
+      gameFrame: 'timeframe_1',
+    },
+    field: {
       firstTeamMetrics: undefined,
       secondTeamMetrics: undefined,
       timeFrame: 'full_time',

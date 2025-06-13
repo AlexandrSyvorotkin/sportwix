@@ -19,7 +19,7 @@ import {
 } from '@components/control-panels'
 import { CommonPanel } from '@components/control-panels/common-panel'
 import { RootState } from '../../store/store'
-import { CandleChart } from '@components/candle-chart-component'
+import { CandleChart } from '@features/candle-chart/ui'
 
 const Chart: FC = () => {
   const dispatch = useAppDispatch()
